@@ -9,8 +9,10 @@
 </head>
 <body>
     <h1 align="center">留言版</h1>
-
+    <hr>
     <?php
+
+        // 資料處理
         require_once("db_connect.php");
         $recordPerPage = 5 ;
         if(isset($_GET["page"]))
@@ -19,13 +21,14 @@
             $page = 1 ;
         $database = "guestbook";
         $link = create_connection();
-        $sql = "SELECT * FROM message ORDER BY date DESC";
+        $sql = "SELECT * FROM message ORDER BY id DESC";
         $result = execute_db($link,"guestbook",$sql);
         $totalRecords = mysqli_num_rows($result);
         $totalPages = ceil($totalRecords/$recordPerPage);
-        $started_record = $recordPerPage * ($page - 1);
-        mysqli_data_seek($result, $started_record);
+        $startedRecord = $recordPerPage * ($page - 1);
+        mysqli_data_seek($result, $startedRecord);
 
+        // 繪製表格
         echo "<table width='800' align='center' cellspacing='3'>";
             $j = 1;
             while ($row = mysqli_fetch_assoc($result) and $j <= $recordPerPage){
@@ -37,23 +40,30 @@
                 $j++;
             }
         echo "</table>" ;
-
+        
+        // 跳頁
+        echo "<hr>";
         echo "<p align='center'>";
-        if ($page > 1)
-            echo "<a href='index.php?page=". ($page - 1) . "'>上一頁</a> ";
+            if ($page > 1){
+                echo "<a href='index.php?page=". ($page - 1) . "'>上一頁</a> ";
+            }
 
-        for ($i = 1; $i <= $totalPages; $i++){
-            if ($i == $page)
-                echo "$i ";
-            else
-                echo "<a href='index.php?page=$i'>$i</a> ";
-        }
-
-        if ($page < $totalPages)
-            echo "<a href='index.php?page=". ($page + 1) . "'>下一頁</a> ";
+            for ($i = 1; $i <= $totalPages; $i++){
+                if ($i == $page){
+                    echo "$i ";
+                }else{
+                    echo "<a href='index.php?page=$i'>$i</a> ";
+                } 
+            }
+            
+            if ($page < $totalPages){
+                echo "<a href='index.php?page=". ($page + 1) . "'>下一頁</a> ";
+            }
         echo "</p>";
-    ?>
 
+    ?>
+    
+    <!-- 填寫表單 -->
     <form name="myForm" method="post" action="post.php">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -76,28 +86,6 @@
             </tr>
         </table>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
 </body>
 </html>

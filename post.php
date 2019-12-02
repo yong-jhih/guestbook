@@ -9,7 +9,7 @@
   $link = create_connection();
   $sql = "INSERT INTO message(author, subject, content, date)
           VALUES('$author', '$subject', '$content', '$current_time')";
-  $result = execute_sql($link, "guestbook", $sql);
+  $result = execute_db($link, "guestbook", $sql);
   mysqli_close($link);
   header("location:index.php");
   exit();

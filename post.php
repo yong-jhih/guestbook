@@ -1,6 +1,5 @@
 <?php
   require_once("db_connect.php");
-	
   $author = $_POST["author"];
   $subject = $_POST["subject"];
   $content = $_POST["content"];

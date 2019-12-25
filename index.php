@@ -8,10 +8,10 @@
     <script src="guestbook.js"></script>
 </head>
 <body>
+    <?php include 'statusBar.php' ?>
     <h1 align="center">留言版</h1>
     <hr>
     <?php
-
         // 資料處理
         require_once("db_connect.php");
         $recordPerPage = 5 ;
@@ -60,23 +60,27 @@
                 echo "<a href='index.php?page=". ($page + 1) . "'>下一頁</a> ";
             }
         echo "</p>";
-
     ?>
-    
+
     <!-- 填寫表單 -->
     <form name="myForm" method="post" action="post.php">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
-                <td colspan="2"><font color="#FFFFFF">請在此輸入新的留言</font></td>
+                <td colspan="2">
+                    <font color="#FFFFFF">請在此輸入新的留言</font>
+                </td>
             </tr>
             <tr bgcolor="#D9F2FF">
-                <td width="15%">作者</td><td width="85%"><input name="author" type="text" size="50"></td>
+                <td width="15%">作者</td>
+                <td width="85%"><input name="author" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#84D7FF">
-                <td width="15%">主題</td><td width="85%"><input name="subject" type="text" size="50"></td>
+                <td width="15%">主題</td>
+                <td width="85%"><input name="subject" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#D9F2FF">
-                <td width="15%">內容</td><td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
+                <td width="15%">內容</td>
+                <td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -86,6 +90,7 @@
             </tr>
         </table>
     </form>
-    
+
 </body>
+
 </html>

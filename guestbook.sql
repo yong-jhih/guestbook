@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2019-12-02 10:32:02
+-- 產生時間： 2019-12-25 12:57:25
 -- 伺服器版本： 10.4.6-MariaDB
 -- PHP 版本： 7.3.8
 
@@ -25,57 +25,58 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- 資料表結構 `member`
+--
+
+CREATE TABLE `member` (
+  `memberID` int(11) NOT NULL,
+  `memberAC` varchar(16) NOT NULL,
+  `memberPW` varchar(16) NOT NULL,
+  `memberName` varchar(16) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `permission` tinyint(4) NOT NULL DEFAULT 1,
+  `createDate` datetime NOT NULL DEFAULT current_timestamp(),
+  `lastModify` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- 傾印資料表的資料 `member`
+--
+
+INSERT INTO `member` (`memberID`, `memberAC`, `memberPW`, `memberName`, `email`, `permission`, `createDate`, `lastModify`) VALUES
+(2, 'cba321', 'cba321', 'cba321', 'hit@gmail', 1, '2019-12-25 19:42:23', '2019-12-25 19:42:23');
+
+-- --------------------------------------------------------
+
+--
 -- 資料表結構 `message`
 --
 
 CREATE TABLE `message` (
   `id` int(11) NOT NULL,
-  `author` varchar(10) NOT NULL DEFAULT '',
+  `author` varchar(16) NOT NULL,
   `subject` tinytext NOT NULL,
   `content` text NOT NULL,
-  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `date` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `memberID` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- 傾印資料表的資料 `message`
 --
 
-INSERT INTO `message` (`id`, `author`, `subject`, `content`, `date`) VALUES
-(1, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(2, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(3, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(4, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(5, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(6, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(7, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(8, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(9, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(10, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(11, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(12, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(13, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(14, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(15, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(16, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(17, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(18, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(19, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(20, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(21, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(22, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(23, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(24, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(25, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(26, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(27, 'test1', 'test1', '123', '2019-12-01 15:28:36'),
-(28, 'test1', 'test2', '123', '2019-12-02 10:15:06'),
-(29, 'test2', 'test1', '456', '2019-12-02 10:15:18'),
-(30, 'test2', 'test1', '45343324553453.45354.4564534364', '2019-12-02 10:15:36'),
-(31, '>', '>', '>', '2019-12-02 10:31:01');
+INSERT INTO `message` (`id`, `author`, `subject`, `content`, `date`, `memberID`) VALUES
+(37, 'test1', 'test1', '133', '2019-12-25 11:20:27', NULL);
 
 --
 -- 已傾印資料表的索引
 --
+
+--
+-- 資料表索引 `member`
+--
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`memberID`);
 
 --
 -- 資料表索引 `message`
@@ -88,10 +89,16 @@ ALTER TABLE `message`
 --
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `member`
+--
+ALTER TABLE `member`
+  MODIFY `memberID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

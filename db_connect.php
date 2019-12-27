@@ -12,16 +12,25 @@
   }
 ?>
 
-
-<!-- 
+<!-- $memberName = mysqli_fetch_object($result)->memberName;
 object(stdClass)#3 (8) 
 { 
-  ["memberID"]=> string(1) "2" 
-  ["memberAC"]=> string(6) "cba321" 
-  ["memberPW"]=> string(6) "cba321" 
-  ["memberName"]=> string(6) "cba321" 
-  ["email"]=> string(9) "hit@gmail" 
-  ["permission"]=> string(1) "1" 
-  ["createDate"]=> string(19) "2019-12-25 19:42:23" 
-  ["lastModify"]=> string(19) "2019-12-25 19:42:23" 
+["memberID"]=> string(1) "2" 
+["memberAC"]=> string(6) "cba321" 
+["memberPW"]=> string(6) "cba321" 
+["memberName"]=> string(6) "cba321" 
+["email"]=> string(9) "hit@gmail" 
+["permission"]=> string(1) "1" 
+["createDate"]=> string(19) "2019-12-25 19:42:23" 
+["lastModify"]=> string(19) "2019-12-25 19:42:23" 
+} -->
+
+<!-- $result
+object(mysqli_result)#2 (5) 
+{ 
+["current_field"]=> int(0) 
+["field_count"]=> int(8) 
+["lengths"]=> NULL 
+["num_rows"]=> int(1) 
+["type"]=> int(0) 
 } -->

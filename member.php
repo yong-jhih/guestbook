@@ -14,11 +14,11 @@
     $memberAC = $member['memberAC'];
     $memberName = $member['memberName'];
     $email = $member['email'];
+    mysqli_close($link);
     }else{
         header("location:index.php");
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +40,13 @@
         電子郵件:<input type="email" name="memberMail" required placeholder="<?php echo $email ?>"><br>
         <button type="submit">修改</button>
     </form>
+    <hr>
+    留言列表<br>
+    <?php
+        $link = create_connection();
+        $sql = "SELECT * from message WHERE memberID = '$memberID' ORDER BY date limit '5' ";
+        $result = execute_db($link,'guestbook',$sql);
+    ?>
     <script src="check.js"></script>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <?php include 'statusBar.php' ?>
     <h1 align="center">留言版</h1>
     <hr>
+    
     <?php
         // 資料處理
         require_once("db_connect.php");
@@ -72,7 +73,13 @@
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                <td width="85%"><input name="author" type="text" size="50"></td>
+            <?php
+                if(isset($_COOKIE['memberName'])){
+                    echo "<td width='85%'><input name='author' readonly type='text' size='50' value='".$memberName."'></td>";
+                }else{
+                    echo '<td width="85%"><input name="author" type="text" size="50"></td>';
+                }
+            ?>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
@@ -90,7 +97,8 @@
             </tr>
         </table>
     </form>
-
+    <!-- <script>
+        document.getElementById('author').value = "<?php echo $memberName ?>";
+    </script> -->
 </body>
-
 </html>

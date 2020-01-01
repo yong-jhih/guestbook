@@ -97,8 +97,5 @@
             </tr>
         </table>
     </form>
-    <!-- <script>
-        document.getElementById('author').value = "<?php echo $memberName ?>";
-    </script> -->
 </body>
 </html>

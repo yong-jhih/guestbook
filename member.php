@@ -26,6 +26,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <style>
+        td{
+            border:1px solid black;
+            width: 200px;
+            text-align: center;
+        }
+        .content {
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
     <?php
@@ -41,12 +52,59 @@
         <button type="submit">修改</button>
     </form>
     <hr>
-    留言列表<br>
+    我的留言列表<br>
+    <table>
+        <tr>
+            <td>主題</td>
+            <td>時間</td>
+            <td class='content'>內容</td>
+            <td>修改</td>
+        </tr>
+    </table>
     <?php
-        $link = create_connection();
-        $sql = "SELECT * from message WHERE memberID = '$memberID' ORDER BY date limit '5' ";
-        $result = execute_db($link,'guestbook',$sql);
+        $recordPerPage = 100 ;
+        if(isset($_GET["page"])){
+            $page = $_GET["page"];
+        }else{
+            $page = 1 ;
+            $database = "guestbook";
+            $link = create_connection();
+            $sql = "SELECT * from message WHERE memberID = '$memberID' ORDER BY id DESC";
+            $result = execute_db($link,"guestbook",$sql);
+            $totalRecords = mysqli_num_rows($result);
+            $totalPages = ceil($totalRecords/$recordPerPage);
+            $startedRecord = $recordPerPage * ($page - 1);
+            mysqli_data_seek($result, $startedRecord);
+        }
+            
+        // 繪製表格
+        echo "<table width='800' align='center' cellspacing='3'>";
+            $j = 1;
+            while ($row = mysqli_fetch_assoc($result) and $j <= $recordPerPage){
+                echo "<table><tr><td>".$row['subject']."</td><td>".$row['date']."</td><td class='content'><form action='modifyContent.php' method='POST'><input type='hidden' name='contentID' value='".$row['id']."'><input type='text' name='content' id='".$row['id']."' value='".$row['content']."'></td><td><button type='submit'>修改內容</button></form><button onclick='Delete(".$row['id'].")'>刪除</button></td></tr>";
+                $j++;
+            }
+        echo "</table>" ;
     ?>
     <script src="check.js"></script>
+    <script>
+        function Delete(deleteID){
+            $(document).ready(function(){
+                $.ajax({
+                    async: true,
+                    type: "POST",
+                    url: "deleteContent.php",
+                    dataType: "json",
+                    data: {'deleteID':deleteID},
+                    success:function(response){
+                        window.location = "member.php";
+                    },
+                    error:function(){
+                        window.location = "member.php";
+                    }
+                })
+            });
+        }
+    </script>
 </body>
 </html>

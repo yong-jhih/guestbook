@@ -5,6 +5,7 @@
     $sql = "SELECT * from member WHERE memberAC='$testAC'";
     $result = execute_db($link,'guestbook',$sql);
     if(mysqli_num_rows($result)!=0){
+        header('Content-Type: application/json; charset=utf-8');
         echo  json_encode($testAC);
         mysqli_free_result($result);
     }

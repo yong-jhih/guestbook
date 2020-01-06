@@ -20,8 +20,7 @@
             $page = $_GET["page"];
         else
             $page = 1 ;
-
-
+            
         $database = "guestbook";
         $link = create_connection();
         $sql = "SELECT * FROM message ORDER BY id DESC";

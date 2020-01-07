@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 </head>
@@ -83,26 +82,46 @@
     echo "</table>";
 
     // 跳頁
+    // echo "<hr>";
+    // echo "<p align='center'>";
+    // if ($page > 1) {
+    //     echo "<a href='index.php?page=" . ($page - 1) . "'>上一頁</a> ";
+    // }
+
+    // for ($i = 1; $i <= $totalPages; $i++) {
+    //     if ($i == $page) {
+    //         echo "$i ";
+    //     } else {
+    //         echo "<a href='index.php?page=$i'>$i</a> ";
+    //     }
+    // }
+
+    // if ($page < $totalPages) {
+    //     echo "<a href='index.php?page=" . ($page + 1) . "'>下一頁</a> ";
+    // }
+    // echo "</p>";
+
     echo "<hr>";
-    echo "<p align='center'>";
+    echo "<nav aria-label='Page navigation example'>";
+    echo "<ul class='pagination' style='align:center;background-color:green'>";
     if ($page > 1) {
-        echo "<a href='index.php?page=" . ($page - 1) . "'>上一頁</a> ";
+        echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page - 1) . "'>上一頁</a></li>";
     }
 
     for ($i = 1; $i <= $totalPages; $i++) {
         if ($i == $page) {
-            echo "$i ";
+            echo "<li class='page-item'><a class='page-link' disabled><u>$i</u></a></li>";
         } else {
-            echo "<a href='index.php?page=$i'>$i</a> ";
+            echo "<li class='page-item'><a class='page-link' href='index.php?page=$i'>$i</a></li>";
         }
     }
 
     if ($page < $totalPages) {
-        echo "<a href='index.php?page=" . ($page + 1) . "'>下一頁</a> ";
+        echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page + 1) . "'>下一頁</a></li>";
     }
-    echo "</p>";
+    echo "</ul>";
+    echo "</nav>";
     ?>
-
     <!-- 填寫表單 -->
     <form name="myForm" method="post" action="post.php">
         <table border="0" width="800" align="center" cellspacing="0">

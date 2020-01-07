@@ -1,10 +1,9 @@
 <?php
     require_once 'db_connect.php';
     $memberAC = $_POST['memberAC'];
-    $memberPW = md5($_POST['memberPW'],);
+    $memberPW = md5(strrev($_POST['memberPW'].$_POST['memberAC']),);
     $memberName = $_POST['memberName'];
     $memberMail = $_POST['memberMail'];
-
     // 檢查帳號有無重複
     $link = create_connection();
     $sql = "SELECT * from member WHERE memberAC='$memberAC'";

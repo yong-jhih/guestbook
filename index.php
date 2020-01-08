@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 </head>
+
 <body>
     <?php include 'statusBar.php' ?>
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -52,11 +54,11 @@
     // 資料處理
     require_once("db_connect.php");
     $recordPerPage = 5;
-    if (isset($_GET["page"]))
+    if (isset($_GET["page"])) {
         $page = $_GET["page"];
-    else
+    } else {
         $page = 1;
-
+    }
     $database = "guestbook";
     $link = create_connection();
     $sql = "SELECT * FROM message ORDER BY id DESC";
@@ -65,20 +67,28 @@
     $totalPages = ceil($totalRecords / $recordPerPage);
     $startedRecord = $recordPerPage * ($page - 1);
     mysqli_data_seek($result, $startedRecord);
-
-    // 繪製表格
-    echo "<table width='800' align='center' cellspacing='3'>";
-    $j = 1;
-    while ($row = mysqli_fetch_assoc($result) and $j <= $recordPerPage) {
-        echo "<tr>";
-        echo "<td>作者：" . $row["author"] . "<br>";
-        echo "主題：" . $row["subject"] . "<br>";
-        echo "時間：" . $row["date"] . "<hr>";
-        echo $row["content"] . "</td></tr>";
+    
+    echo '<div class="accordion" id="accordionExample">';
+    $j=1;
+    while ($row = mysqli_fetch_assoc($result) and $j <= $recordPerPage){
+        echo '<div class="card" bgcolor="#D9F2FF">';
+            echo "<div class='card-header' style='border:2px solid #D9F2FF' id='heading{$j}'>";
+                echo '<h2 class="mb-0">';
+                    echo "<button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse{$j}' aria-expanded='true' aria-controls='collapse{$j}'>";
+                echo '主 題 : '.$row["subject"].'</button></h2></div>';
+        
+            echo "<div id='collapse{$j}' class='collapse' aria-labelledby='heading{$j}' data-parent='#accordionExample'>";
+                echo '<div class="card-body" style="display:flex">';
+        if($row["img"]!=null){
+                    echo "<div><img src='".$row["img"]."' style='width:400px;height:300px'></div>";
+        }
+                echo '<div class="col-md-8" style="margin-left:20px;border:2px solid red">'."<input type='text' style=''>".$row["content"].'</div></div>';
+            echo '</div>' ;
+        echo '</div>';
         $j++;
     }
-    echo "</table>";
-
+    echo '</div>';
+    
     // 跳頁
     echo "<hr>";
     echo "<nav aria-label='Page navigation example'>";
@@ -101,8 +111,9 @@
     echo "</ul>";
     echo "</nav>";
     ?>
+
     <!-- 輸入留言 -->
-    <form name="myForm" method="post" action="post.php">
+    <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
                 <td colspan="2">
@@ -127,6 +138,11 @@
                 <td width="15%">內容</td>
                 <td width="85%"><textarea id='content' name="content" cols="50" rows="5"></textarea></td>
             </tr>
+            
+            <tr bgcolor="#84D7FF">
+                <td width="15%">上傳圖片</td>
+                <td width="85%"><input id='img' name="img" type="file"></td>
+            </tr>
             <tr>
                 <td colspan="2" align="center">
                     <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">　
@@ -135,14 +151,18 @@
             </tr>
         </table>
     </form>
-
     <script>
-        let islogin = <?php if(isset($_COOKIE['passed'])){echo "true";}else{echo "false";} ?>;
-        function checkMember(islogin){
+        let islogin = <?php if (isset($_COOKIE['passed'])) {
+                            echo "true";
+                        } else {
+                            echo "false";
+                        } ?>;
+
+        function checkMember(islogin) {
             document.getElementById('author').disabled = !islogin;
             document.getElementById('subject').disabled = !islogin;
             document.getElementById('content').disabled = !islogin;
-            document.getElementById('enter').innerHTML = islogin ?"請在此輸入新的留言":"如要留言請先登入會員";
+            document.getElementById('enter').innerHTML = islogin ? "請在此輸入新的留言" : "如要留言請先登入會員";
         }
 
         function checkForm() {

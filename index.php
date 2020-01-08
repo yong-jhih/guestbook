@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 </head>
-
 <body>
     <?php include 'statusBar.php' ?>
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -82,25 +80,6 @@
     echo "</table>";
 
     // 跳頁
-    // echo "<hr>";
-    // echo "<p align='center'>";
-    // if ($page > 1) {
-    //     echo "<a href='index.php?page=" . ($page - 1) . "'>上一頁</a> ";
-    // }
-
-    // for ($i = 1; $i <= $totalPages; $i++) {
-    //     if ($i == $page) {
-    //         echo "$i ";
-    //     } else {
-    //         echo "<a href='index.php?page=$i'>$i</a> ";
-    //     }
-    // }
-
-    // if ($page < $totalPages) {
-    //     echo "<a href='index.php?page=" . ($page + 1) . "'>下一頁</a> ";
-    // }
-    // echo "</p>";
-
     echo "<hr>";
     echo "<nav aria-label='Page navigation example'>";
     echo "<ul class='pagination' style='align:center;background-color:green'>";
@@ -122,31 +101,31 @@
     echo "</ul>";
     echo "</nav>";
     ?>
-    <!-- 填寫表單 -->
+    <!-- 輸入留言 -->
     <form name="myForm" method="post" action="post.php">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
                 <td colspan="2">
-                    <font color="#FFFFFF">請在此輸入新的留言</font>
+                    <font color="#FFFFFF" id="enter">請在此輸入新的留言</font>
                 </td>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
                 <?php
                 if (isset($_COOKIE['memberName'])) {
-                    echo "<td width='85%'><input name='author' readonly type='text' size='50' value='" . $memberName . "'></td>";
+                    echo "<td width='85%'><input id='author' name='author' readonly type='text' size='50' value='" . $memberName . "'></td>";
                 } else {
-                    echo '<td width="85%"><input name="author" type="text" size="50"></td>';
+                    echo '<td width="85%"><input id="author" name="author" type="text" size="50"></td>';
                 }
                 ?>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
-                <td width="85%"><input name="subject" type="text" size="50"></td>
+                <td width="85%"><input id='subject' name="subject" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">內容</td>
-                <td width="85%"><textarea name="content" cols="50" rows="5"></textarea></td>
+                <td width="85%"><textarea id='content' name="content" cols="50" rows="5"></textarea></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -158,6 +137,14 @@
     </form>
 
     <script>
+        let islogin = <?php if(isset($_COOKIE['passed'])){echo "true";}else{echo "false";} ?>;
+        function checkMember(islogin){
+            document.getElementById('author').disabled = !islogin;
+            document.getElementById('subject').disabled = !islogin;
+            document.getElementById('content').disabled = !islogin;
+            document.getElementById('enter').innerHTML = islogin ?"請在此輸入新的留言":"如要留言請先登入會員";
+        }
+
         function checkForm() {
             if (document.myForm.author.value.length == 0) {
                 alert("請留名字");
@@ -169,6 +156,8 @@
                 myForm.submit();
             }
         }
+
+        checkMember(islogin);
     </script>
 </body>
 

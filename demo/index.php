@@ -1,6 +1,42 @@
+<?php
+/**
+ * Example Application
+ *
+ * @package Example-application
+ */
+require '../libs/Smarty.class.php';
+$smarty = new Smarty;
+//$smarty->force_compile = true;
+$smarty->debugging = true;
+$smarty->caching = true;
+$smarty->cache_lifetime = 120;
+$smarty->assign("Name", "Fred Irving Johnathan Bradley Peppergill", true);
+$smarty->assign("FirstName", array("John", "Mary", "James", "Henry"));
+$smarty->assign("LastName", array("Doe", "Smith", "Johnson", "Case"));
+$smarty->assign(
+    "Class",
+    array(
+        array("A", "B", "C", "D"),
+        array("E", "F", "G", "H"),
+        array("I", "J", "K", "L"),
+        array("M", "N", "O", "P")
+    )
+);
+$smarty->assign(
+    "contacts",
+    array(
+        array("phone" => "1", "fax" => "2", "cell" => "3"),
+        array("phone" => "555-4444", "fax" => "555-3333", "cell" => "760-1234")
+    )
+);
+$smarty->assign("option_values", array("NY", "NE", "KS", "IA", "OK", "TX"));
+$smarty->assign("option_output", array("New York", "Nebraska", "Kansas", "Iowa", "Oklahoma", "Texas"));
+$smarty->assign("option_selected", "NE");
+$smarty->display('index.tpl');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,24 +86,25 @@
             </div>
         </div>
     </div>
+    <?php // 資料處理
+        require_once("db_connect.php");
+        $recordPerPage = 5;
+        if (isset($_GET["page"])) {
+            $page = $_GET["page"];
+        } else {
+            $page = 1;
+        }
+        $database = "guestbook";
+        $link = create_connection();
+        $sql = "SELECT * FROM message ORDER BY id DESC";
+        $result = execute_db($link, "guestbook", $sql);
+        $totalRecords = mysqli_num_rows($result);
+        $totalPages = ceil($totalRecords / $recordPerPage);
+        $startedRecord = $recordPerPage * ($page - 1);
+        mysqli_data_seek($result, $startedRecord);
+    ?>
+
     <?php
-    // 資料處理
-    require_once("db_connect.php");
-    $recordPerPage = 5;
-    if (isset($_GET["page"])) {
-        $page = $_GET["page"];
-    } else {
-        $page = 1;
-    }
-    $database = "guestbook";
-    $link = create_connection();
-    $sql = "SELECT * FROM message ORDER BY id DESC";
-    $result = execute_db($link, "guestbook", $sql);
-    $totalRecords = mysqli_num_rows($result);
-    $totalPages = ceil($totalRecords / $recordPerPage);
-    $startedRecord = $recordPerPage * ($page - 1);
-    mysqli_data_seek($result, $startedRecord);
-    
     echo '<div class="accordion" id="accordionExample">';
     $j=1;
     while ($row = mysqli_fetch_assoc($result) and $j <= $recordPerPage){
@@ -82,34 +119,36 @@
         if($row["img"]!=null){
                     echo "<div><img src='".$row["img"]."' style='width:400px;height:300px'></div>";
         }
-                echo '<div class="col-md-8" style="margin-left:20px;border:2px solid red">'."<input type='text' style=''>".$row["content"].'</div></div>';
+                echo '<div class="col-md-8" style="margin-left:20px;border:2px solid red"><div><div style="display:flex;border:2px solid red"><div></div><div></div></div></div>'."<input type='text' style=''>".$row["content"].'</div></div>';
             echo '</div>' ;
         echo '</div>';
         $j++;
     }
     echo '</div>';
-    
-    // 跳頁
-    echo "<hr>";
-    echo "<nav aria-label='Page navigation example'>";
-    echo "<ul class='pagination' style='align:center;background-color:green'>";
-    if ($page > 1) {
-        echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page - 1) . "'>上一頁</a></li>";
-    }
+    ?>
 
-    for ($i = 1; $i <= $totalPages; $i++) {
-        if ($i == $page) {
-            echo "<li class='page-item'><a class='page-link' disabled><u>$i</u></a></li>";
-        } else {
-            echo "<li class='page-item'><a class='page-link' href='index.php?page=$i'>$i</a></li>";
+    <?php
+        // 跳頁
+        echo "<hr>";
+        echo "<nav aria-label='Page navigation example'>";
+        echo "<ul class='pagination' style='align:center;background-color:green'>";
+        if ($page > 1) {
+            echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page - 1) . "'>上一頁</a></li>";
         }
-    }
 
-    if ($page < $totalPages) {
-        echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page + 1) . "'>下一頁</a></li>";
-    }
-    echo "</ul>";
-    echo "</nav>";
+        for ($i = 1; $i <= $totalPages; $i++) {
+            if ($i == $page) {
+                echo "<li class='page-item'><a class='page-link' disabled><u>$i</u></a></li>";
+            } else {
+                echo "<li class='page-item'><a class='page-link' href='index.php?page=$i'>$i</a></li>";
+            }
+        }
+
+        if ($page < $totalPages) {
+            echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page + 1) . "'>下一頁</a></li>";
+        }
+        echo "</ul>";
+        echo "</nav>";
     ?>
 
     <!-- 輸入留言 -->
@@ -180,5 +219,4 @@
         checkMember(islogin);
     </script>
 </body>
-
 </html>

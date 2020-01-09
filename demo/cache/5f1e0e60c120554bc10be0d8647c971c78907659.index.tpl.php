@@ -1,5 +1,80 @@
-{include file="statusBar.tpl"}
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-01-09 09:21:33
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5e16e28ded9d12_88595712',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
+      1 => 1578552637,
+      2 => 'file',
+    ),
+    'b0ab8945239f55f5e4f86807ea4ce91e91106e24' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\statusBar.tpl',
+      1 => 1578557787,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 120,
+),true)) {
+function content_5e16e28ded9d12_88595712 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery-3.4.1.js"></script>
+  <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
+  <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="index.php">留言板</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                  </a>
+      </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>Search</button>
+      </form>
+                      <div style='text-align:right'><button class='btn btn-outline-primary' style='margin-right:5px' data-toggle='modal' data-target='#staticBackdrop'>登入</button><button class='btn btn-outline-primary' onclick='redirectRegister()'>註冊</button></div>
+              </div>
+  </nav>
+  <script>
+    function redirectRegister() {
+      window.location = "register.php";
+    }
+
+    function redirectMember() {
+      window.location = "member.php";
+    }
+
+    function logOut() {
+      window.location = "logout.php";
+    }
+  </script>
+</body>
+
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,8 +92,7 @@
 </head>
 <body>
 <pre>
-    {* 登入頁 *}
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -51,40 +125,12 @@
         </div>
     </div>
     
-    {* 留言表 *}
-    <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionExample">
 
-        {section name=messageList loop=$message}
-        {$message[messageList].id}
-        {$message[messageList].subject}
-        {$message[messageList].author}
-        {$message[messageList].content}
-        {$message[messageList].memberID}
-
-
-            <div class="card" bgcolor="#D9F2FF">
-                <div class='card-header' style='border:2px solid #D9F2FF' id='heading{$i}'>
-                    <h2 class="mb-0">
-                        <button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse{$i}' aria-expanded='true' aria-controls='collapse{$i}'>
-                            {$message[messageList].subject}
-                        </button>
-                    </h2>
-                </div>
-                <div id='collapse{$i}' class='collapse' aria-labelledby='heading{$i}' data-parent='#accordionExample'>
-                    <div class="card-body" style="display:flex">
-                    {if {$message[messageList].img}!=null}
-                        <div><img src='' style='width:400px;height:300px'></div>
-                    {/if}
-                        <div class="col-md-8" style="margin-left:20px;border:2px solid red"></div>
-                    </div>
-                </div>
-            </div>
-        {/section}
-
+        
     </div>
 
-    {* 留言區 *}
-    <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
+        <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
                 <td colspan="2">
@@ -93,12 +139,13 @@
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                {if $passed}
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50' value='{$memberName}'></td>
-                {else} 
+                <br />
+<b>Notice</b>:  Undefined index: passed in <b>C:\xampp\htdocs\coding\guestbook\demo\templates_c\fb7bda8a00003dcb36a0b75bc0c0724146a12f94_0.file.index.tpl.cache.php</b> on line <b>148</b><br />
+<br />
+<b>Notice</b>:  Trying to get property 'value' of non-object in <b>C:\xampp\htdocs\coding\guestbook\demo\templates_c\fb7bda8a00003dcb36a0b75bc0c0724146a12f94_0.file.index.tpl.cache.php</b> on line <b>148</b><br />
+ 
                     <td width="85%"><input id="author" name="author" type="text" size="50"></td>
-                {/if}
-            </tr>
+                            </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
                 <td width="85%"><input id='subject' name="subject" type="text" size="50"></td>
@@ -121,12 +168,8 @@
     </form>
     
     <script>
-        {if passed == 'true'}
-            islogin = true;
-        {else}
-            islogin = false;
-        {/if}
-
+                    islogin = false;
+        
         function checkMember(islogin) {
             document.getElementById('author').disabled = !islogin;
             document.getElementById('subject').disabled = !islogin;
@@ -150,4 +193,5 @@
     </script>
 </pre>
 </body>
-</html>
+</html><?php }
+}

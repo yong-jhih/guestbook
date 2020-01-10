@@ -1,30 +1,29 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-09 09:07:08
+/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:15:15
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e16df2c6a5444_93699343',
+  'unifunc' => 'content_5e183293e6a0c8_34469261',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578557227,
+      1 => 1578643877,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:statusBar.tpl' => 1,
   ),
 ),false)) {
-function content_5e16df2c6a5444_93699343 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '18382931805e16df2c6643a9_35061218';
-$_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5e183293e6a0c8_34469261 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +58,7 @@ $_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $
         }
     </style>
 </head>
-<pre>
+
 <body>
     <div style="display:flex">
         <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
@@ -115,12 +114,12 @@ $_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $
                     <td>" . $row['date'] . "</td>
                     <td class='content'>
                         <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value='" . $row['id'] . "'>
-                        <input type='text' name='content' id='" . $row['id'] . "' value='" . $row['content'] . "'>
+                        <input type='hidden' name='contentID' value='row[id]'>
+                        <input type='text' name='content' id='$row[id]' value='$row[content]'>
                     </td>
                     <td>
                         <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(" . $row['id'] . ")'>刪除</button>
+                        </form><button onclick='Delete()'>刪除</button>
                     </td>
                 </tr>
             </table>
@@ -153,7 +152,7 @@ $_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $
         <?php echo '</script'; ?>
 >
     </div>
-</pre>
+
 </body>
 </html><?php }
 }

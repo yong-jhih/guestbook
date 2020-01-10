@@ -1,5 +1,13 @@
 <?php
+    include_once 'statusBar.php';
     require_once 'db_connect.php';
+    require '../libs/Smarty.class.php';
+    $smarty = new Smarty;
+    $smarty->debugging = true;
+    $smarty->caching = true;
+    $smarty->cache_lifetime = 120;
+    $smarty->display('addAC.tpl');
+
     $memberAC = $_POST['memberAC'];
     $memberPW = md5(strrev($_POST['memberPW'].$_POST['memberAC']),);
     $memberName = $_POST['memberName'];
@@ -15,9 +23,6 @@
         mysqli_free_result($result);
         $sql = "INSERT INTO member (memberAC,memberPW,memberName,email) VALUES('$memberAC','$memberPW','$memberName','$memberMail')";
         $result = execute_db($link,'guestbook',$sql);
-        echo "建立帳號成功,3秒後跳轉頁面";
     }
     mysqli_close($link);
-    header("refresh:3;url='index.php'");
-    exit();
 ?>

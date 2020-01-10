@@ -1,5 +1,3 @@
-{include file="statusBar.tpl"}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +14,7 @@
     </script>
 </head>
 <body>
-<pre>
-    {* 登入頁 *}
+    {* 登入頁ok *}
     <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -52,7 +49,7 @@
     </div>
     
     {* 留言表 *}
-    <div class="accordion" id="accordionExample">
+    {* <div class="accordion" id="accordionExample">
 
         {section name=messageList loop=$message}
         {$message[messageList].id}
@@ -81,7 +78,7 @@
             </div>
         {/section}
 
-    </div>
+    </div> *}
 
     {* 留言區 *}
     <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
@@ -93,11 +90,7 @@
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                {if $passed}
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50' value='{$memberName}'></td>
-                {else} 
-                    <td width="85%"><input id="author" name="author" type="text" size="50"></td>
-                {/if}
+                    <td width='85%'><input id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
@@ -113,7 +106,7 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">　
+                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
                     <input type="reset" class='btn btn-outline-primary' value="重新輸入">
                 </td>
             </tr>
@@ -121,17 +114,12 @@
     </form>
     
     <script>
-        {if passed == 'true'}
-            islogin = true;
-        {else}
-            islogin = false;
-        {/if}
-
-        function checkMember(islogin) {
-            document.getElementById('author').disabled = !islogin;
-            document.getElementById('subject').disabled = !islogin;
-            document.getElementById('content').disabled = !islogin;
-            document.getElementById('enter').innerHTML = islogin ? "請在此輸入新的留言" : "如要留言請先登入會員";
+    {* alert(document.cookie);
+        function checkMember() {
+            document.getElementById('author').disabled = !passed;
+            document.getElementById('subject').disabled = !passed;
+            document.getElementById('content').disabled = !passed;
+            document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
         }
 
         function checkForm() {
@@ -145,9 +133,8 @@
                 myForm.submit();
             }
         }
-
-        checkMember(islogin);
+        checkMember(); *}
     </script>
-</pre>
+
 </body>
 </html>

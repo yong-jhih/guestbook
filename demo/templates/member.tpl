@@ -1,4 +1,4 @@
-{include file="statusBar.tpl"}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,7 @@
         }
     </style>
 </head>
-<pre>
+
 <body>
     <div style="display:flex">
         <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
@@ -77,12 +77,12 @@
                     <td>" . $row['date'] . "</td>
                     <td class='content'>
                         <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value='" . $row['id'] . "'>
-                        <input type='text' name='content' id='" . $row['id'] . "' value='" . $row['content'] . "'>
+                        <input type='hidden' name='contentID' value='row[id]'>
+                        <input type='text' name='content' id='$row[id]' value='$row[content]'>
                     </td>
                     <td>
                         <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(" . $row['id'] . ")'>刪除</button>
+                        </form><button onclick='Delete()'>刪除</button>
                     </td>
                 </tr>
             </table>
@@ -111,6 +111,6 @@
             }
         </script>
     </div>
-</pre>
+
 </body>
 </html>

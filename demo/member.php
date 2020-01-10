@@ -1,7 +1,5 @@
 <?php
-    /**
-    * @package Example-application
-    */
+    include_once 'statusBar.php';
     require '../libs/Smarty.class.php';
     require 'db_connect.php';
     $smarty = new Smarty;

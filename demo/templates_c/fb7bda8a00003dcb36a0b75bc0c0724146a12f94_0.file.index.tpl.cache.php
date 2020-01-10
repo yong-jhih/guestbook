@@ -1,31 +1,28 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-09 07:50:39
+/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:44:58
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e16cd3fb8d342_21674914',
+  'unifunc' => 'content_5e18398a9d3d78_80628876',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578552637,
+      1 => 1578645494,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:statusBar.tpl' => 1,
   ),
 ),false)) {
-function content_5e16cd3fb8d342_21674914 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '21255021715e16cd3fb43f81_86571343';
-$_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_5e18398a9d3d78_80628876 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '19706639575e18398a99ae84_51042844';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +45,6 @@ $_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $
 >
 </head>
 <body>
-<pre>
         <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -82,60 +78,7 @@ $_smarty_tpl->_subTemplateRender("file:statusBar.tpl", $_smarty_tpl->cache_id, $
         </div>
     </div>
     
-        <div class="accordion" id="accordionExample">
-
-        <?php
-$__section_messageList_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['message']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_messageList_0_total = $__section_messageList_0_loop;
-$_smarty_tpl->tpl_vars['__smarty_section_messageList'] = new Smarty_Variable(array());
-if ($__section_messageList_0_total !== 0) {
-for ($__section_messageList_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] = 0; $__section_messageList_0_iteration <= $__section_messageList_0_total; $__section_messageList_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']++){
-?>
-        <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['id'];?>
-
-        <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['subject'];?>
-
-        <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['author'];?>
-
-        <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['content'];?>
-
-        <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['memberID'];?>
-
-
-
-            <div class="card" bgcolor="#D9F2FF">
-                <div class='card-header' style='border:2px solid #D9F2FF' id='heading<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-'>
-                    <h2 class="mb-0">
-                        <button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-' aria-expanded='true' aria-controls='collapse<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-'>
-                            <?php echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['subject'];?>
-
-                        </button>
-                    </h2>
-                </div>
-                <div id='collapse<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-' class='collapse' aria-labelledby='heading<?php echo $_smarty_tpl->tpl_vars['i']->value;?>
-' data-parent='#accordionExample'>
-                    <div class="card-body" style="display:flex">
-                    <?php ob_start();
-echo $_smarty_tpl->tpl_vars['message']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_messageList']->value['index'] : null)]['img'];
-$_prefixVariable1 = ob_get_clean();
-if ($_prefixVariable1 != null) {?>
-                        <div><img src='' style='width:400px;height:300px'></div>
-                    <?php }?>
-                        <div class="col-md-8" style="margin-left:20px;border:2px solid red"></div>
-                    </div>
-                </div>
-            </div>
-        <?php
-}
-}
-?>
-
-    </div>
-
+        
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -145,12 +88,7 @@ if ($_prefixVariable1 != null) {?>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                <?php if ($_smarty_tpl->tpl_vars['passed']->value) {?>
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50' value='<?php echo $_smarty_tpl->tpl_vars['memberName']->value;?>
-'></td>
-                <?php } else { ?> 
-                    <td width="85%"><input id="author" name="author" type="text" size="50"></td>
-                <?php }?>
+                    <td width='85%'><input id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
@@ -166,7 +104,7 @@ if ($_prefixVariable1 != null) {?>
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">　
+                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
                     <input type="reset" class='btn btn-outline-primary' value="重新輸入">
                 </td>
             </tr>
@@ -175,35 +113,9 @@ if ($_prefixVariable1 != null) {?>
     
     <?php echo '<script'; ?>
 >
-        <?php if ('passed' == 'true') {?>
-            islogin = true;
-        <?php } else { ?>
-            islogin = false;
-        <?php }?>
-
-        function checkMember(islogin) {
-            document.getElementById('author').disabled = !islogin;
-            document.getElementById('subject').disabled = !islogin;
-            document.getElementById('content').disabled = !islogin;
-            document.getElementById('enter').innerHTML = islogin ? "請在此輸入新的留言" : "如要留言請先登入會員";
-        }
-
-        function checkForm() {
-            if (document.myForm.author.value.length == 0) {
-                alert("請留名字");
-            } else if (document.myForm.subject.value.length == 0) {
-                alert("請給主題");
-            } else if (document.myForm.content.value.length == 0) {
-                alert("請給內容");
-            } else {
-                myForm.submit();
-            }
-        }
-
-        checkMember(islogin);
-    <?php echo '</script'; ?>
+        <?php echo '</script'; ?>
 >
-</pre>
+
 </body>
 </html><?php }
 }

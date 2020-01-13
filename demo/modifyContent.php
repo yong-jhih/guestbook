@@ -1,15 +1,17 @@
 <?php
-    require_once 'db_connect.php';
+    include_once 'statusBar.php';
+    require 'mysqlilib.php';
+    ini_set('display_errors','off');
+
     $content = $_POST['content'];
     $contentID = $_POST['contentID'];
+    $db=new StockDB('localhost','root','','guestbook');
+    $qstr = "UPDATE message SET content='$content' WHERE postID='$contentID'";
+    
     if(isset($_COOKIE['passed'])){
-        $link = create_connection();
-        $sql = "UPDATE message SET content='$content' WHERE id='$contentID'";
-        $result = execute_db($link,'guestbook',$sql);
-        
+        $data = $db->query($qstr);
         header("location:member.php");
-        }else{
-            header("location:index.php");
-        }
-        exit();
+    }else{
+        header("location:index.php");
+    }
 ?>

@@ -1,13 +1,15 @@
 <?php
-    require_once "db_connect.php";
+    require "mysqlilib.php";
+    ini_set('display_errors','off');
+
     $testAC=$_POST['newAC'];
-    $link = create_connection();
-    $sql = "SELECT * from member WHERE memberAC='$testAC'";
-    $result = execute_db($link,'guestbook',$sql);
-    if(mysqli_num_rows($result)!=0){
+    $db=new StockDB('localhost','root','','guestbook');
+    $qstr = "SELECT memberAC from member WHERE memberAC='$testAC'";
+    $data = $db->query($qstr);
+    $totalRecords = $data->num_rows;
+
+    if($totalRecords!=0){
         header('Content-Type: application/json; charset=utf-8');
         echo  json_encode($testAC);
-        mysqli_free_result($result);
     }
-    exit();
 ?>

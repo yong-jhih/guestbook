@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:36:57
+/* Smarty version 3.1.34-dev-7, created on 2020-01-13 08:57:25
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1837a969e7a6_88391816',
+  'unifunc' => 'content_5e1c22e53a9d62_94213086',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6822df0f23d8eb7cb7c9df9b8a3634e7c095efbe' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\checkpwd.tpl',
-      1 => 1578645415,
+      1 => 1578902187,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1837a969e7a6_88391816 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '18545302145e1837a9665d97_26720853';
+function content_5e1c22e53a9d62_94213086 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '6544159505e1c22e538eaf3_70442425';
 ?>
 <!DOCTYPE html>
 <html lang="en">

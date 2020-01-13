@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:44:58
+/* Smarty version 3.1.34-dev-7, created on 2020-01-13 09:32:24
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e18398a9d3d78_80628876',
+  'unifunc' => 'content_5e1c2b18886f61_56486352',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578645494,
+      1 => 1578904343,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e18398a9d3d78_80628876 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '19706639575e18398a99ae84_51042844';
+function content_5e1c2b18886f61_56486352 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '4344854735e1c2b188472d1_54536029';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +78,39 @@ $_smarty_tpl->compiled->nocache_hash = '19706639575e18398a99ae84_51042844';
         </div>
     </div>
     
+        <hr>
+    <div class="accordion" id="accordionExample">
+        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['post_array']->value, 'post');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
+?>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" aria-expanded="true" aria-controls="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+">
+                            <?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+
+                    </div>
+                </div>
+            </div>
+        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+    </div>
+    <hr>
+
         
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">

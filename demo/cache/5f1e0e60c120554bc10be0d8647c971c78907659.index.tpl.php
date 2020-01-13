@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-10 11:04:17
+/* Smarty version 3.1.34-dev-7, created on 2020-01-13 11:01:52
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e184c21464950_30415546',
+  'unifunc' => 'content_5e1c401018a137_47381220',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578645494,
+      1 => 1578904343,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 120,
 ),true)) {
-function content_5e184c21464950_30415546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1c401018a137_47381220 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,6 +68,11 @@ function content_5e184c21464950_30415546 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
     
+        <hr>
+    <div class="accordion" id="accordionExample">
+            </div>
+    <hr>
+
         
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">

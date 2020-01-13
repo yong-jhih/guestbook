@@ -1,14 +1,17 @@
 <?php
-    require_once 'db_connect.php';
+    include_once 'statusBar.php';
+    require 'mysqlilib.php';
+    ini_set('display_errors','off');
     $deleteID = $_POST['deleteID'];
+
+    $db=new StockDB('localhost','root','','guestbook');
+    $qstr = "DELETE FROM message where postID='$deleteID'";
+    $data = $db->query($qstr);
+
     if(isset($_COOKIE['passed'])){
-        $link = create_connection();
-        $sql = "DELETE FROM message where id='$deleteID'";
-        $result = execute_db($link,'guestbook',$sql);
-        echo  json_encode($deleteID);
+        echo json_encode($deleteID);
         header("location:member.php");
-        }else{
-            header("location:index.php");
-        }
-        exit();
+    }else{
+        header("location:index.php");
+    }
 ?>

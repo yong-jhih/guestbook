@@ -49,36 +49,71 @@
     </div>
     
     {* 留言表 *}
-    {* <div class="accordion" id="accordionExample">
-
-        {section name=messageList loop=$message}
-        {$message[messageList].id}
-        {$message[messageList].subject}
-        {$message[messageList].author}
-        {$message[messageList].content}
-        {$message[messageList].memberID}
-
-
-            <div class="card" bgcolor="#D9F2FF">
-                <div class='card-header' style='border:2px solid #D9F2FF' id='heading{$i}'>
+    <hr>
+    <div class="accordion" id="accordionExample">
+        {foreach item=post from=$post_array}
+            <div class="card">
+                <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class='btn btn-link' type='button' data-toggle='collapse' data-target='#collapse{$i}' aria-expanded='true' aria-controls='collapse{$i}'>
-                            {$message[messageList].subject}
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{$post.postID}" aria-expanded="true" aria-controls="collapse{$post.postID}">
+                            {$post.subject}
                         </button>
                     </h2>
                 </div>
-                <div id='collapse{$i}' class='collapse' aria-labelledby='heading{$i}' data-parent='#accordionExample'>
-                    <div class="card-body" style="display:flex">
-                    {if {$message[messageList].img}!=null}
-                        <div><img src='' style='width:400px;height:300px'></div>
-                    {/if}
-                        <div class="col-md-8" style="margin-left:20px;border:2px solid red"></div>
+                <div id="collapse{$post.postID}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        {$post.content}
                     </div>
                 </div>
             </div>
-        {/section}
+        {/foreach}
+    </div>
+    <hr>
+{*     
+        // 跳頁
+        // echo "<hr>";
+        // echo "<nav aria-label='Page navigation example'>";
+        // echo "<ul class='pagination' style='align:center;background-color:green'>";
+        // if ($page > 1) {
+        //     echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page - 1) . "'>上一頁</a></li>";
+        // }
 
-    </div> *}
+        // for ($i = 1; $i <= $totalPages; $i++) {
+        //     if ($i == $page) {
+        //         echo "<li class='page-item'><a class='page-link' disabled><u>$i</u></a></li>";
+        //     } else {
+        //         echo "<li class='page-item'><a class='page-link' href='index.php?page=$i'>$i</a></li>";
+        //     }
+        // }
+
+        // if ($page < $totalPages) {
+        //     echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page + 1) . "'>下一頁</a></li>";
+        // }
+        // echo "</ul>";
+        // echo "</nav>";
+      *}
+
+    {* 跳頁 *}
+    {* <hr>
+    <nav aria-label='Page navigation example'>
+        <ul class='pagination' style='align:center;background-color:green'>
+            {if $page > 1}
+                <li class='page-item'><a class='page-link' href="index.php?page={$page-1}">上一頁</a></li>
+            {/if}
+
+            
+            {if $page==1}
+                <li class='page-item'><a class='page-link' disabled><u>{$page}</u></a></li>
+            {else}
+                <li class='page-item'><a class='page-link' href="index.php?page={$page}"></a></li>
+            {/if}
+
+
+            {if $page < $totalPages}
+                <li class='page-item'><a class='page-link' href="index.php?page={$page+1}">下一頁</a></li>
+            {/if}
+        </ul>
+    </nav> *}
 
     {* 留言區 *}
     <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">

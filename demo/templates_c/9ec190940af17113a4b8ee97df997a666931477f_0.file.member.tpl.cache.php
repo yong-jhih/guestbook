@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:15:15
+/* Smarty version 3.1.34-dev-7, created on 2020-01-13 10:38:46
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e183293e6a0c8_34469261',
+  'unifunc' => 'content_5e1c3aa682d645_51789321',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578643877,
+      1 => 1578908320,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e183293e6a0c8_34469261 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
+function content_5e1c3aa682d645_51789321 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '13865824325e1c3aa67ea8b9_20720278';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,19 +56,19 @@ $_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
         }
     </style>
 </head>
-
 <body>
     <div style="display:flex">
-        <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+
+                <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
-                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="<?php echo $_smarty_tpl->tpl_vars['memberAC']->value;?>
+                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="<?php echo $_smarty_tpl->tpl_vars['member']->value[0];?>
 ">
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer02">密碼</label>
-                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="<?php echo $_smarty_tpl->tpl_vars['pw']->value;?>
+                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="<?php echo $_smarty_tpl->tpl_vars['member']->value[1];?>
 ">
                     <h6 style="visibility: hidden" id="checkPW">.</h6>
                 </div>
@@ -81,13 +79,13 @@ $_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="<?php echo $_smarty_tpl->tpl_vars['memberName']->value;?>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="<?php echo $_smarty_tpl->tpl_vars['member']->value[2];?>
 " required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer05">電子信箱</label>
-                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="<?php echo $_smarty_tpl->tpl_vars['email']->value;?>
+                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="<?php echo $_smarty_tpl->tpl_vars['member']->value[3];?>
 " required>
                     <h6 style="visibility: hidden" id="checkMail">.</h6>
                 </div>
@@ -97,7 +95,7 @@ $_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
             </form>
         </div>
 
-        <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+                <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <h4>留言列表</h4>
             <table>
                 <tr>
@@ -108,21 +106,36 @@ $_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
                 </tr>
             </table>
 
-            <table width='800' align='center' cellspacing='3'>
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['post_array']->value, 'post');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
+?>
+            <table width='800' cellspacing='3'>
                 <tr>
-                    <td>" . $row['subject'] . "</td>
-                    <td>" . $row['date'] . "</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
+</td>
                     <td class='content'>
                         <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value='row[id]'>
-                        <input type='text' name='content' id='$row[id]' value='$row[content]'>
+                        <input type='hidden' name='contentID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+">
+                        <input type='text' name='content' id="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" value="<?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+">
                     </td>
                     <td>
                         <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete()'>刪除</button>
+                        </form><button onclick='Delete(<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+)'>刪除</button>
                     </td>
                 </tr>
             </table>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
         </div>
         <?php echo '<script'; ?>
@@ -131,6 +144,7 @@ $_smarty_tpl->compiled->nocache_hash = '19558088035e183293e2df64_48275688';
         <?php echo '<script'; ?>
 >
             function Delete(deleteID) {
+                alert(deleteID);
                 $(document).ready(function() {
                     $.ajax({
                         async: true,

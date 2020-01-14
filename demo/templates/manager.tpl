@@ -1,31 +1,10 @@
-<?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:18:58
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
-
-/* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
-  'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d87826fe842_82921923',
-  'has_nocache_code' => false,
-  'file_dependency' => 
-  array (
-    '9ec190940af17113a4b8ee97df997a666931477f' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578983817,
-      2 => 'file',
-    ),
-  ),
-  'cache_lifetime' => 0,
-),true)) {
-function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl) {
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>會員中心</title>
+    <title>管理中心</title>
     <script src="jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
@@ -47,15 +26,16 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
 <body>
     <div style="display:flex">
 
-                <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+        {* 資料修改ok *}
+        <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
-                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="abc123456">
+                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="{$member.0}">
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer02">密碼</label>
-                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="*********">
+                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="{$member.1}">
                     <h6 style="visibility: hidden" id="checkPW">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
@@ -65,12 +45,12 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="abc123456" required>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="{$member.2}" required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer05">電子信箱</label>
-                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="abc123456@aaa.bbb" required>
+                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="{$member.3}" required>
                     <h6 style="visibility: hidden" id="checkMail">.</h6>
                 </div>
                 <div style="margin:15px" onmouseover="McheckForm()">
@@ -79,7 +59,8 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
             </form>
         </div>
 
-                <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+        {* 文章列表ok *}
+        <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <h4>留言列表</h4>
             <table>
                 <tr>
@@ -90,52 +71,24 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
                 </tr>
             </table>
 
-                        <table width='800' cellspacing='3'>
+            {foreach item=post from=$post_array}
+            <table width='800' cellspacing='3'>
                 <tr>
-                    <td></td>
-                    <td>2020-01-14 10:11:06</td>
+                    <td>{$post.subject}</td>
+                    <td>{$post.date}</td>
                     <td class='content'>
                         <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="55">
-                        <input type='text' name='content' id="55" value="45242452452">
+                        <input type='hidden' name='contentID' value="{$post.postID}">
+                        <input type='text' name='content' id="{$post.postID}" value="{$post.content}">
                     </td>
                     <td>
                         <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(55)'>刪除</button>
+                        </form><button onclick='Delete({$post.postID})'>刪除</button>
                     </td>
                 </tr>
             </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td>22222222</td>
-                    <td>2020-01-14 10:03:36</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="52">
-                        <input type='text' name='content' id="52" value="22222222">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(52)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td>111111111111</td>
-                    <td>2020-01-14 10:03:25</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="51">
-                        <input type='text' name='content' id="51" value="111111111111">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(51)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-            
+            {/foreach}
+
         </div>
         <script src="check.js"></script>
         <script>
@@ -162,5 +115,4 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
 </body>
-</html><?php }
-}
+</html>

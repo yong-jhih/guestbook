@@ -1,4 +1,12 @@
-<?php session_start(); ?>
+<?php
+  session_start();
+  function test_input($data){
+    $data = trim($data);  //去除使用者輸入資料中不必要的字元（多餘的空格、製表符、換行）
+    $data = stripslashes($data);  //刪除使用者輸入資料中的反斜槓（\）
+    $data = htmlspecialchars($data);  //把特殊字元轉換為 HTML 實體
+    return $data;
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

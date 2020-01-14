@@ -8,7 +8,7 @@
     $qstr = "DELETE FROM message where postID='$deleteID'";
     $data = $db->query($qstr);
 
-    if(isset($_COOKIE['passed'])){
+    if(isset($_SESSION['passed'])){
         echo json_encode($deleteID);
         header("location:member.php");
     }else{

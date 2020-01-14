@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 08:05:49
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 09:45:31
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\error.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d684d5020d9_94309763',
+  'unifunc' => 'content_5e1d7fabca1a99_13911933',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '6822df0f23d8eb7cb7c9df9b8a3634e7c095efbe' => 
+    '5c261e0e093568d41cb1b414a96e23a8dd9499b9' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\checkpwd.tpl',
-      1 => 1578985173,
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\error.tpl',
+      1 => 1578989851,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d684d5020d9_94309763 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '4108879945e1d684d4c3541_92232330';
+function content_5e1d7fabca1a99_13911933 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '12663593225e1d7fabc65114_72199390';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,15 +44,9 @@ $_smarty_tpl->compiled->nocache_hash = '4108879945e1d684d4c3541_92232330';
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
-    <?php if ($_smarty_tpl->tpl_vars['permission']->value == 1) {?>
-        <?php echo '<script'; ?>
->setTimeout("window.location.href='member.php'",2000);<?php echo '</script'; ?>
+    <?php echo '<script'; ?>
+>setTimeout("window.location.href='index.php'",2000);<?php echo '</script'; ?>
 >
-    <?php } else { ?>
-        <?php echo '<script'; ?>
->setTimeout("window.location.href='manager.php'",2000);<?php echo '</script'; ?>
->
-    <?php }?>
 </head>
 <body>
     <div class="text-center" style="position: absolute;top:46%;left:49%">
@@ -60,6 +54,11 @@ $_smarty_tpl->compiled->nocache_hash = '4108879945e1d684d4c3541_92232330';
         <span class="sr-only">Loading...</span>
         </div>
     </div>
+    <?php echo '<script'; ?>
+>
+        alert('不允許的資料格式');
+    <?php echo '</script'; ?>
+>
 </body>
 </html><?php }
 }

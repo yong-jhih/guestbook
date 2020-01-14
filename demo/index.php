@@ -3,7 +3,6 @@
     require 'mysqlilib.php';
     ini_set('display_errors','off'); 
     $db=new StockDB('localhost','root','','guestbook');
-
     $memberName=$_SESSION['memberName'];
 
     // 主文查詢

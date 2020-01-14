@@ -3,18 +3,19 @@
     require 'mysqlilib.php';
     ini_set('display_errors','off');
 
-    $memberPW = md5(strrev($_POST['memberPW'].$_POST['memberAC']),);
-    $memberName = $_POST['memberName'];
-    $memberMail = $_POST['memberMail'];
     $memberPWL = strlen($_POST['memberPW']);
-    setcookie('memberPWL',$memberPWL);
+    $memberPW = md5(strrev(test_input($_POST['memberPW']).$memberAC),);
+    $memberName = test_input($_POST['memberName']);
+    $memberMail = test_input($_POST['memberMail']);
+    $memberID = $_SESSION['memberID'];
 
-    $db=new StockDB('localhost','root','','guestbook');
-    $qstr = "UPDATE member SET memberPW='$memberPW',memberName='$memberName',email='$memberMail' WHERE memberID='$memberID'";
-    
-    if(isset($_COOKIE['passed'])){
-        $data = $db->query($qstr);
-        header("location:member.php");
+    if(isset($_SESSION['passed'])){
+        if($memberName == $_POST['memberName'] && $memberMail == $_POST['memberMail']){
+            $db=new StockDB('localhost','root','','guestbook');
+            $qstr = "UPDATE member SET memberPW='$memberPW',memberName='$memberName',email='$memberMail' WHERE memberID='$memberID'";
+            $data = $db->query($qstr);
+            header("location:member.php");
+        }
     }else{
         header("location:index.php");
     }

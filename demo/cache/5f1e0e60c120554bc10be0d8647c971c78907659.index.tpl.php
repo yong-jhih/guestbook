@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 07:39:31
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 11:00:37
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d6223664370_96382825',
+  'unifunc' => 'content_5e1d91452969c7_51891247',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578983777,
+      1 => 1578993268,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1d6223664370_96382825 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,25 +73,23 @@ function content_5e1d6223664370_96382825 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse41" aria-expanded="true" aria-controls="collapse41">
-                            <h4>222222222</h4>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse56" aria-expanded="true" aria-controls="collapse56">
+                            <h4>123</h4>
                         </button>
                     </h2>
                 </div>
-                <div id="collapse41" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapse56" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
-                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4320200114071856123.jpg" style="display: block;width: auto;height: 100%;" ></div>
+                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4720200114110026123.jpg" style="display: block;width: auto;height: 100%;" ></div>
                         <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">cba123456 said:</h5>
-                            <p>222222222<p>
-                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>33333333333<p>
-                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>123<p>
+                                                                                                                                                                                                                                        </div>
                                             </div>
                     <div style="text-align:center">
                         <form action="reply.php" method="post">
                             <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
-                            <input type='text' name='subID' value="41" hidden>
+                            <input type='text' name='subID' value="56" hidden>
                         </form>
                     </div>
                 </div>
@@ -99,32 +97,52 @@ function content_5e1d6223664370_96382825 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse40" aria-expanded="true" aria-controls="collapse40">
-                            <h4>1111111111</h4>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse52" aria-expanded="true" aria-controls="collapse52">
+                            <h4>22222222</h4>
                         </button>
                     </h2>
                 </div>
-                <div id="collapse40" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id="collapse52" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
-                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                            <h5 style="margin:0px">cba123456 said:</h5>
-                            <p>1111111111<p>
-                                                                                                                                                            <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>44444444444444444<p>
-                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>gsnnsnsrn<p>
-                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>gnbsdgnsdgnsdrgns<p>
-                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>gfnsgnsgnsgnsg<p>
-                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>sgnsgnsgnfgnsfgn<p>
+                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4720200114100336123.jpg" style="display: block;width: auto;height: 100%;" ></div>
+                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>22222222<p>
+                                                                                                <h5 style="margin:0px">cba123456 said:</h5>
+                                    <p>3333333333<p>
+                                                                                                                                                                                            <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>45242452452<p>
                                                                                     </div>
                                             </div>
                     <div style="text-align:center">
                         <form action="reply.php" method="post">
                             <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
-                            <input type='text' name='subID' value="40" hidden>
+                            <input type='text' name='subID' value="52" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                    <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse51" aria-expanded="true" aria-controls="collapse51">
+                            <h4>111111111111</h4>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse51" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>111111111111<p>
+                                                                                                                                                            <h5 style="margin:0px">cba123456 said:</h5>
+                                    <p>4444444444444444444<p>
+                                                                                                                                                </div>
+                                            </div>
+                    <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <input type='text' name='subID' value="51" hidden>
                         </form>
                     </div>
                 </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:04:30
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 08:05:51
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d841e37e941_20298333',
+  'unifunc' => 'content_5e1d684f667886_60376363',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9ec190940af17113a4b8ee97df997a666931477f' => 
+    '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578983817,
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
+      1 => 1578985363,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d841e37e941_20298333 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
+function content_5e1d684f667886_60376363 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '14558687305e1d684f6255b5_80244835';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +29,7 @@ $_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>會員中心</title>
+    <title>管理中心</title>
     <?php echo '<script'; ?>
  src="jquery-3.4.1.js"><?php echo '</script'; ?>
 >

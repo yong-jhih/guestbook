@@ -1,31 +1,31 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:18:58
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:13:50
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d87826fe842_82921923',
+  'unifunc' => 'content_5e1d864e14d970_26375408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9ec190940af17113a4b8ee97df997a666931477f' => 
+    '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578983817,
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
+      1 => 1578985363,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1d864e14d970_26375408 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>會員中心</title>
+    <title>管理中心</title>
     <script src="jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
@@ -102,6 +102,36 @@ function content_5e1d87826fe842_82921923 (Smarty_Internal_Template $_smarty_tpl)
                     <td>
                         <button type='submit'>修改內容</button>
                         </form><button onclick='Delete(55)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 10:04:55</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="54">
+                        <input type='text' name='content' id="54" value="4444444444444444444">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(54)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 10:04:50</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="53">
+                        <input type='text' name='content' id="53" value="3333333333">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(53)'>刪除</button>
                     </td>
                 </tr>
             </table>

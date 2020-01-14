@@ -1,10 +1,10 @@
 <?php
     include_once 'statusBar.php';
     require 'mysqlilib.php';
-    ini_set('display_errors','off'); 
+    ini_set('display_errors','off');
 
     // 查詢會員資料
-    $memberID= $_COOKIE['memberID'];
+    $memberID= $_SESSION['memberID'];
     $db=new StockDB('localhost','root','','guestbook');
     $qstr = "SELECT * FROM member WHERE memberID='$memberID'";
     $data = $db->query($qstr);
@@ -26,15 +26,14 @@
     $smarty = new Smarty;
     $smarty->debugging = true;
     $smarty->caching = true;
-    $smarty->cache_lifetime = 120;
+    $smarty->cache_lifetime = 0;
 
-    if(isset($_COOKIE['passed'])){
-
+    if(isset($_SESSION['passed'])){
         // 會員資料smarty
         $memberName = $r['memberName'];
         $memberAC = $r['memberAC'];
         $email = $r['email'];
-        $pwl = (int)$_COOKIE['memberPWL'];
+        $pwl = (int)$_SESSION['memberPWL'];
         $pw = "";
         for ($i = 0; $i < $pwl; $i++) {
             $pw = $pw . "*";

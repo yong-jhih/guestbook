@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-13 11:01:52
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 07:39:31
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1c401018a137_47381220',
+  'unifunc' => 'content_5e1d6223664370_96382825',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578904343,
+      1 => 1578983777,
       2 => 'file',
     ),
   ),
-  'cache_lifetime' => 120,
+  'cache_lifetime' => 0,
 ),true)) {
-function content_5e1c401018a137_47381220 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1d6223664370_96382825 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,10 +70,68 @@ function content_5e1c401018a137_47381220 (Smarty_Internal_Template $_smarty_tpl)
     
         <hr>
     <div class="accordion" id="accordionExample">
+                    <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse41" aria-expanded="true" aria-controls="collapse41">
+                            <h4>222222222</h4>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse41" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4320200114071856123.jpg" style="display: block;width: auto;height: 100%;" ></div>
+                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                            <h5 style="margin:0px">cba123456 said:</h5>
+                            <p>222222222<p>
+                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>33333333333<p>
+                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                    <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <input type='text' name='subID' value="41" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                    <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse40" aria-expanded="true" aria-controls="collapse40">
+                            <h4>1111111111</h4>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse40" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">cba123456 said:</h5>
+                            <p>1111111111<p>
+                                                                                                                                                            <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>44444444444444444<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>gsnnsnsrn<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>gnbsdgnsdgnsdrgns<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>gfnsgnsgnsgnsg<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>sgnsgnsgnfgnsfgn<p>
+                                                                                    </div>
+                                            </div>
+                    <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <input type='text' name='subID' value="40" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
             </div>
     <hr>
 
-        
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -107,7 +165,35 @@ function content_5e1c401018a137_47381220 (Smarty_Internal_Template $_smarty_tpl)
     </form>
     
     <script>
-        </script>
+        let cookie = document.cookie.split(" ");
+        if(cookie[0]=="passed=1;"){
+            passed=true;
+            document.getElementById('author').value = cookie[1].split("=")[1];
+        }else{
+            passed=false;
+        }
+
+        function checkMember() {
+            document.getElementById('author').disabled = !passed;
+            document.getElementById('subject').disabled = !passed;
+            document.getElementById('content').disabled = !passed;
+            document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
+            document.getElementById('reply').disabled = !passed;
+        }
+
+        function checkForm() {
+            if (document.myForm.author.value.length == 0) {
+                alert("請留名字");
+            } else if (document.myForm.subject.value.length == 0) {
+                alert("請給主題");
+            } else if (document.myForm.content.value.length == 0) {
+                alert("請給內容");
+            } else {
+                myForm.submit();
+            }
+        }
+        checkMember();
+    </script>
 
 </body>
 </html><?php }

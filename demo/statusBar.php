@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +24,8 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
             <?php
-              if(isset($_COOKIE['passed'])){
-                echo $_COOKIE['memberName']." 歡迎回來";
+              if(isset($_SESSION['passed'])){
+                echo $_SESSION['memberName']." 歡迎回來";
               }
             ?>
           </a>
@@ -35,7 +36,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>Search</button>
       </form>
       <?php
-        if(isset($_COOKIE['passed'])){
+        if(isset($_SESSION['passed'])){
           echo "<div style='text-align:right;margin-right:5px'>";
             echo "<button class='btn btn-outline-primary' onclick='logOut()' style='margin-right:5px'>"."登出</button>";
             echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>會員中心</button>";

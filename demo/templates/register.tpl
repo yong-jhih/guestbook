@@ -14,7 +14,7 @@
 </head>
 <body>
 
-  {* 登入頁 *}
+  {* 登入頁ok *}
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -48,7 +48,7 @@
     </div>
   </div>
 
-  {* 資料輸入區 *}
+  {* 資料輸入區ok *}
   <div class="col-md-4 mb-3">
     <form method="POST" action="addAC.php">
       <div class="col-md-9 mb-3">

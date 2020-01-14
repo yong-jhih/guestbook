@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-13 09:32:24
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 07:36:23
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1c2b18886f61_56486352',
+  'unifunc' => 'content_5e1d6167d8e5e1_20323906',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578904343,
+      1 => 1578983777,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1c2b18886f61_56486352 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '4344854735e1c2b188472d1_54536029';
+function content_5e1d6167d8e5e1_20323906 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '6857900405e1d6167d40b54_34517632';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,16 +91,68 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 " aria-expanded="true" aria-controls="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 ">
-                            <?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
-
+                            <h4><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+</h4>
                         </button>
                     </h2>
                 </div>
                 <div id="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 " class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        <?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
-
+                    <div class="card-body" style="display:flex">
+                        <?php if ($_smarty_tpl->tpl_vars['post']->value['img']) {?>
+                        <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['img'];?>
+" style="display: block;width: auto;height: 100%;" ></div>
+                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                            <h5 style="margin:0px"><?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+ said:</h5>
+                            <p><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+<p>
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reply_array']->value, 'reply');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
+?>
+                                <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
+                                    <h5 style="margin:0px"><?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
+ said:</h5>
+                                    <p><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
+<p>
+                                <?php }?>
+                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                        </div>
+                        <?php } else { ?>
+                        <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px"><?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+ said:</h5>
+                            <p><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+<p>
+                            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reply_array']->value, 'reply');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
+?>
+                                <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
+                                    <h5 style="margin:0px"><?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
+ said:</h5>
+                                    <p><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
+<p>
+                                <?php }?>
+                            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                        </div>
+                        <?php }?>
+                    </div>
+                    <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <input type='text' name='subID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" hidden>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -111,7 +163,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </div>
     <hr>
 
-        
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -146,7 +197,35 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     
     <?php echo '<script'; ?>
 >
-        <?php echo '</script'; ?>
+        let cookie = document.cookie.split(" ");
+        if(cookie[0]=="passed=1;"){
+            passed=true;
+            document.getElementById('author').value = cookie[1].split("=")[1];
+        }else{
+            passed=false;
+        }
+
+        function checkMember() {
+            document.getElementById('author').disabled = !passed;
+            document.getElementById('subject').disabled = !passed;
+            document.getElementById('content').disabled = !passed;
+            document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
+            document.getElementById('reply').disabled = !passed;
+        }
+
+        function checkForm() {
+            if (document.myForm.author.value.length == 0) {
+                alert("請留名字");
+            } else if (document.myForm.subject.value.length == 0) {
+                alert("請給主題");
+            } else if (document.myForm.content.value.length == 0) {
+                alert("請給內容");
+            } else {
+                myForm.submit();
+            }
+        }
+        checkMember();
+    <?php echo '</script'; ?>
 >
 
 </body>

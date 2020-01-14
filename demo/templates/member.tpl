@@ -93,7 +93,6 @@
         <script src="check.js"></script>
         <script>
             function Delete(deleteID) {
-                alert(deleteID);
                 $(document).ready(function() {
                     $.ajax({
                         async: true,

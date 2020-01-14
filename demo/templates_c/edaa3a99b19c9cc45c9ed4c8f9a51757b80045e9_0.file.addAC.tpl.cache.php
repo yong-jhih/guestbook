@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-10 09:13:37
+/* Smarty version 3.1.34-dev-7, created on 2020-01-14 06:06:16
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\addAC.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e183231020a82_37207267',
+  'unifunc' => 'content_5e1d4c481dd4b4_13326730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'edaa3a99b19c9cc45c9ed4c8f9a51757b80045e9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\addAC.tpl',
-      1 => 1578643847,
+      1 => 1578968408,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e183231020a82_37207267 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '14326122605e183230f2e694_30282793';
+function content_5e1d4c481dd4b4_13326730 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '4554991025e1d4c481c2e36_98911674';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -56,66 +56,50 @@
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{$post.postID}" aria-expanded="true" aria-controls="collapse{$post.postID}">
-                            {$post.subject}
+                            <h4>{$post.subject}</h4>
                         </button>
                     </h2>
                 </div>
                 <div id="collapse{$post.postID}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body">
-                        {$post.content}
+                    <div class="card-body" style="display:flex">
+                        {if $post.img}
+                        <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
+                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                            <h5 style="margin:0px">{$post.memberName} said:</h5>
+                            <p>{$post.content}<p>
+                            {foreach item=reply from=$reply_array}
+                                {if $reply.subID==$post.postID}
+                                    <h5 style="margin:0px">{$reply.memberName} said:</h5>
+                                    <p>{$reply.content}<p>
+                                {/if}
+                            {/foreach}
+                        </div>
+                        {else}
+                        <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">{$post.memberName} said:</h5>
+                            <p>{$post.content}<p>
+                            {foreach item=reply from=$reply_array}
+                                {if $reply.subID==$post.postID}
+                                    <h5 style="margin:0px">{$reply.memberName} said:</h5>
+                                    <p>{$reply.content}<p>
+                                {/if}
+                            {/foreach}
+                        </div>
+                        {/if}
+                    </div>
+                    <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <input type='text' name='subID' value="{$post.postID}" hidden>
+                        </form>
                     </div>
                 </div>
             </div>
         {/foreach}
     </div>
     <hr>
-{*     
-        // 跳頁
-        // echo "<hr>";
-        // echo "<nav aria-label='Page navigation example'>";
-        // echo "<ul class='pagination' style='align:center;background-color:green'>";
-        // if ($page > 1) {
-        //     echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page - 1) . "'>上一頁</a></li>";
-        // }
 
-        // for ($i = 1; $i <= $totalPages; $i++) {
-        //     if ($i == $page) {
-        //         echo "<li class='page-item'><a class='page-link' disabled><u>$i</u></a></li>";
-        //     } else {
-        //         echo "<li class='page-item'><a class='page-link' href='index.php?page=$i'>$i</a></li>";
-        //     }
-        // }
-
-        // if ($page < $totalPages) {
-        //     echo "<li class='page-item'><a class='page-link' href='index.php?page=" . ($page + 1) . "'>下一頁</a></li>";
-        // }
-        // echo "</ul>";
-        // echo "</nav>";
-      *}
-
-    {* 跳頁 *}
-    {* <hr>
-    <nav aria-label='Page navigation example'>
-        <ul class='pagination' style='align:center;background-color:green'>
-            {if $page > 1}
-                <li class='page-item'><a class='page-link' href="index.php?page={$page-1}">上一頁</a></li>
-            {/if}
-
-            
-            {if $page==1}
-                <li class='page-item'><a class='page-link' disabled><u>{$page}</u></a></li>
-            {else}
-                <li class='page-item'><a class='page-link' href="index.php?page={$page}"></a></li>
-            {/if}
-
-
-            {if $page < $totalPages}
-                <li class='page-item'><a class='page-link' href="index.php?page={$page+1}">下一頁</a></li>
-            {/if}
-        </ul>
-    </nav> *}
-
-    {* 留言區 *}
+    {* 留言區ok *}
     <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -149,12 +133,20 @@
     </form>
     
     <script>
-    {* alert(document.cookie);
+        let cookie = document.cookie.split(" ");
+        if(cookie[0]=="passed=1;"){
+            passed=true;
+            document.getElementById('author').value = cookie[1].split("=")[1];
+        }else{
+            passed=false;
+        }
+
         function checkMember() {
             document.getElementById('author').disabled = !passed;
             document.getElementById('subject').disabled = !passed;
             document.getElementById('content').disabled = !passed;
             document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
+            document.getElementById('reply').disabled = !passed;
         }
 
         function checkForm() {
@@ -168,7 +160,7 @@
                 myForm.submit();
             }
         }
-        checkMember(); *}
+        checkMember();
     </script>
 
 </body>

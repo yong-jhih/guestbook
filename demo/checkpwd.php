@@ -18,10 +18,12 @@
         }
         $memberName = $r['memberName'];
         $memberID = $r['memberID'];
-        setcookie('memberName',$memberName);
-        setcookie('memberID',$memberID);
-        setcookie('memberPWL',$memberPWL);
+        $_SESSION['memberName']=$memberName;
+        $_SESSION['memberID']=$memberID;
+        $_SESSION['memberPWL']=$memberPWL;
+        $_SESSION['passed']=true;
         setcookie('passed',true);
+        setcookie('memberName',$memberName);
     }else{
         echo "<script>alert('帳號密碼輸入錯誤,請重新輸入');history.back();</script>";
     }
@@ -30,7 +32,7 @@
     $smarty = new Smarty;
     $smarty->debugging = true;
     $smarty->caching = true;
-    $smarty->cache_lifetime = 120;
+    $smarty->cache_lifetime = 0;
     $smarty->display('checkpwd.tpl');
 
 ?>

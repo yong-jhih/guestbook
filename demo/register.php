@@ -4,7 +4,7 @@
   $smarty = new Smarty;
   $smarty->debugging = true;
   $smarty->caching = true;
-  $smarty->cache_lifetime = 120;
+  $smarty->cache_lifetime = 0;
   $smarty->display('register.tpl');
 
 ?>

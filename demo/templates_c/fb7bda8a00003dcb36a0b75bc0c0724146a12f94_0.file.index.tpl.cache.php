@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:14:34
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 06:23:49
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d867ad87566_10046571',
+  'unifunc' => 'content_5e1ea1e5176e88_37817276',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578993268,
+      1 => 1579065797,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d867ad87566_10046571 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '5686268445e1d867ad5ed14_01325327';
+function content_5e1ea1e5176e88_37817276 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '5740973315e1ea1e512d5e6_67539490';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +85,7 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 ?>
-            <div class="card">
+                        <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
@@ -96,7 +96,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
                         </button>
                     </h2>
                 </div>
-                <div id="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+                                <div id="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 " class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
                         <?php if ($_smarty_tpl->tpl_vars['post']->value['img']) {?>
@@ -147,10 +147,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                         </div>
                         <?php }?>
                     </div>
-                    <div style="text-align:center">
+                                        <div style="text-align:center">
                         <form action="reply.php" method="post">
-                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <div>
+                                <?php if ($_smarty_tpl->tpl_vars['passed']->value) {?>
+                                <input type="text" class="col-sm-11" name="reply" required>
+                                <?php } else { ?>
+                                <input type="text" class="col-sm-11" name="reply" disabled required>
+                                <?php }?>
+                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
                             <input type='text' name='subID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" hidden>
+                            <input type='text' name='subject' value="RE.<?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
 " hidden>
                         </form>
                     </div>
@@ -172,19 +181,19 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50'></td>
+                    <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
-                <td width="85%"><input id='subject' name="subject" type="text" size="50"></td>
+                <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">內容</td>
-                <td width="85%"><textarea id='content' name="content" cols="50" rows="5"></textarea></td>
+                <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file"></td>
+                <td width="85%"><input id='img' name="img" type="file" accept="image,.jpg,.jpeg,.png,.gif"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -204,15 +213,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         }else{
             passed=false;
         }
-
         function checkMember() {
             document.getElementById('author').disabled = !passed;
             document.getElementById('subject').disabled = !passed;
             document.getElementById('content').disabled = !passed;
             document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
-            document.getElementById('reply').disabled = !passed;
-        }
-
+        }checkMember();
         function checkForm() {
             if (document.myForm.author.value.length == 0) {
                 alert("請留名字");
@@ -224,7 +230,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 myForm.submit();
             }
         }
-        checkMember();
     <?php echo '</script'; ?>
 >
 

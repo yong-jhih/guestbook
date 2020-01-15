@@ -23,4 +23,5 @@
     }else{
         $smarty->display('error.tpl');
     }
+    include_once 'footer.php';
 ?>

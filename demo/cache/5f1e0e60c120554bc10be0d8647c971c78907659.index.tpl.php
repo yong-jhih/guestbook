@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 11:00:37
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 06:42:46
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d91452969c7_51891247',
+  'unifunc' => 'content_5e1ea6565e3c60_36091093',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1578993268,
+      1 => 1579065797,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1ea6565e3c60_36091093 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,79 +70,472 @@ function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl)
     
         <hr>
     <div class="accordion" id="accordionExample">
-                    <div class="card">
+                                <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse56" aria-expanded="true" aria-controls="collapse56">
-                            <h4>123</h4>
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse80" aria-expanded="true" aria-controls="collapse80">
+                            <h4>strhtr</h4>
                         </button>
                     </h2>
                 </div>
-                <div id="collapse56" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4720200114110026123.jpg" style="display: block;width: auto;height: 100%;" ></div>
-                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">abc123456 said:</h5>
-                            <p>123<p>
-                                                                                                                                                                                                                                        </div>
-                                            </div>
-                    <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
-                            <input type='text' name='subID' value="56" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                    <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse52" aria-expanded="true" aria-controls="collapse52">
-                            <h4>22222222</h4>
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapse52" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4720200114100336123.jpg" style="display: block;width: auto;height: 100%;" ></div>
-                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">abc123456 said:</h5>
-                            <p>22222222<p>
-                                                                                                <h5 style="margin:0px">cba123456 said:</h5>
-                                    <p>3333333333<p>
-                                                                                                                                                                                            <h5 style="margin:0px">abc123456 said:</h5>
-                                    <p>45242452452<p>
-                                                                                    </div>
-                                            </div>
-                    <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
-                            <input type='text' name='subID' value="52" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                    <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse51" aria-expanded="true" aria-controls="collapse51">
-                            <h4>111111111111</h4>
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapse51" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                <div id="collapse80" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
                                                 <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
                             <h5 style="margin:0px">abc123456 said:</h5>
-                            <p>111111111111<p>
-                                                                                                                                                            <h5 style="margin:0px">cba123456 said:</h5>
-                                    <p>4444444444444444444<p>
-                                                                                                                                                </div>
+                            <p>1111111111<p>
+                                                                                                                                                                                                                        <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>trshsrhsrthsrhsr<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>strhstrstrhtr<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>hstrhsrhssr<p>
+                                                                                    </div>
                                             </div>
-                    <div style="text-align:center">
+                                        <div style="text-align:center">
                         <form action="reply.php" method="post">
-                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
-                            <input type='text' name='subID' value="51" hidden>
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="80" hidden>
+                            <input type='text' name='subject' value="RE.strhtr" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse79" aria-expanded="true" aria-controls="collapse79">
+                            <h4>srthrt</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse79" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>sthrtsrt<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="79" hidden>
+                            <input type='text' name='subject' value="RE.srthrt" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse78" aria-expanded="true" aria-controls="collapse78">
+                            <h4>srthtrstr</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse78" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>srthtsrsr<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="78" hidden>
+                            <input type='text' name='subject' value="RE.srthtrstr" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse77" aria-expanded="true" aria-controls="collapse77">
+                            <h4>srthrs</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse77" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>hsrthsr<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="77" hidden>
+                            <input type='text' name='subject' value="RE.srthrs" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse76" aria-expanded="true" aria-controls="collapse76">
+                            <h4>strhrt</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse76" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>strhsrth<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="76" hidden>
+                            <input type='text' name='subject' value="RE.strhrt" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse75" aria-expanded="true" aria-controls="collapse75">
+                            <h4>srthsrth</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse75" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>srthrtsrt<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="75" hidden>
+                            <input type='text' name='subject' value="RE.srthsrth" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse74" aria-expanded="true" aria-controls="collapse74">
+                            <h4>tghrrtrt</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse74" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>hsrhssr<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="74" hidden>
+                            <input type='text' name='subject' value="RE.tghrrtrt" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse73" aria-expanded="true" aria-controls="collapse73">
+                            <h4>esrher</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse73" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>erhesrhse<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="73" hidden>
+                            <input type='text' name='subject' value="RE.esrher" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse72" aria-expanded="true" aria-controls="collapse72">
+                            <h4>sethseh</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse72" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>sehtseh<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="72" hidden>
+                            <input type='text' name='subject' value="RE.sethseh" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse71" aria-expanded="true" aria-controls="collapse71">
+                            <h4>sthsthst</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse71" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>setheet<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="71" hidden>
+                            <input type='text' name='subject' value="RE.sthsthst" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse70" aria-expanded="true" aria-controls="collapse70">
+                            <h4>htshshs</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse70" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>sttsst<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="70" hidden>
+                            <input type='text' name='subject' value="RE.htshshs" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse69" aria-expanded="true" aria-controls="collapse69">
+                            <h4>srthstr</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse69" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>strhts<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="69" hidden>
+                            <input type='text' name='subject' value="RE.srthstr" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse68" aria-expanded="true" aria-controls="collapse68">
+                            <h4>strhss</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse68" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>tstrhshs<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="68" hidden>
+                            <input type='text' name='subject' value="RE.strhss" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse67" aria-expanded="true" aria-controls="collapse67">
+                            <h4>srthsr</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse67" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>strhsrstrtr<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="67" hidden>
+                            <input type='text' name='subject' value="RE.srthsr" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse66" aria-expanded="true" aria-controls="collapse66">
+                            <h4>大吉大利明天吃雞</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse66" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>2020-01-15<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="66" hidden>
+                            <input type='text' name='subject' value="RE.大吉大利明天吃雞" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse65" aria-expanded="true" aria-controls="collapse65">
+                            <h4>今天天氣不好</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse65" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>哭哭<p>
+                                                                                                                                                                                                                                                                                                                                                                </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="65" hidden>
+                            <input type='text' name='subject' value="RE.今天天氣不好" hidden>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                                <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse62" aria-expanded="true" aria-controls="collapse62">
+                            <h4>今天天氣很好</h4>
+                        </button>
+                    </h2>
+                </div>
+                                <div id="collapse62" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body" style="display:flex">
+                                                <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/4720200115045252123.jpg" style="display: block;width: auto;height: 100%;" ></div>
+                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                            <h5 style="margin:0px">abc123456 said:</h5>
+                            <p>當個網美<p>
+                                                                                                <h5 style="margin:0px">cba123456 said:</h5>
+                                    <p>小姐單身嗎<p>
+                                                                                                                                <h5 style="margin:0px">abc123456 said:</h5>
+                                    <p>喪偶 謝<p>
+                                                                                                                                                                                                                                                                        </div>
+                                            </div>
+                                        <div style="text-align:center">
+                        <form action="reply.php" method="post">
+                            <div>
+                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
+                            <input type='text' name='subID' value="62" hidden>
+                            <input type='text' name='subject' value="RE.今天天氣很好" hidden>
                         </form>
                     </div>
                 </div>
@@ -159,19 +552,19 @@ function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl)
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50'></td>
+                    <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
-                <td width="85%"><input id='subject' name="subject" type="text" size="50"></td>
+                <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">內容</td>
-                <td width="85%"><textarea id='content' name="content" cols="50" rows="5"></textarea></td>
+                <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file"></td>
+                <td width="85%"><input id='img' name="img" type="file" accept="image,.jpg,.jpeg,.png,.gif"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -190,15 +583,12 @@ function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl)
         }else{
             passed=false;
         }
-
         function checkMember() {
             document.getElementById('author').disabled = !passed;
             document.getElementById('subject').disabled = !passed;
             document.getElementById('content').disabled = !passed;
             document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
-            document.getElementById('reply').disabled = !passed;
-        }
-
+        }checkMember();
         function checkForm() {
             if (document.myForm.author.value.length == 0) {
                 alert("請留名字");
@@ -210,7 +600,6 @@ function content_5e1d91452969c7_51891247 (Smarty_Internal_Template $_smarty_tpl)
                 myForm.submit();
             }
         }
-        checkMember();
     </script>
 
 </body>

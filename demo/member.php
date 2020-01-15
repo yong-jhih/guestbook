@@ -47,4 +47,5 @@
         header("location:index.php");
     }
     $smarty->display('member.tpl');
+    include_once 'footer.php';
 ?>

@@ -40,8 +40,9 @@
     $smarty->debugging = true;
     $smarty->caching = true;
     $smarty->cache_lifetime = 0;
+    $smarty->assign("passed",$_SESSION['passed']);
     $smarty->assign("post_array",$r);
     $smarty->assign("reply_array",$s);
     $smarty->display('index.tpl');
-  
+    include_once 'footer.php';
 ?>

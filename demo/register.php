@@ -6,5 +6,5 @@
   $smarty->caching = true;
   $smarty->cache_lifetime = 0;
   $smarty->display('register.tpl');
-
+  include_once 'footer.php';
 ?>

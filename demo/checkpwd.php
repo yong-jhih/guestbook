@@ -29,7 +29,7 @@
             $_SESSION['passed']=true;
             setcookie('passed',true);
             setcookie('memberName',$r['memberName']);
-            $smarty->assign("permisiion",$r['permission']);
+            $smarty->assign("permission",$r['permission']);
             $smarty->display('checkpwd.tpl');
         }else{
             echo "<script>alert('帳號密碼輸入錯誤,請重新輸入');history.back();</script>";
@@ -37,4 +37,5 @@
     }else{
         $smarty->display('error.tpl');
     }
+    include_once 'footer.php';
 ?>

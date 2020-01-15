@@ -52,6 +52,7 @@
     <hr>
     <div class="accordion" id="accordionExample">
         {foreach item=post from=$post_array}
+            {* 文章列表 *}
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h2 class="mb-0">
@@ -60,6 +61,7 @@
                         </button>
                     </h2>
                 </div>
+                {* 內文 *}
                 <div id="collapse{$post.postID}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
                         {if $post.img}
@@ -87,10 +89,19 @@
                         </div>
                         {/if}
                     </div>
+                    {* 回覆 *}
                     <div style="text-align:center">
                         <form action="reply.php" method="post">
-                            <div><input type="text" class="col-sm-11" name="reply" id="reply"><button type="submit" style="margin-left:10px;margin-bottom:10px">submit</button></div>
+                            <div>
+                                {if $passed}
+                                <input type="text" class="col-sm-11" name="reply" required>
+                                {else}
+                                <input type="text" class="col-sm-11" name="reply" disabled required>
+                                {/if}
+                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                            </div>
                             <input type='text' name='subID' value="{$post.postID}" hidden>
+                            <input type='text' name='subject' value="RE.{$post.subject}" hidden>
                         </form>
                     </div>
                 </div>
@@ -99,7 +110,7 @@
     </div>
     <hr>
 
-    {* 留言區ok *}
+    {* 主留言區ok *}
     <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">
@@ -109,19 +120,19 @@
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">作者</td>
-                    <td width='85%'><input id='author' name='author' readonly type='text' size='50'></td>
+                    <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">主題</td>
-                <td width="85%"><input id='subject' name="subject" type="text" size="50"></td>
+                <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
             </tr>
             <tr bgcolor="#D9F2FF">
                 <td width="15%">內容</td>
-                <td width="85%"><textarea id='content' name="content" cols="50" rows="5"></textarea></td>
+                <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file"></td>
+                <td width="85%"><input id='img' name="img" type="file" accept="image,.jpg,.jpeg,.png,.gif"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -140,15 +151,12 @@
         }else{
             passed=false;
         }
-
         function checkMember() {
             document.getElementById('author').disabled = !passed;
             document.getElementById('subject').disabled = !passed;
             document.getElementById('content').disabled = !passed;
             document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
-            document.getElementById('reply').disabled = !passed;
-        }
-
+        }checkMember();
         function checkForm() {
             if (document.myForm.author.value.length == 0) {
                 alert("請留名字");
@@ -160,7 +168,6 @@
                 myForm.submit();
             }
         }
-        checkMember();
     </script>
 
 </body>

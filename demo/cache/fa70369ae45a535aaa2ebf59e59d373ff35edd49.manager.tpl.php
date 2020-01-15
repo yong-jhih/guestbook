@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:13:50
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 03:38:37
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d864e14d970_26375408',
+  'unifunc' => 'content_5e1e7b2dd1fd77_26235958',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1d864e14d970_26375408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1e7b2dd1fd77_26235958 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@ function content_5e1d864e14d970_26375408 (Smarty_Internal_Template $_smarty_tpl)
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
-                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="abc123456">
+                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="cba123456">
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer02">密碼</label>
@@ -65,12 +65,12 @@ function content_5e1d864e14d970_26375408 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="abc123456" required>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="cba123456" required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer05">電子信箱</label>
-                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="abc123456@aaa.bbb" required>
+                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="cba123456@aaa.bbb" required>
                     <h6 style="visibility: hidden" id="checkMail">.</h6>
                 </div>
                 <div style="margin:15px" onmouseover="McheckForm()">
@@ -90,6 +90,81 @@ function content_5e1d864e14d970_26375408 (Smarty_Internal_Template $_smarty_tpl)
                 </tr>
             </table>
 
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 11:02:32</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="60">
+                        <input type='text' name='content' id="60" value="setnesnysenyseyseen">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(60)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 11:02:26</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="59">
+                        <input type='text' name='content' id="59" value="senhyse5ynesnyseynesen">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(59)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 11:02:21</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="58">
+                        <input type='text' name='content' id="58" value="regnegnjysetynhgntnsegysensensensen">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(58)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td></td>
+                    <td>2020-01-14 11:02:13</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="57">
+                        <input type='text' name='content' id="57" value="swgrh zg rg rz g r">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(57)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
+                        <table width='800' cellspacing='3'>
+                <tr>
+                    <td>123</td>
+                    <td>2020-01-14 18:07:25</td>
+                    <td class='content'>
+                        <form action='modifyContent.php' method='POST'>
+                        <input type='hidden' name='contentID' value="56">
+                        <input type='text' name='content' id="56" value="11111111111">
+                    </td>
+                    <td>
+                        <button type='submit'>修改內容</button>
+                        </form><button onclick='Delete(56)'>刪除</button>
+                    </td>
+                </tr>
+            </table>
                         <table width='800' cellspacing='3'>
                 <tr>
                     <td></td>

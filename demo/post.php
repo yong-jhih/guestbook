@@ -13,7 +13,7 @@
   $filePath = "upload/" . $fileName;
 
   if(isset($_SESSION['passed'])){
-    if($subject == $_POST["subject"] && $content == ($_POST["content"])){
+    if($subject == $_POST["subject"]){
       $db=new StockDB('localhost','root','','guestbook');
       if($_FILES['img']['error'] > 0){
         $qstr = "INSERT INTO message(subject, content, date, memberID , memberName ) VALUES('$subject', '$content', '$current_time', '$memberID' , '$memberName')";

@@ -39,8 +39,11 @@
           </a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
+        <input type="radio" value="subject" name="searchType" style='margin:5px'>主題
+        <input type="radio" value="content" name="searchType" style='margin:5px'>內容
+        <input type="radio" value="author" name="searchType" style='margin:5px'>作者
+        <input style='margin:5px' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keywords" required>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>Search</button>
       </form>
       <?php

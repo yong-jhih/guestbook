@@ -27,7 +27,7 @@
     <div style="display:flex">
 
         {* 資料修改ok *}
-        <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+        <div class="col-md-3 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
@@ -60,23 +60,25 @@
         </div>
 
         {* 文章列表ok *}
-        <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <h4>留言列表</h4>
+        <div class="col-md-9 mb-9" style="position:relative;display:inline-block;margin-top:20px">
+            <h4>所有留言列表</h4>
             <table>
                 <tr>
+                    <td>發文者</td>
                     <td>主題</td>
                     <td>時間</td>
-                    <td class='content'>內容</td>
+                    <td class='content' style="overflow:hidden">內容</td>
                     <td>修改</td>
                 </tr>
             </table>
 
             {foreach item=post from=$post_array}
-            <table width='800' cellspacing='3'>
+            <table cellspacing='3'>
                 <tr>
+                    <td>{$post.memberName}</td>
                     <td>{$post.subject}</td>
                     <td>{$post.date}</td>
-                    <td class='content'>
+                    <td class='content' style="overflow:hidden">
                         <form action='modifyContent.php' method='POST'>
                         <input type='hidden' name='contentID' value="{$post.postID}">
                         <input type='text' name='content' id="{$post.postID}" value="{$post.content}">

@@ -23,6 +23,7 @@
             while ($db->next_record()){
                 $r=$db->record;
             }
+            $_SESSION['permission']=$r['permission'];
             $_SESSION['memberName']=$r['memberName'];
             $_SESSION['memberID']=$r['memberID'];
             $_SESSION['memberPWL']=$memberPWL;

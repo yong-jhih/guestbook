@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-15 06:18:02
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:01:06
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1ea08ae75a88_41179020',
+  'unifunc' => 'content_5e202652055823_39473998',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb179ef5a467c51874b32e0bae4d205d129391e3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\search.tpl',
-      1 => 1579055637,
+      1 => 1579143830,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1ea08ae75a88_41179020 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e202652055823_39473998 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,50 +78,63 @@ function content_5e1ea08ae75a88_41179020 (Smarty_Internal_Template $_smarty_tpl)
         </div>
     </div>
     
-                <p>查詢結果:共有4筆資料</p>
+                <p>查詢結果:共有3筆資料</p>
         <div>
+            <div>
             <h4>留言列表</h4>
-            <table>
-                <tr>
-                    <td>留言者</td>
-                    <td>主題</td>
-                    <td>時間</td>
-                    <td>內容</td>
-                </tr>
-            </table>
-                        <table>
-                <tr>
-                    <td>abc123456</td>
-                    <td>今天天氣很好</td>
-                    <td>2020-01-15 04:52:52</td>
-                    <td>當個網美</td>
-                </tr>
-            </table>
-                        <table>
-                <tr>
-                    <td>cba123456</td>
-                    <td>RE.今天天氣很好</td>
-                    <td>2020-01-15 04:53:30</td>
-                    <td>小姐單身嗎</td>
-                </tr>
-            </table>
-                        <table>
-                <tr>
-                    <td>abc123456</td>
-                    <td>RE.今天天氣很好</td>
-                    <td>2020-01-15 11:59:37</td>
-                    <td>喪偶 謝</td>
-                </tr>
-            </table>
-                        <table>
-                <tr>
-                    <td>abc123456</td>
-                    <td>今天天氣不好</td>
-                    <td>2020-01-15 04:54:59</td>
-                    <td>哭哭</td>
-                </tr>
-            </table>
-                    </div>
+                <table>
+                    <tr>
+                        <td>前往</td>
+                        <td>留言者</td>
+                        <td>主題</td>
+                        <td>時間</td>
+                        <td class='content' style="overflow:hidden">內容</td>
+                    </tr>
+                </table>
+                                <table>
+                    <tr>
+                    <form action="index.php" method="POST">
+                        <input type="text" name="postID" value="101" hidden>
+                        <input type="text" name="subID" value="" hidden>
+                        <input type="text" name="type" value="1" hidden>
+                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                        <td>bull shit</td>
+                        <td>今天天氣好</td>
+                        <td>2020-01-16 09:55:21</td>
+                        <td class='content text-break' style="overflow:hidden">當個網美</td>
+                    </form>
+                    </tr>
+                </table>
+                                <table>
+                    <tr>
+                    <form action="index.php" method="POST">
+                        <input type="text" name="postID" value="102" hidden>
+                        <input type="text" name="subID" value="101" hidden>
+                        <input type="text" name="type" value="2" hidden>
+                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                        <td>bull shit</td>
+                        <td>RE.今天天氣好</td>
+                        <td>2020-01-16 09:55:35</td>
+                        <td class='content text-break' style="overflow:hidden">我真美</td>
+                    </form>
+                    </tr>
+                </table>
+                                <table>
+                    <tr>
+                    <form action="index.php" method="POST">
+                        <input type="text" name="postID" value="103" hidden>
+                        <input type="text" name="subID" value="101" hidden>
+                        <input type="text" name="type" value="2" hidden>
+                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                        <td>callmebaby</td>
+                        <td>RE.今天天氣好</td>
+                        <td>2020-01-16 09:56:47</td>
+                        <td class='content text-break' style="overflow:hidden">死肥婆</td>
+                    </form>
+                    </tr>
+                </table>
+                            </div>
+        </div>
     </body>
 </html><?php }
 }

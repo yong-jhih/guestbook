@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-15 03:34:09
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 04:04:14
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1e7a21d1dc25_23318581',
+  'unifunc' => 'content_5e1fd2ae879b62_52523823',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eb179ef5a467c51874b32e0bae4d205d129391e3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\search.tpl',
-      1 => 1579055637,
+      1 => 1579143830,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1e7a21d1dc25_23318581 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1139385615e1e7a21ce7122_89041760';
+function content_5e1fd2ae879b62_52523823 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '7318157285e1fd2ae842b79_37810633';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -92,36 +92,48 @@ $_smarty_tpl->compiled->nocache_hash = '1139385615e1e7a21ce7122_89041760';
         <p>查詢結果:共有<?php echo $_smarty_tpl->tpl_vars['records']->value;?>
 筆資料</p>
         <div>
+            <div>
             <h4>留言列表</h4>
-            <table>
-                <tr>
-                    <td>留言者</td>
-                    <td>主題</td>
-                    <td>時間</td>
-                    <td>內容</td>
-                </tr>
-            </table>
-            <?php
+                <table>
+                    <tr>
+                        <td>前往</td>
+                        <td>留言者</td>
+                        <td>主題</td>
+                        <td>時間</td>
+                        <td class='content' style="overflow:hidden">內容</td>
+                    </tr>
+                </table>
+                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['post_array']->value, 'post');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 ?>
-            <table>
-                <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+                <table>
+                    <tr>
+                    <form action="index.php" method="POST">
+                        <input type="text" name="postID" value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+" hidden>
+                        <input type="text" name="subID" value="<?php echo $_smarty_tpl->tpl_vars['post']->value['subID'];?>
+" hidden>
+                        <input type="text" name="type" value="<?php echo $_smarty_tpl->tpl_vars['post']->value['type'];?>
+" hidden>
+                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+                        <td class='content text-break' style="overflow:hidden"><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
 </td>
-                </tr>
-            </table>
-            <?php
+                    </form>
+                    </tr>
+                </table>
+                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            </div>
         </div>
     <?php } else { ?>
         <p>查無結果:請重新確認查詢資料</p>

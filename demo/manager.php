@@ -28,7 +28,7 @@
     $smarty->caching = true;
     $smarty->cache_lifetime = 0;
 
-    if(isset($_SESSION['passed'])){
+    if($_SESSION['permission']==0){
         // 會員資料smarty
         $memberName = $r['memberName'];
         $memberAC = $r['memberAC'];

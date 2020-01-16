@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-15 06:27:00
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:02:19
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1ea2a404e588_76832237',
+  'unifunc' => 'content_5e20269b69b986_64115524',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6822df0f23d8eb7cb7c9df9b8a3634e7c095efbe' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\checkpwd.tpl',
-      1 => 1578985173,
+      1 => 1579068823,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1ea2a404e588_76832237 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e20269b69b986_64115524 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>

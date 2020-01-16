@@ -33,13 +33,15 @@
         $memberName = $r['memberName'];
         $memberAC = $r['memberAC'];
         $email = $r['email'];
+        $Face = $r['Face'];
         $pwl = (int)$_SESSION['memberPWL'];
         $pw = "";
         for ($i = 0; $i < $pwl; $i++) {
             $pw = $pw . "*";
         }
-        $member=array($memberAC,$pw,$memberName,$email);
+        $member=array($memberAC,$pw,$memberName,$email,$Face);
         $smarty->assign("member",$member);
+        // echo $Face ;
 
         // 會員文章smarty
         $smarty->assign("post_array",$p);

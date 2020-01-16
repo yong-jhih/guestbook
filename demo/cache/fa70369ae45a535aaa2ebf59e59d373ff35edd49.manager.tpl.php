@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-15 03:38:37
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 11:14:24
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1e7b2dd1fd77_26235958',
+  'unifunc' => 'content_5e1ee600b72499_02548026',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
-      1 => 1578985363,
+      1 => 1579068732,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e1e7b2dd1fd77_26235958 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e1ee600b72499_02548026 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,15 +47,15 @@ function content_5e1e7b2dd1fd77_26235958 (Smarty_Internal_Template $_smarty_tpl)
 <body>
     <div style="display:flex">
 
-                <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+                <div class="col-md-3 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
-                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="cba123456">
+                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="GM123456">
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer02">密碼</label>
-                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="*********">
+                    <input type="password" class="form-control" id="validationServer02" name="memberPW" onblur="checkPW()" required placeholder="********">
                     <h6 style="visibility: hidden" id="checkPW">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
@@ -65,12 +65,12 @@ function content_5e1e7b2dd1fd77_26235958 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="cba123456" required>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="GM" required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer05">電子信箱</label>
-                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="cba123456@aaa.bbb" required>
+                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="GM123456@aaa.bbb" required>
                     <h6 style="visibility: hidden" id="checkMail">.</h6>
                 </div>
                 <div style="margin:15px" onmouseover="McheckForm()">
@@ -79,167 +79,18 @@ function content_5e1e7b2dd1fd77_26235958 (Smarty_Internal_Template $_smarty_tpl)
             </form>
         </div>
 
-                <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <h4>留言列表</h4>
+                <div class="col-md-9 mb-9" style="position:relative;display:inline-block;margin-top:20px">
+            <h4>所有留言列表</h4>
             <table>
                 <tr>
+                    <td>發文者</td>
                     <td>主題</td>
                     <td>時間</td>
-                    <td class='content'>內容</td>
+                    <td class='content' style="overflow:hidden">內容</td>
                     <td>修改</td>
                 </tr>
             </table>
 
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 11:02:32</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="60">
-                        <input type='text' name='content' id="60" value="setnesnysenyseyseen">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(60)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 11:02:26</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="59">
-                        <input type='text' name='content' id="59" value="senhyse5ynesnyseynesen">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(59)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 11:02:21</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="58">
-                        <input type='text' name='content' id="58" value="regnegnjysetynhgntnsegysensensensen">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(58)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 11:02:13</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="57">
-                        <input type='text' name='content' id="57" value="swgrh zg rg rz g r">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(57)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td>123</td>
-                    <td>2020-01-14 18:07:25</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="56">
-                        <input type='text' name='content' id="56" value="11111111111">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(56)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 10:11:06</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="55">
-                        <input type='text' name='content' id="55" value="45242452452">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(55)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 10:04:55</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="54">
-                        <input type='text' name='content' id="54" value="4444444444444444444">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(54)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td></td>
-                    <td>2020-01-14 10:04:50</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="53">
-                        <input type='text' name='content' id="53" value="3333333333">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(53)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td>22222222</td>
-                    <td>2020-01-14 10:03:36</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="52">
-                        <input type='text' name='content' id="52" value="22222222">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(52)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table width='800' cellspacing='3'>
-                <tr>
-                    <td>111111111111</td>
-                    <td>2020-01-14 10:03:25</td>
-                    <td class='content'>
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="51">
-                        <input type='text' name='content' id="51" value="111111111111">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(51)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
             
         </div>
         <script src="check.js"></script>

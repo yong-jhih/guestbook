@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="..\jquery-mu-image-resize-master\jquery.mu.image.resize.js"></script>
     <style>
         td {
             border: 1px solid black;
@@ -27,7 +28,30 @@
     <div style="display:flex">
 
         {* 資料修改ok *}
-        <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+        <div class="col-md-3 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+
+            {* 大頭貼 *}
+            <div class="col-md-9 mb-3">
+                大頭貼
+                <form method="POST" action="modifyFace.php" enctype="multipart/form-data">
+                    <input class="btn btn-outline-info" type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png" name="Face" style="margin-bottom:5px">
+                    <button type="submit" class="btn btn-primary" style="margin-top:10px">修改</button>
+                    <input type="text" value="change" Name="way" hidden>
+                    <input type="text" value="{$member.4}" Name="oldPath" hidden>
+                </form>
+                {if $member.4}
+                <img id="preview_progressbarTW_img" src="{$member.4}" style="width:300px;height:auto">
+                    <form method="POST" action="modifyFace.php">
+                        <input type="text" value="{$member.4}" Name="oldPath" hidden>
+                        <input type="text" value="delete" Name="way" hidden>
+                        <button type="submit" class="btn btn-primary" style="margin-top:10px">刪除</button>
+                    </form>
+                {else}
+                    <img id="preview_progressbarTW_img" src="#" style="width:300px;height:auto;display:none">
+                {/if}     
+            </div>
+
+            {* 基本資料 *}
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
@@ -60,23 +84,23 @@
         </div>
 
         {* 文章列表ok *}
-        <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <h4>留言列表</h4>
+        <div class="col-md-9 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+            <h4>我的留言</h4>
             <table>
                 <tr>
                     <td>主題</td>
                     <td>時間</td>
-                    <td class='content'>內容</td>
+                    <td class='content' style="overflow:hidden">內容</td>
                     <td>修改</td>
                 </tr>
             </table>
 
             {foreach item=post from=$post_array}
-            <table width='800' cellspacing='3'>
+            <table cellspacing='3'>
                 <tr>
                     <td>{$post.subject}</td>
                     <td>{$post.date}</td>
-                    <td class='content'>
+                    <td class='content' style="overflow:hidden">
                         <form action='modifyContent.php' method='POST'>
                         <input type='hidden' name='contentID' value="{$post.postID}">
                         <input type='text' name='content' id="{$post.postID}" value="{$post.content}">
@@ -92,6 +116,22 @@
         </div>
         <script src="check.js"></script>
         <script>
+
+            $("#progressbarTWInput").change(function(){
+                readURL(this);
+            });
+
+            function readURL(input){
+                if(input.files && input.files[0]){
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#preview_progressbarTW_img").attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    document.getElementById("preview_progressbarTW_img").style.display = "block" ;
+                }
+            }
+
             function Delete(deleteID) {
                 $(document).ready(function() {
                     $.ajax({

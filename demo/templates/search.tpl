@@ -62,25 +62,34 @@
     {if $records}
         <p>查詢結果:共有{$records}筆資料</p>
         <div>
+            <div>
             <h4>留言列表</h4>
-            <table>
-                <tr>
-                    <td>留言者</td>
-                    <td>主題</td>
-                    <td>時間</td>
-                    <td>內容</td>
-                </tr>
-            </table>
-            {foreach item=post from=$post_array}
-            <table>
-                <tr>
-                    <td>{$post.memberName}</td>
-                    <td>{$post.subject}</td>
-                    <td>{$post.date}</td>
-                    <td>{$post.content}</td>
-                </tr>
-            </table>
-            {/foreach}
+                <table>
+                    <tr>
+                        <td>前往</td>
+                        <td>留言者</td>
+                        <td>主題</td>
+                        <td>時間</td>
+                        <td class='content' style="overflow:hidden">內容</td>
+                    </tr>
+                </table>
+                {foreach item=post from=$post_array}
+                <table>
+                    <tr>
+                    <form action="index.php" method="POST">
+                        <input type="text" name="postID" value="{$post.postID}" hidden>
+                        <input type="text" name="subID" value="{$post.subID}" hidden>
+                        <input type="text" name="type" value="{$post.type}" hidden>
+                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                        <td>{$post.memberName}</td>
+                        <td>{$post.subject}</td>
+                        <td>{$post.date}</td>
+                        <td class='content text-break' style="overflow:hidden">{$post.content}</td>
+                    </form>
+                    </tr>
+                </table>
+                {/foreach}
+            </div>
         </div>
     {else}
         <p>查無結果:請重新確認查詢資料</p>

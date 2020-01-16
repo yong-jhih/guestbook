@@ -4,9 +4,10 @@
     ini_set('display_errors','off'); 
 
     $memberAC = test_input($_POST['memberAC']);
-    $memberPW = md5(strrev(test_input($_POST['memberPW']).$memberAC),);
+    $memberPW = (string)md5(strrev(test_input($_POST['memberPW']).$memberAC),);
     $memberName = test_input($_POST['memberName']);
     $memberMail = test_input($_POST['memberMail']);
+    
 
     require '../libs/Smarty.class.php';
     $smarty = new Smarty;

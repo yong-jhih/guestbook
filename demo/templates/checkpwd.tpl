@@ -13,8 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     {if $permission==1}
         <script>setTimeout("window.location.href='member.php'",2000);</script>
-    {else}
+    {else if $permission==0}
         <script>setTimeout("window.location.href='manager.php'",2000);</script>
+    {else}
     {/if}
 </head>
 <body>

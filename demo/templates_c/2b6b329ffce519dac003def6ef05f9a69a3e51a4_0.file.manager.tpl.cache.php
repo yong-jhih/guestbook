@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 08:05:51
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 07:14:04
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d684f667886_60376363',
+  'unifunc' => 'content_5e1eadac26c752_34812730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
-      1 => 1578985363,
+      1 => 1579068732,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d684f667886_60376363 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '14558687305e1d684f6255b5_80244835';
+function content_5e1eadac26c752_34812730 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '10729737745e1eadac229430_75321405';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -59,7 +59,7 @@ $_smarty_tpl->compiled->nocache_hash = '14558687305e1d684f6255b5_80244835';
 <body>
     <div style="display:flex">
 
-                <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+                <div class="col-md-3 mb-3" style="position:relative;display:inline-block;margin-top:20px">
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
@@ -95,13 +95,14 @@ $_smarty_tpl->compiled->nocache_hash = '14558687305e1d684f6255b5_80244835';
             </form>
         </div>
 
-                <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <h4>留言列表</h4>
+                <div class="col-md-9 mb-9" style="position:relative;display:inline-block;margin-top:20px">
+            <h4>所有留言列表</h4>
             <table>
                 <tr>
+                    <td>發文者</td>
                     <td>主題</td>
                     <td>時間</td>
-                    <td class='content'>內容</td>
+                    <td class='content' style="overflow:hidden">內容</td>
                     <td>修改</td>
                 </tr>
             </table>
@@ -111,13 +112,15 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 ?>
-            <table width='800' cellspacing='3'>
+            <table cellspacing='3'>
                 <tr>
+                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+</td>
                     <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
 </td>
-                    <td class='content'>
+                    <td class='content' style="overflow:hidden">
                         <form action='modifyContent.php' method='POST'>
                         <input type='hidden' name='contentID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 ">

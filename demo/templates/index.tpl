@@ -49,17 +49,19 @@
     </div>
     
     {* 留言表 *}
-    <hr>
     <div class="accordion" id="accordionExample">
         {foreach item=post from=$post_array}
             {* 文章列表 *}
             <div class="card">
-                <div class="card-header" id="headingOne">
+                <div class="card-header" id="headingOne" style="block-inline">
                     <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{$post.postID}" aria-expanded="true" aria-controls="collapse{$post.postID}">
                             <h4>{$post.subject}</h4>
                         </button>
                     </h2>
+                    <div>
+                        <div style="text-align:right">{$post.memberName}  於  {$post.date}  發表</div>
+                    </div>
                 </div>
                 {* 內文 *}
                 <div id="collapse{$post.postID}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -67,23 +69,40 @@
                         {if $post.img}
                         <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
                         <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">{$post.memberName} said:</h5>
-                            <p>{$post.content}<p>
+                            <h5 style="margin:0px">
+                                {if $post.Face}
+                                    <img src="{$post.Face}" style="width:auto;height:30px" title="{$post.memberName}"> said:
+                                {else}
+                                    {$post.memberName} said:
+                                {/if}
+                            </h5>
+                            <p class="text-break">{$post.content}<p>
                             {foreach item=reply from=$reply_array}
                                 {if $reply.subID==$post.postID}
-                                    <h5 style="margin:0px">{$reply.memberName} said:</h5>
-                                    <p>{$reply.content}<p>
+                                    <h5 style="margin:0px">
+                                    {if $reply.Face}
+                                    <img src="{$reply.Face}" style="width:auto;height:30px" title="{$reply.memberName}"> said:
+                                    {else}
+                                    {$reply.memberName} said:
+                                    {/if}
+                                    </h5>
+                                    <p class="text-break">{$reply.content}<p>
                                 {/if}
                             {/foreach}
                         </div>
                         {else}
                         <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                            <h5 style="margin:0px">{$post.memberName} said:</h5>
-                            <p>{$post.content}<p>
+                            <h5 style="margin:0px">
+                            {if $post.Face}
+                                <img src="{$post.Face}" style="width:auto;height:30px" title="{$post.memberName}"> said:
+                            {else}
+                                {$post.memberName} said:
+                            {/if}
+                            <p class="text-break">{$post.content}<p>
                             {foreach item=reply from=$reply_array}
                                 {if $reply.subID==$post.postID}
                                     <h5 style="margin:0px">{$reply.memberName} said:</h5>
-                                    <p>{$reply.content}<p>
+                                    <p class="text-break">{$reply.content}<p>
                                 {/if}
                             {/foreach}
                         </div>
@@ -119,7 +138,7 @@
                 </td>
             </tr>
             <tr bgcolor="#D9F2FF">
-                <td width="15%">作者</td>
+                <td width="15%">發文者</td>
                     <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
             <tr bgcolor="#84D7FF">
@@ -132,7 +151,7 @@
             </tr>
             <tr bgcolor="#84D7FF">
                 <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file" accept="image,.jpg,.jpeg,.png,.gif"></td>
+                <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
             </tr>
             <tr>
                 <td colspan="2" align="center">
@@ -145,9 +164,10 @@
     
     <script>
         let cookie = document.cookie.split(" ");
+        let memberName = cookie[1].split("=")[1].replace("+"," ");
         if(cookie[0]=="passed=1;"){
             passed=true;
-            document.getElementById('author').value = cookie[1].split("=")[1];
+            document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
             passed=false;
         }

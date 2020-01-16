@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 10:04:30
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 08:53:58
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d841e37e941_20298333',
+  'unifunc' => 'content_5e201696401a14_90692321',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1578983817,
+      1 => 1579161183,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d841e37e941_20298333 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
+function content_5e201696401a14_90692321 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1009093465e2016963b5a24_75989152';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +44,9 @@ $_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="..\jquery-mu-image-resize-master\jquery.mu.image.resize.js"><?php echo '</script'; ?>
+>
     <style>
         td {
             border: 1px solid black;
@@ -59,8 +62,32 @@ $_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
 <body>
     <div style="display:flex">
 
-                <div class="col-md-5 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <form method="POST" action="modifyMember.php">
+                <div class="col-md-3 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+
+                        <div class="col-md-9 mb-3">
+                大頭貼
+                <form method="POST" action="modifyFace.php" enctype="multipart/form-data">
+                    <input class="btn btn-outline-info" type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png" name="Face" style="margin-bottom:5px">
+                    <button type="submit" class="btn btn-primary" style="margin-top:10px">修改</button>
+                    <input type="text" value="change" Name="way" hidden>
+                    <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['member']->value[4];?>
+" Name="oldPath" hidden>
+                </form>
+                <?php if ($_smarty_tpl->tpl_vars['member']->value[4]) {?>
+                <img id="preview_progressbarTW_img" src="<?php echo $_smarty_tpl->tpl_vars['member']->value[4];?>
+" style="width:300px;height:auto">
+                    <form method="POST" action="modifyFace.php">
+                        <input type="text" value="<?php echo $_smarty_tpl->tpl_vars['member']->value[4];?>
+" Name="oldPath" hidden>
+                        <input type="text" value="delete" Name="way" hidden>
+                        <button type="submit" class="btn btn-primary" style="margin-top:10px">刪除</button>
+                    </form>
+                <?php } else { ?>
+                    <img id="preview_progressbarTW_img" src="#" style="width:300px;height:auto;display:none">
+                <?php }?>     
+            </div>
+
+                        <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
                     <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="<?php echo $_smarty_tpl->tpl_vars['member']->value[0];?>
@@ -95,13 +122,13 @@ $_smarty_tpl->compiled->nocache_hash = '2469815545e1d841e35b012_71593629';
             </form>
         </div>
 
-                <div class="col-md-7 mb-3" style="position:relative;display:inline-block;margin-top:20px">
-            <h4>留言列表</h4>
+                <div class="col-md-9 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+            <h4>我的留言</h4>
             <table>
                 <tr>
                     <td>主題</td>
                     <td>時間</td>
-                    <td class='content'>內容</td>
+                    <td class='content' style="overflow:hidden">內容</td>
                     <td>修改</td>
                 </tr>
             </table>
@@ -111,13 +138,13 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 ?>
-            <table width='800' cellspacing='3'>
+            <table cellspacing='3'>
                 <tr>
                     <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
 </td>
                     <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
 </td>
-                    <td class='content'>
+                    <td class='content' style="overflow:hidden">
                         <form action='modifyContent.php' method='POST'>
                         <input type='hidden' name='contentID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 ">
@@ -143,6 +170,22 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 >
         <?php echo '<script'; ?>
 >
+
+            $("#progressbarTWInput").change(function(){
+                readURL(this);
+            });
+
+            function readURL(input){
+                if(input.files && input.files[0]){
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $("#preview_progressbarTW_img").attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                    document.getElementById("preview_progressbarTW_img").style.display = "block" ;
+                }
+            }
+
             function Delete(deleteID) {
                 $(document).ready(function() {
                     $.ajax({

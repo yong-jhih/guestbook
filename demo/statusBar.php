@@ -1,11 +1,12 @@
 <?php
-  session_start();
-  function test_input($data){
-    $data = trim($data);  //去除使用者輸入資料中不必要的字元（多餘的空格、製表符、換行）
-    $data = stripslashes($data);  //刪除使用者輸入資料中的反斜槓（\）
-    $data = htmlspecialchars($data);  //把特殊字元轉換為 HTML 實體
-    return $data;
-  }
+session_start();
+function test_input($data)
+{
+  $data = trim($data);  //去除使用者輸入資料中不必要的字元（多餘的空格、製表符、換行）
+  $data = stripslashes($data);  //刪除使用者輸入資料中的反斜槓（\）
+  $data = htmlspecialchars($data);  //把特殊字元轉換為 HTML 實體
+  return $data;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,32 +33,32 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
             <?php
-              if(isset($_SESSION['passed'])){
-                echo $_SESSION['memberName']." 歡迎回來";
+              if (isset($_SESSION['passed'])) {
+                echo $_SESSION['memberName'] . " 歡迎回來";
               }
             ?>
           </a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
-        <input type="radio" value="subject" name="searchType" style='margin:5px'>主題
-        <input type="radio" value="content" name="searchType" style='margin:5px'>內容
-        <input type="radio" value="author" name="searchType" style='margin:5px'>作者
+        <input type="radio" value="subject" name="searchType" style='margin:5px' required>主題
+        <input type="radio" value="content" name="searchType" style='margin:5px' required>內容
+        <input type="radio" value="author" name="searchType" style='margin:5px' required>作者
         <input style='margin:5px' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keywords" required>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>搜尋</button>
       </form>
       <?php
-        if(isset($_SESSION['passed'])){
-          echo "<div style='text-align:right;margin-right:5px'>";
-            echo "<button class='btn btn-outline-primary' onclick='logOut()' style='margin-right:5px'>"."登出</button>";
-            echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>會員中心</button>";
-          echo "</div>";
-        }else{
-          echo "<div style='text-align:right'>";
-            echo "<button class='btn btn-outline-primary' style='margin-right:5px' data-toggle='modal' data-target='#staticBackdrop'>登入</button>";
-            echo "<button class='btn btn-outline-primary' onclick='redirectRegister()'>註冊</button>";
-          echo "</div>";
-        }
+      if (isset($_SESSION['passed'])) {
+        echo "<div style='text-align:right;margin-right:5px'>";
+        echo "<button class='btn btn-outline-primary' onclick='logOut()' style='margin-right:5px'>" . "登出</button>";
+        echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>會員中心</button>";
+        echo "</div>";
+      } else {
+        echo "<div style='text-align:right'>";
+        echo "<button class='btn btn-outline-primary' style='margin-right:5px' data-toggle='modal' data-target='#staticBackdrop'>登入</button>";
+        echo "<button class='btn btn-outline-primary' onclick='redirectRegister()'>註冊</button>";
+        echo "</div>";
+      }
       ?>
     </div>
   </nav>
@@ -65,15 +66,17 @@
     function redirectRegister() {
       window.location = "register.php";
     }
-
-    function redirectMember() {
-      window.location = "member.php";
-    }
-
+    <?php
+      if(isset($_SESSION['permission'])){
+        if ($_SESSION['permission'] == 0)
+          echo 'function redirectMember(){window.location = "manager.php";}';
+        elseif($_SESSION['permission'] == 1)
+          echo 'function redirectMember(){window.location = "member.php";}';
+      } 
+    ?>
     function logOut() {
       window.location = "logout.php";
     }
   </script>
 </body>
-
 </html>

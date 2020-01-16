@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-14 08:05:49
+/* Smarty version 3.1.34-dev-7, created on 2020-01-15 07:14:02
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e1d684d5020d9_94309763',
+  'unifunc' => 'content_5e1eadaa107427_88114898',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6822df0f23d8eb7cb7c9df9b8a3634e7c095efbe' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\checkpwd.tpl',
-      1 => 1578985173,
+      1 => 1579068823,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e1d684d5020d9_94309763 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '4108879945e1d684d4c3541_92232330';
+function content_5e1eadaa107427_88114898 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2101791695e1eadaa0c7e83_58914189';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,10 +48,11 @@ $_smarty_tpl->compiled->nocache_hash = '4108879945e1d684d4c3541_92232330';
         <?php echo '<script'; ?>
 >setTimeout("window.location.href='member.php'",2000);<?php echo '</script'; ?>
 >
-    <?php } else { ?>
+    <?php } elseif ($_smarty_tpl->tpl_vars['permission']->value == 0) {?>
         <?php echo '<script'; ?>
 >setTimeout("window.location.href='manager.php'",2000);<?php echo '</script'; ?>
 >
+    <?php } else { ?>
     <?php }?>
 </head>
 <body>

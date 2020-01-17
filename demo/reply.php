@@ -13,7 +13,7 @@
   if(isset($_SESSION['passed'])){
     if($content == $_POST["reply"] && $subID == $_POST["subID"]){
       $db=new StockDB('localhost','root','','guestbook');
-      $qstr = "INSERT INTO message(subID , content, date, memberID , memberName , type , subject) VALUES('$subID','$content', '$current_time', '$memberID', '$memberName' , '2' , '$subject')";
+      $qstr = "INSERT INTO message(subID , content, date, memberID , type , subject) VALUES('$subID','$content', '$current_time', '$memberID' , '2' , '$subject')";
       $data = $db->query($qstr);
       header("location:index.php");
     }

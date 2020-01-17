@@ -66,46 +66,58 @@
                 {* 內文 *}
                 <div id="collapse{$post.postID}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
-                        {if $post.img}
-                        <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
-                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">
+                        {* 主留言附圖 *}
+                        {if $post.img} 
+                            <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
+                            <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                                <h5 style="margin:0px">
+                                    {* 主留言者有無大頭照 *}
+                                    {if $post.Face}
+                                        <img src="{$post.Face}" style="width:auto;height:30px" title="{$post.memberName}"> said:
+                                    {else}
+                                        {$post.memberName} said:
+                                    {/if}
+                                </h5>
+                                <p class="text-break">{$post.content}<p>
+                                {foreach item=reply from=$reply_array}
+                                    {* 回覆者有無大頭照 *}
+                                    {if $reply.subID==$post.postID}
+                                        <h5 style="margin:0px">
+                                        {if $reply.Face}
+                                            <img src="{$reply.Face}" style="width:auto;height:30px" title="{$reply.memberName}"> said:
+                                        {else}
+                                            {$reply.memberName} said:
+                                        {/if}
+                                        </h5>
+                                        <p class="text-break">{$reply.content}<p>
+                                    {/if}
+                                {/foreach}
+                            </div>
+                        {* 主留言留言不附圖 *}
+                        {else}
+                            <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                                <h5 style="margin:0px">
+                                {* 主留言者有無大頭照 *}
                                 {if $post.Face}
                                     <img src="{$post.Face}" style="width:auto;height:30px" title="{$post.memberName}"> said:
                                 {else}
                                     {$post.memberName} said:
                                 {/if}
-                            </h5>
-                            <p class="text-break">{$post.content}<p>
-                            {foreach item=reply from=$reply_array}
-                                {if $reply.subID==$post.postID}
-                                    <h5 style="margin:0px">
-                                    {if $reply.Face}
-                                    <img src="{$reply.Face}" style="width:auto;height:30px" title="{$reply.memberName}"> said:
-                                    {else}
-                                    {$reply.memberName} said:
+                                <p class="text-break">{$post.content}<p>
+                                {foreach item=reply from=$reply_array}
+                                    {if $reply.subID==$post.postID}
+                                        <h5 style="margin:0px">
+                                        {* 回覆者有無大頭照 *}
+                                        {if $reply.Face}
+                                            <img src="{$reply.Face}" style="width:auto;height:30px" title="{$reply.memberName}"> said:
+                                        {else}
+                                            {$reply.memberName} said:
+                                        {/if}
+                                        </h5>
+                                        <p class="text-break">{$reply.content}<p>
                                     {/if}
-                                    </h5>
-                                    <p class="text-break">{$reply.content}<p>
-                                {/if}
-                            {/foreach}
-                        </div>
-                        {else}
-                        <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                            <h5 style="margin:0px">
-                            {if $post.Face}
-                                <img src="{$post.Face}" style="width:auto;height:30px" title="{$post.memberName}"> said:
-                            {else}
-                                {$post.memberName} said:
-                            {/if}
-                            <p class="text-break">{$post.content}<p>
-                            {foreach item=reply from=$reply_array}
-                                {if $reply.subID==$post.postID}
-                                    <h5 style="margin:0px">{$reply.memberName} said:</h5>
-                                    <p class="text-break">{$reply.content}<p>
-                                {/if}
-                            {/foreach}
-                        </div>
+                                {/foreach}
+                            </div>
                         {/if}
                     </div>
                     {* 回覆 *}

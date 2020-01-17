@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 08:53:58
+/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:34:59
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e201696401a14_90692321',
+  'unifunc' => 'content_5e202e43b6ac57_95440786',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1579161183,
+      1 => 1579166943,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e201696401a14_90692321 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1009093465e2016963b5a24_75989152';
+function content_5e202e43b6ac57_95440786 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '21454520625e202e43b457d4_83870309';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +43,6 @@ $_smarty_tpl->compiled->nocache_hash = '1009093465e2016963b5a24_75989152';
 >
     <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"><?php echo '</script'; ?>
->
-    <?php echo '<script'; ?>
- src="..\jquery-mu-image-resize-master\jquery.mu.image.resize.js"><?php echo '</script'; ?>
 >
     <style>
         td {

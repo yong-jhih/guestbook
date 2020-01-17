@@ -8,7 +8,6 @@
     $memberName = test_input($_POST['memberName']);
     $memberMail = test_input($_POST['memberMail']);
     
-
     require '../libs/Smarty.class.php';
     $smarty = new Smarty;
     $smarty->debugging = true;

@@ -11,7 +11,11 @@
             $db=new StockDB('localhost','root','','guestbook');
             $qstr = "UPDATE message SET content='$content' WHERE postID='$contentID'";
             $data = $db->query($qstr);
-            header("location:member.php");
+            if($_SESSION['permission']==0){
+                header("location:manager.php");
+            }else{
+                header("location:member.php");
+            }
         }
     }else{
         header("location:index.php");

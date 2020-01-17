@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:01:06
+/* Smarty version 3.1.34-dev-7, created on 2020-01-17 02:37:54
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\search.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e202652055823_39473998',
+  'unifunc' => 'content_5e210ff2441071_66684883',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e202652055823_39473998 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e210ff2441071_66684883 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,42 +94,43 @@ function content_5e202652055823_39473998 (Smarty_Internal_Template $_smarty_tpl)
                                 <table>
                     <tr>
                     <form action="index.php" method="POST">
-                        <input type="text" name="postID" value="101" hidden>
+                        <input type="text" name="postID" value="107" hidden>
                         <input type="text" name="subID" value="" hidden>
                         <input type="text" name="type" value="1" hidden>
                         <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
-                        <td>bull shit</td>
-                        <td>今天天氣好</td>
-                        <td>2020-01-16 09:55:21</td>
-                        <td class='content text-break' style="overflow:hidden">當個網美</td>
+                        <td>GM</td>
+                        <td>請勿人身攻擊</td>
+                        <td>2020-01-16 10:13:10</td>
+                        <td class='content text-break' style="overflow:hidden">小心ban你</td>
                     </form>
                     </tr>
                 </table>
                                 <table>
                     <tr>
                     <form action="index.php" method="POST">
-                        <input type="text" name="postID" value="102" hidden>
-                        <input type="text" name="subID" value="101" hidden>
+                        <input type="text" name="postID" value="108" hidden>
+                        <input type="text" name="subID" value="104" hidden>
                         <input type="text" name="type" value="2" hidden>
                         <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
-                        <td>bull shit</td>
-                        <td>RE.今天天氣好</td>
-                        <td>2020-01-16 09:55:35</td>
-                        <td class='content text-break' style="overflow:hidden">我真美</td>
+                        <td>GM</td>
+                        <td>RE.大吉大利明天吃雞</td>
+                        <td>2020-01-16 10:13:29</td>
+                        <td class='content text-break' style="overflow:hidden">請勿人身攻擊</td>
                     </form>
                     </tr>
                 </table>
                                 <table>
                     <tr>
                     <form action="index.php" method="POST">
-                        <input type="text" name="postID" value="103" hidden>
-                        <input type="text" name="subID" value="101" hidden>
-                        <input type="text" name="type" value="2" hidden>
+                        <input type="text" name="postID" value="109" hidden>
+                        <input type="text" name="subID" value="" hidden>
+                        <input type="text" name="type" value="1" hidden>
                         <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
-                        <td>callmebaby</td>
-                        <td>RE.今天天氣好</td>
-                        <td>2020-01-16 09:56:47</td>
-                        <td class='content text-break' style="overflow:hidden">死肥婆</td>
+                        <td>GM</td>
+                        <td>號外號外</td>
+                        <td>2020-01-16 10:40:08</td>
+                        <td class='content text-break' style="overflow:hidden">即日起儲100 送1000
+心動不如馬上行動</td>
                     </form>
                     </tr>
                 </table>

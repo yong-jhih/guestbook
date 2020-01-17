@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 09:49:13
+/* Smarty version 3.1.34-dev-7, created on 2020-01-17 03:26:48
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e202389512137_05852830',
+  'unifunc' => 'content_5e211b686cf8b3_56298190',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1579164538,
+      1 => 1579227987,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e202389512137_05852830 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '13708074095e2023894c1953_78109631';
+function content_5e211b686cf8b3_56298190 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '12981016965e211b68681175_12929317';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -103,12 +103,50 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
                                 <div id="collapse<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 " class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body" style="display:flex">
-                        <?php if ($_smarty_tpl->tpl_vars['post']->value['img']) {?>
-                        <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['img'];?>
+                                                <?php if ($_smarty_tpl->tpl_vars['post']->value['img']) {?> 
+                            <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['img'];?>
 " style="display: block;width: auto;height: 100%;" ></div>
-                        <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                            <h5 style="margin:0px">
-                                <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
+                            <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
+                                <h5 style="margin:0px">
+                                                                        <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
+                                        <img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['Face'];?>
+" style="width:auto;height:30px" title="<?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+"> said:
+                                    <?php } else { ?>
+                                        <?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
+ said:
+                                    <?php }?>
+                                </h5>
+                                <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+<p>
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reply_array']->value, 'reply');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
+?>
+                                                                        <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
+                                        <h5 style="margin:0px">
+                                        <?php if ($_smarty_tpl->tpl_vars['reply']->value['Face']) {?>
+                                            <img src="<?php echo $_smarty_tpl->tpl_vars['reply']->value['Face'];?>
+" style="width:auto;height:30px" title="<?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
+"> said:
+                                        <?php } else { ?>
+                                            <?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
+ said:
+                                        <?php }?>
+                                        </h5>
+                                        <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
+<p>
+                                    <?php }?>
+                                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                            </div>
+                                                <?php } else { ?>
+                            <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
+                                <h5 style="margin:0px">
+                                                                <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
                                     <img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['Face'];?>
 " style="width:auto;height:30px" title="<?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
 "> said:
@@ -116,62 +154,32 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
                                     <?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
  said:
                                 <?php }?>
-                            </h5>
-                            <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
+                                <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
 <p>
-                            <?php
+                                <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reply_array']->value, 'reply');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
 ?>
-                                <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
-                                    <h5 style="margin:0px">
-                                    <?php if ($_smarty_tpl->tpl_vars['reply']->value['Face']) {?>
-                                    <img src="<?php echo $_smarty_tpl->tpl_vars['reply']->value['Face'];?>
+                                    <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
+                                        <h5 style="margin:0px">
+                                                                                <?php if ($_smarty_tpl->tpl_vars['reply']->value['Face']) {?>
+                                            <img src="<?php echo $_smarty_tpl->tpl_vars['reply']->value['Face'];?>
 " style="width:auto;height:30px" title="<?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
 "> said:
-                                    <?php } else { ?>
-                                    <?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
+                                        <?php } else { ?>
+                                            <?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
  said:
+                                        <?php }?>
+                                        </h5>
+                                        <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
+<p>
                                     <?php }?>
-                                    </h5>
-                                    <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
-<p>
-                                <?php }?>
-                            <?php
+                                <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                        </div>
-                        <?php } else { ?>
-                        <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                            <h5 style="margin:0px">
-                            <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
-                                <img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['Face'];?>
-" style="width:auto;height:30px" title="<?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
-"> said:
-                            <?php } else { ?>
-                                <?php echo $_smarty_tpl->tpl_vars['post']->value['memberName'];?>
- said:
-                            <?php }?>
-                            <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
-<p>
-                            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['reply_array']->value, 'reply');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
-?>
-                                <?php if ($_smarty_tpl->tpl_vars['reply']->value['subID'] == $_smarty_tpl->tpl_vars['post']->value['postID']) {?>
-                                    <h5 style="margin:0px"><?php echo $_smarty_tpl->tpl_vars['reply']->value['memberName'];?>
- said:</h5>
-                                    <p class="text-break"><?php echo $_smarty_tpl->tpl_vars['reply']->value['content'];?>
-<p>
-                                <?php }?>
-                            <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-                        </div>
+                            </div>
                         <?php }?>
                     </div>
                                         <div style="text-align:center">

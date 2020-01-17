@@ -9,13 +9,13 @@
         $db=new StockDB('localhost','root','','guestbook');
         switch($searchType){
             case "subject":
-                $qstr = "SELECT * FROM message WHERE subject LIKE '%$keywords%' ORDER BY postID";
+                $qstr = "SELECT a.* , b.memberName FROM message AS a , member AS b WHERE a.memberID=b.memberID AND subject LIKE '%$keywords%' ORDER BY postID";
                 break;
             case "content":
-                $qstr = "SELECT * FROM message WHERE content LIKE '%$keywords%' ORDER BY postID";
+                $qstr = "SELECT a.* , b.memberName FROM message AS a , member AS b WHERE a.memberID=b.memberID AND content LIKE '%$keywords%' ORDER BY postID";
                 break;
             case "author":
-                $qstr = "SELECT * FROM message WHERE memberName LIKE '%$keywords%' ORDER BY postID";
+                $qstr = "SELECT a.* , b.memberName FROM message AS a , member AS b WHERE a.memberID=b.memberID AND memberName LIKE '%$keywords%' ORDER BY postID";
                 break;
             default;
         }

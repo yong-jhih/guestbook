@@ -20,6 +20,9 @@
         $qstr = "DELETE FROM message where postID='$deleteID' OR subID='$deleteID'";
         $data = $db->query($qstr);
         echo json_encode($deleteID);
+        if($_SESSION['permission']==0){
+            header("location:manager.php");
+          }
         header("location:member.php");
     }else{
         header("location:index.php");

@@ -13,7 +13,7 @@
     }
 
     // 會員文章查詢
-    $qstr = "SELECT * FROM message WHERE memberID='$memberID' ORDER BY postID DESC";
+    $qstr = "SELECT a.* , b.memberName FROM message as a , member as b where a.memberID = b.memberID AND a.memberID = '$memberID' ORDER BY postID";
     $data = $db->query($qstr);
     $totalRecords = $data->num_rows;
     $j=0;
@@ -41,7 +41,6 @@
         }
         $member=array($memberAC,$pw,$memberName,$email,$Face);
         $smarty->assign("member",$member);
-        // echo $Face ;
 
         // 會員文章smarty
         $smarty->assign("post_array",$p);

@@ -13,7 +13,7 @@
     }
 
     // 會員文章查詢
-    $qstr = "SELECT * FROM message ORDER BY postID DESC";
+    $qstr = "SELECT a.* , b.memberName FROM message as a , member as b where a.memberID = b.memberID ORDER BY postID";
     $data = $db->query($qstr);
     $totalRecords = $data->num_rows;
     $j=0;
@@ -33,12 +33,13 @@
         $memberName = $r['memberName'];
         $memberAC = $r['memberAC'];
         $email = $r['email'];
+        $Face = $r['Face'];
         $pwl = (int)$_SESSION['memberPWL'];
         $pw = "";
         for ($i = 0; $i < $pwl; $i++) {
             $pw = $pw . "*";
         }
-        $member=array($memberAC,$pw,$memberName,$email);
+        $member=array($memberAC,$pw,$memberName,$email,$Face);
         $smarty->assign("member",$member);
 
         // 會員文章smarty

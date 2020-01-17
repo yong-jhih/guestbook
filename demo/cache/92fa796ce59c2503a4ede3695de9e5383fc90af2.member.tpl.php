@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:02:33
+/* Smarty version 3.1.34-dev-7, created on 2020-01-17 07:28:38
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e2026a9035e60_96804255',
+  'unifunc' => 'content_5e215416741b93_72622171',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1579161183,
+      1 => 1579166943,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e2026a9035e60_96804255 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e215416741b93_72622171 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,6 @@ function content_5e2026a9035e60_96804255 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="..\jquery-mu-image-resize-master\jquery.mu.image.resize.js"></script>
     <style>
         td {
             border: 1px solid black;
@@ -56,21 +55,16 @@ function content_5e2026a9035e60_96804255 (Smarty_Internal_Template $_smarty_tpl)
                     <input class="btn btn-outline-info" type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png" name="Face" style="margin-bottom:5px">
                     <button type="submit" class="btn btn-primary" style="margin-top:10px">修改</button>
                     <input type="text" value="change" Name="way" hidden>
-                    <input type="text" value="upload/5320200116095459123.jpg" Name="oldPath" hidden>
+                    <input type="text" value="" Name="oldPath" hidden>
                 </form>
-                                <img id="preview_progressbarTW_img" src="upload/5320200116095459123.jpg" style="width:300px;height:auto">
-                    <form method="POST" action="modifyFace.php">
-                        <input type="text" value="upload/5320200116095459123.jpg" Name="oldPath" hidden>
-                        <input type="text" value="delete" Name="way" hidden>
-                        <button type="submit" class="btn btn-primary" style="margin-top:10px">刪除</button>
-                    </form>
+                                    <img id="preview_progressbarTW_img" src="#" style="width:300px;height:auto;display:none">
                      
             </div>
 
                         <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
-                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="abc123456">
+                    <input type="text" class="form-control" id="validationServer01" name="memberAC" id="newAC" readonly value="aaaaaaaaa">
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer02">密碼</label>
@@ -84,12 +78,12 @@ function content_5e2026a9035e60_96804255 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="bull shit" required>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="aaaaaaaaa" required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer05">電子信箱</label>
-                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="abc123456@aaa.bbb" required>
+                    <input type="text" class="form-control" id="validationServer05" name="memberMail" onblur="checkMail()" value="aaaaaaaa@aaa.aaa" required>
                     <h6 style="visibility: hidden" id="checkMail">.</h6>
                 </div>
                 <div style="margin:15px" onmouseover="McheckForm()">

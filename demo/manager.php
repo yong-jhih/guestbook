@@ -1,7 +1,8 @@
 <?php
     include_once 'statusBar.php';
     require 'mysqlilib.php';
-    ini_set('display_errors','off');
+    require 'class_page.php';
+    ini_set('display_errors','on');
 
     // 查詢會員資料
     $memberID= $_SESSION['memberID'];
@@ -21,6 +22,21 @@
         $p[$j]=$db->record;
         $j++;
     }
+    
+    //分頁
+    $page_obj=new Page($db['WS'],$_REQUEST['page'],30,$sql_column,$sql_from,$sql_where,$sql_order);
+    $db['WS']->query($page_obj->_SQL);
+
+
+    // if(!isset($_POST['page'])){
+    //     $_now_page=1;
+    // }elseif($_POST['page']>$_TotalPages){
+    //     $_now_page=$_TotalPages;
+    // }elseif($_POST['page']<=0){
+    //     $_now_page=1;
+    // }else{
+    //     $_now_page=$_POST['page'];
+    // }
 
     require '../libs/Smarty.class.php';
     $smarty = new Smarty;

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * 分頁
  */
@@ -22,7 +22,7 @@ class Page{
         $this->_SQL2="SELECT COUNT(*) AS C FROM (".$temp_sql.") AS Temp";
 
         //myisam
-		$_sql_column="SQL_CALC_FOUND_ROWS ".$_sql_column;
+		// $_sql_column="SQL_CALC_FOUND_ROWS ".$_sql_column;
 
 		//分頁處理
 		if($_page_rows!=0){
@@ -30,11 +30,7 @@ class Page{
 			$start_nums=($_now_page-1)*$_page_rows;
 			$sql_limit=" LIMIT $start_nums,$_page_rows";
 		}
-		$this->_SQL="(SELECT ".$_sql_column." "
-		.$_sql_from." "
-		.$_sql_where." )"
-		.$_sql_order." "
-		.$sql_limit;
+		$this->_SQL="(SELECT ".$_sql_column." ".$_sql_from." ".$_sql_where." )".$_sql_order." ".$sql_limit;
 
 		//用子查詢加速排序,在用取出的ID取資料
         $this->_SQL3="SELECT {$_subquery_column} FROM ({$temp_sql}) AS T {$_sql_order} {$sql_limit}";

@@ -48,7 +48,7 @@
         </div>
     </div>
     
-    {* 留言表 *}
+    {* 留言表ok *}
     <div class="accordion" id="accordionExample">
         {foreach item=post from=$post_array}
             {* 文章列表 *}
@@ -139,8 +139,14 @@
             </div>
         {/foreach}
     </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {foreach item=page from=$pages}
+                <li class="page-item"><a class="page-link" href="?page={$page}">{$page}</a></li>
+            {/foreach}                  
+        </ul>
+    <nav>
     <hr>
-
     {* 主留言區ok *}
     <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">

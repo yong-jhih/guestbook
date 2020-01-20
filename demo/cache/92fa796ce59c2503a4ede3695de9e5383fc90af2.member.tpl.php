@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-17 11:01:13
+/* Smarty version 3.1.34-dev-7, created on 2020-01-20 05:01:06
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e2185e9509d42_42764669',
+  'unifunc' => 'content_5e252602adf479_86442780',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1579166943,
+      1 => 1579492829,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e2185e9509d42_42764669 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e252602adf479_86442780 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -168,7 +168,12 @@ function content_5e2185e9509d42_42764669 (Smarty_Internal_Template $_smarty_tpl)
                     </td>
                 </tr>
             </table>
-            
+                                        <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                                                <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                                          
+                    </ul>
+                <nav>
         </div>
         <script src="check.js"></script>
         <script>

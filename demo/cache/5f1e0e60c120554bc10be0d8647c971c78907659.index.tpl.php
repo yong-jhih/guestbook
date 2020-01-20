@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 02:01:18
+/* Smarty version 3.1.34-dev-7, created on 2020-01-20 06:22:18
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e24fbdeaa1944_58381644',
+  'unifunc' => 'content_5e25390ab790a1_18831897',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1579227987,
+      1 => 1579491700,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e24fbdeaa1944_58381644 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e25390ab790a1_18831897 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,157 +72,6 @@ function content_5e24fbdeaa1944_58381644 (Smarty_Internal_Template $_smarty_tpl)
                                 <div class="card">
                 <div class="card-header" id="headingOne" style="block-inline">
                     <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse115" aria-expanded="true" aria-controls="collapse115">
-                            <h4>123</h4>
-                        </button>
-                    </h2>
-                    <div>
-                        <div style="text-align:right">callmebaby  於  2020-01-17 03:14:35  發表</div>
-                    </div>
-                </div>
-                                <div id="collapse115" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                 
-                            <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/5420200117031435123.jpg" style="display: block;width: auto;height: 100%;" ></div>
-                            <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                                <h5 style="margin:0px">
-                                                                                                                <img src="upload/5420200116095633d8df320e5ed729f438d6c758d3d68b47.jpg" style="width:auto;height:30px" title="callmebaby"> said:
-                                                                    </h5>
-                                <p class="text-break">123<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <h5 style="margin:0px">
-                                                                                    <img src="upload/5420200116095633d8df320e5ed729f438d6c758d3d68b47.jpg" style="width:auto;height:30px" title="callmebaby"> said:
-                                                                                </h5>
-                                        <p class="text-break">這是我的死對頭<p>
-                                                                                                                                                                                    <h5 style="margin:0px">
-                                                                                    <img src="upload/5320200117044904123.jpg" style="width:auto;height:30px" title="princess"> said:
-                                                                                </h5>
-                                        <p class="text-break">你真是讓我又愛又恨<p>
-                                                                                                </div>
-                                                                    </div>
-                                        <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
-                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                            </div>
-                            <input type='text' name='subID' value="115" hidden>
-                            <input type='text' name='subject' value="RE.123" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                                <div class="card">
-                <div class="card-header" id="headingOne" style="block-inline">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse113" aria-expanded="true" aria-controls="collapse113">
-                            <h4>嗐</h4>
-                        </button>
-                    </h2>
-                    <div>
-                        <div style="text-align:right">callmebaby  於  2020-01-17 02:58:28  發表</div>
-                    </div>
-                </div>
-                                <div id="collapse113" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                                            <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                                <h5 style="margin:0px">
-                                                                                                    <img src="upload/5420200116095633d8df320e5ed729f438d6c758d3d68b47.jpg" style="width:auto;height:30px" title="callmebaby"> said:
-                                                                <p class="text-break">瞎<p>
-                                                                                                                                                                                                                                                                                                                                                                                            <h5 style="margin:0px">
-                                                                                                                            <img src="upload/5420200116095633d8df320e5ed729f438d6c758d3d68b47.jpg" style="width:auto;height:30px" title="callmebaby"> said:
-                                                                                </h5>
-                                        <p class="text-break">真瞎<p>
-                                                                                                                                                                                                                                        </div>
-                                            </div>
-                                        <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
-                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                            </div>
-                            <input type='text' name='subID' value="113" hidden>
-                            <input type='text' name='subject' value="RE.嗐" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                                <div class="card">
-                <div class="card-header" id="headingOne" style="block-inline">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse110" aria-expanded="true" aria-controls="collapse110">
-                            <h4>今天天氣差</h4>
-                        </button>
-                    </h2>
-                    <div>
-                        <div style="text-align:right">princess  於  2020-01-17 02:51:59  發表</div>
-                    </div>
-                </div>
-                                <div id="collapse110" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                                            <div class="col-sm-12" style="height:400px;border:2px solid red;padding:10px;overflow:scroll">
-                                <h5 style="margin:0px">
-                                                                                                    <img src="upload/5320200117044904123.jpg" style="width:auto;height:30px" title="princess"> said:
-                                                                <p class="text-break">哭哭<p>
-                                                                                                                                                                                                                                                    <h5 style="margin:0px">
-                                                                                                                            <img src="upload/5420200116095633d8df320e5ed729f438d6c758d3d68b47.jpg" style="width:auto;height:30px" title="callmebaby"> said:
-                                                                                </h5>
-                                        <p class="text-break">哭屁哭<p>
-                                                                                                                                                <h5 style="margin:0px">
-                                                                                                                            <img src="upload/5320200117044904123.jpg" style="width:auto;height:30px" title="princess"> said:
-                                                                                </h5>
-                                        <p class="text-break">sad<p>
-                                                                                                                                                                                                                                                                                                            </div>
-                                            </div>
-                                        <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
-                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                            </div>
-                            <input type='text' name='subID' value="110" hidden>
-                            <input type='text' name='subject' value="RE.今天天氣差" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                                <div class="card">
-                <div class="card-header" id="headingOne" style="block-inline">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse109" aria-expanded="true" aria-controls="collapse109">
-                            <h4>號外號外</h4>
-                        </button>
-                    </h2>
-                    <div>
-                        <div style="text-align:right">GM  於  2020-01-16 10:40:08  發表</div>
-                    </div>
-                </div>
-                                <div id="collapse109" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                    <div class="card-body" style="display:flex">
-                                                 
-                            <div class="col-sm-4" style="height:400px;border:2px solid red"><img src="upload/020200116104008GM.png" style="display: block;width: auto;height: 100%;" ></div>
-                            <div class="col-sm-8" style="height:400px;border:2px solid red;padding:10px;margin-left:5px;overflow:scroll">
-                                <h5 style="margin:0px">
-                                                                                                                <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
-                                                                    </h5>
-                                <p class="text-break">即日起儲100 送1000
-心動不如馬上行動<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                    </div>
-                                        <div style="text-align:center">
-                        <form action="reply.php" method="post">
-                            <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
-                                                                <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                            </div>
-                            <input type='text' name='subID' value="109" hidden>
-                            <input type='text' name='subject' value="RE.號外號外" hidden>
-                        </form>
-                    </div>
-                </div>
-            </div>
-                                <div class="card">
-                <div class="card-header" id="headingOne" style="block-inline">
-                    <h2 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse107" aria-expanded="true" aria-controls="collapse107">
                             <h4>請勿人身攻擊</h4>
                         </button>
@@ -242,7 +91,7 @@ function content_5e24fbdeaa1944_58381644 (Smarty_Internal_Template $_smarty_tpl)
                                         <div style="text-align:center">
                         <form action="reply.php" method="post">
                             <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <input type="text" class="col-sm-11" name="reply" disabled required>
                                                                 <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                             </div>
                             <input type='text' name='subID' value="107" hidden>
@@ -284,7 +133,7 @@ function content_5e24fbdeaa1944_58381644 (Smarty_Internal_Template $_smarty_tpl)
                                         <div style="text-align:center">
                         <form action="reply.php" method="post">
                             <div>
-                                                                <input type="text" class="col-sm-11" name="reply" required>
+                                                                <input type="text" class="col-sm-11" name="reply" disabled required>
                                                                 <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                             </div>
                             <input type='text' name='subID' value="104" hidden>
@@ -294,8 +143,15 @@ function content_5e24fbdeaa1944_58381644 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </div>
             </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                            <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                            <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+                              
+        </ul>
+    <nav>
     <hr>
-
         <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
         <table border="0" width="800" align="center" cellspacing="0">
             <tr bgcolor="#0084CA" align="center">

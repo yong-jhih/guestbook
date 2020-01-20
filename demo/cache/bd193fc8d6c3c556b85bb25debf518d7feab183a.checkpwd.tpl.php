@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 02:00:55
+/* Smarty version 3.1.34-dev-7, created on 2020-01-20 04:57:51
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e24fbc7916a74_72561675',
+  'unifunc' => 'content_5e25253fe0fba4_66165029',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e24fbc7916a74_72561675 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e25253fe0fba4_66165029 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@ function content_5e24fbc7916a74_72561675 (Smarty_Internal_Template $_smarty_tpl)
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-            <script>setTimeout("window.location.href='manager.php'",2000);</script>
+            <script>setTimeout("window.location.href='member.php'",2000);</script>
     </head>
 <body>
     <div class="text-center" style="position: absolute;top:46%;left:49%">

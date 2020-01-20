@@ -114,6 +114,14 @@
             </table>
             {/foreach}
 
+            {* 跳頁 *}
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        {foreach item=page from=$pages}
+                        <li class="page-item"><a class="page-link" href="?page={$page}">{$page}</a></li>
+                        {/foreach}                  
+                    </ul>
+                <nav>
         </div>
         <script src="check.js"></script>
         <script>

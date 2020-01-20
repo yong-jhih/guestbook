@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-17 10:46:06
+/* Smarty version 3.1.34-dev-7, created on 2020-01-20 04:13:56
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e21825eb1fce0_99366397',
+  'unifunc' => 'content_5e251af49c2bf4_12815845',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
-      1 => 1579167211,
+      1 => 1579489887,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e21825eb1fce0_99366397 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e251af49c2bf4_12815845 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -270,55 +270,14 @@ function content_5e21825eb1fce0_99366397 (Smarty_Internal_Template $_smarty_tpl)
                     </td>
                 </tr>
             </table>
-                        <table cellspacing='3'>
-                <tr>
-                    <td>callmebaby</td>
-                    <td>123</td>
-                    <td>2020-01-17 03:14:35</td>
-                    <td class='content' style="overflow:hidden">
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="115">
-                        <input type='text' name='content' id="115" value="123">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(115)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table cellspacing='3'>
-                <tr>
-                    <td>callmebaby</td>
-                    <td>RE.123</td>
-                    <td>2020-01-17 03:14:49</td>
-                    <td class='content' style="overflow:hidden">
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="116">
-                        <input type='text' name='content' id="116" value="這是我的死對頭">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(116)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-                        <table cellspacing='3'>
-                <tr>
-                    <td>princess</td>
-                    <td>RE.123</td>
-                    <td>2020-01-17 03:27:54</td>
-                    <td class='content' style="overflow:hidden">
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="117">
-                        <input type='text' name='content' id="117" value="你真是讓我又愛又恨">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(117)'>刪除</button>
-                    </td>
-                </tr>
-            </table>
             
+                            <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                                                <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                                          
+                    </ul>
+                <nav>
         </div>
         <script src="check.js"></script>
         <script>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-16 10:34:43
+/* Smarty version 3.1.34-dev-7, created on 2020-01-20 04:11:35
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\manager.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e202e331982b6_68534078',
+  'unifunc' => 'content_5e251a67e6e567_73390819',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2b6b329ffce519dac003def6ef05f9a69a3e51a4' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\manager.tpl',
-      1 => 1579167211,
+      1 => 1579489887,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e202e331982b6_68534078 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '10080432275e202e33174154_50496231';
+function content_5e251a67e6e567_73390819 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2178314365e251a67e28746_55923710';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -164,6 +164,22 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
+                            <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pages']->value, 'page');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['page']->value) {
+?>
+                        <li class="page-item"><a class="page-link" href="?page=<?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
+</a></li>
+                        <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>                  
+                    </ul>
+                <nav>
         </div>
         <?php echo '<script'; ?>
  src="check.js"><?php echo '</script'; ?>

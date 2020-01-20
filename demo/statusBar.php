@@ -24,57 +24,60 @@ function test_input($data)
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="index.php">留言板</a>
-    <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="member.php" tabindex="-1">
-            <?php
-              if (isset($_SESSION['passed'])) {
-                echo "遊戲區" ;
-              }
-            ?>
-          </a>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
-            <?php
-              if (isset($_SESSION['passed'])) {
-                echo $_SESSION['memberName'] . " 歡迎回來~";
-              }
-            ?>
-          </a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
-        <input type="radio" value="subject" name="searchType" style='margin:5px' required>主題
-        <input type="radio" value="content" name="searchType" style='margin:5px' required>內容
-        <input type="radio" value="author" name="searchType" style='margin:5px' required>作者
-        <input style='margin:5px' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keywords" required>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>搜尋</button>
-      </form>
-      <?php
-      if (isset($_SESSION['passed'])) {
-        echo "<div style='text-align:right;margin-right:5px'>";
-        echo "<button class='btn btn-outline-primary' onclick='logOut()' style='margin-right:5px'>" . "登出</button>";
-        if($_SESSION['permission']==0){
-          echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>管理中心</button>";
-        }else{
-          echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>會員中心</button>";
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="index.php">留言板</a>
+      <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="member.php" tabindex="-1">
+              <?php
+                if (isset($_SESSION['passed'])) {
+                  echo "遊戲區" ;
+                }
+              ?>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+              <?php
+                if (isset($_SESSION['passed'])) {
+                  echo $_SESSION['memberName'] . " 歡迎回來~";
+                }
+              ?>
+            </a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="POST" action="search.php">
+          <input type="radio" value="subject" name="searchType" style='margin:5px' required>主題
+          <input type="radio" value="content" name="searchType" style='margin:5px' required>內容
+          <input type="radio" value="author" name="searchType" style='margin:5px' required>作者
+          <input style='margin:5px' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keywords" required>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style='margin-right:5px'>搜尋</button>
+        </form>
+        <?php
+        if (isset($_SESSION['passed'])) {
+          echo "<div style='text-align:right;margin-right:5px'>";
+          echo "<button class='btn btn-outline-primary' onclick='logOut()' style='margin-right:5px'>" . "登出</button>";
+          if($_SESSION['permission']==0){
+            echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>管理中心</button>";
+          }else{
+            echo "<button class='btn btn-outline-primary' onclick='redirectMember()'>會員中心</button>";
+          }
+          echo "</div>";
+        } else {
+          echo "<div style='text-align:right'>";
+          echo "<button class='btn btn-outline-primary' style='margin-right:5px' data-toggle='modal' data-target='#staticBackdrop'>登入</button>";
+          echo "<button class='btn btn-outline-primary' onclick='redirectRegister()'>註冊</button>";
+          echo "</div>";
         }
-        echo "</div>";
-      } else {
-        echo "<div style='text-align:right'>";
-        echo "<button class='btn btn-outline-primary' style='margin-right:5px' data-toggle='modal' data-target='#staticBackdrop'>登入</button>";
-        echo "<button class='btn btn-outline-primary' onclick='redirectRegister()'>註冊</button>";
-        echo "</div>";
-      }
-      ?>
+        ?>
+      </div>
     </div>
   </nav>
+
   <script>
     function redirectRegister() {
       window.location = "register.php";

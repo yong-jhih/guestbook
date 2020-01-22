@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 09:13:52
+/* Smarty version 3.1.34-dev-7, created on 2020-01-22 07:02:27
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e256140045239_20379310',
+  'unifunc' => 'content_5e27e5739ffc09_92334787',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e256140045239_20379310 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e27e5739ffc09_92334787 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +83,7 @@ function content_5e256140045239_20379310 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <div class="col-md-9 mb-3">
                     <label for="validationServer04">暱稱</label>
-                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="princess" required>
+                    <input type="text" class="form-control" id="validationServer04" name="memberName" onblur="checkName()" value="Sarah princess" required>
                     <h6 style="visibility: hidden" id="checkName">.</h6>
                 </div>
                 <div class="col-md-9 mb-3">

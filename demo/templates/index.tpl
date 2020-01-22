@@ -70,8 +70,8 @@
                         <div class="card-body" style="display:flex">
                             {* 主留言附圖 *}
                             {if $post.img} 
-                                <div class="col-sm-4" style="height:400px;"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
-                                <div class="col-sm-8" style="height:400px;padding:10px;margin-left:5px;overflow:scroll">
+                                <div class="col-sm-6" style="height:300px;"><img src="{$post.img}" style="display: block;width: auto;height: 100%;" ></div>
+                                <div class="col-sm-6" style="height:300px;padding:10px;margin-left:5px;overflow:scroll">
                                     <h5 style="margin:0px">
                                         {* 主留言者有無大頭照 *}
                                         {if $post.Face}
@@ -97,7 +97,7 @@
                                 </div>
                             {* 主留言留言不附圖 *}
                             {else}
-                                <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                     {* 主留言者有無大頭照 *}
                                     {if $post.Face}

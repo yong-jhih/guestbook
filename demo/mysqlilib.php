@@ -18,7 +18,7 @@ class StockDB extends mysqli
 	// function next_record($action) $action: 1 (MYSQLI_ASSOC) 2 (MYSQL_NUM) 3 (MYSQL_BOTH)
 
 	public function __construct($host='',$user='',$pwd='',$dbname='') {
-	// 	if(!empty($host)) {
+		if(!empty($host)) {
 			$d=explode(":",$host);
 			// $this->dbhost = $d[0];
 			// $this->dbport=$d[1];
@@ -26,7 +26,7 @@ class StockDB extends mysqli
 			$this->dbuser = $user;
 			$this->dbpwd = $pwd;
 			$this->dbname = $dbname;
-		// }
+		}
 		// include("parserval.php");
 	}
 

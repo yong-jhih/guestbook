@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 09:13:05
+/* Smarty version 3.1.34-dev-7, created on 2020-01-21 01:49:45
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e256111f2e188_56787870',
+  'unifunc' => 'content_5e264aa9786481_46818180',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1579507973,
+      1 => 1579511659,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e256111f2e188_56787870 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '14696923765e256111edc618_92513238';
+function content_5e264aa9786481_46818180 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '20087628705e264aa9475ce3_32152123';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -106,9 +106,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 " class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
                                                         <?php if ($_smarty_tpl->tpl_vars['post']->value['img']) {?> 
-                                <div class="col-sm-4" style="height:400px;"><img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['img'];?>
+                                <div class="col-sm-6" style="height:300px;"><img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['img'];?>
 " style="display: block;width: auto;height: 100%;" ></div>
-                                <div class="col-sm-8" style="height:400px;padding:10px;margin-left:5px;overflow:scroll">
+                                <div class="col-sm-6" style="height:300px;padding:10px;margin-left:5px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                 <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
                                             <img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['Face'];?>
@@ -146,7 +146,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['reply']->value) {
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                 </div>
                                                         <?php } else { ?>
-                                <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                         <?php if ($_smarty_tpl->tpl_vars['post']->value['Face']) {?>
                                         <img src="<?php echo $_smarty_tpl->tpl_vars['post']->value['Face'];?>

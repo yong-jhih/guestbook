@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 09:13:43
+/* Smarty version 3.1.34-dev-7, created on 2020-01-22 07:02:40
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e2561376532b8_95088568',
+  'unifunc' => 'content_5e27e5806c1900_00041366',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1579507973,
+      1 => 1579511659,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e27e5806c1900_00041366 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,7 +84,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                                         <div id="collapse123" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">sfbsbsbs<p>
@@ -93,7 +93,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="123" hidden>
@@ -115,7 +115,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                                         <div id="collapse122" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">strhrsthsrth<p>
@@ -124,7 +124,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="122" hidden>
@@ -146,7 +146,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                                         <div id="collapse121" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">strhrthsrth<p>
@@ -155,7 +155,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="121" hidden>
@@ -177,7 +177,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                                         <div id="collapse120" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">srthrthrt<p>
@@ -186,7 +186,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="120" hidden>
@@ -208,7 +208,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                                         <div id="collapse119" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:400px;padding:10px;overflow:scroll">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">strhtrhsrthrth<p>
@@ -217,7 +217,7 @@ function content_5e2561376532b8_95088568 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="119" hidden>

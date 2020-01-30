@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-22 07:02:27
+/* Smarty version 3.1.34-dev-7, created on 2020-01-30 09:05:01
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e27e5739ffc09_92334787',
+  'unifunc' => 'content_5e328e2db6cf52_16357456',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e27e5739ffc09_92334787 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e328e2db6cf52_16357456 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +55,11 @@ function content_5e27e5739ffc09_92334787 (Smarty_Internal_Template $_smarty_tpl)
                     <input class="btn btn-outline-info" type="file" id="progressbarTWInput" accept="image/gif, image/jpeg, image/png" name="Face" style="margin-bottom:5px">
                     <button type="submit" class="btn btn-primary" style="margin-top:10px">修改</button>
                     <input type="text" value="change" Name="way" hidden>
-                    <input type="text" value="upload/5320200117044904123.jpg" Name="oldPath" hidden>
+                    <input type="text" value="upload/5320200130090400123.jpg" Name="oldPath" hidden>
                 </form>
-                                <img id="preview_progressbarTW_img" src="upload/5320200117044904123.jpg" style="width:300px;height:auto">
+                                <img id="preview_progressbarTW_img" src="upload/5320200130090400123.jpg" style="width:300px;height:auto">
                     <form method="POST" action="modifyFace.php">
-                        <input type="text" value="upload/5320200117044904123.jpg" Name="oldPath" hidden>
+                        <input type="text" value="upload/5320200130090400123.jpg" Name="oldPath" hidden>
                         <input type="text" value="delete" Name="way" hidden>
                         <button type="submit" class="btn btn-primary" style="margin-top:10px">刪除</button>
                     </form>

@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 03:59:33
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 04:48:36
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e38de15d75592_59647499',
+  'unifunc' => 'content_5e38e994d157d5_54164828',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1579492829,
+      1 => 1580786966,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e38de15d75592_59647499 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e38e994d157d5_54164828 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@ function content_5e38de15d75592_59647499 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>會員中心</title>
-    <script src="jquery-3.4.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -175,7 +175,7 @@ function content_5e38de15d75592_59647499 (Smarty_Internal_Template $_smarty_tpl)
                     </ul>
                 <nav>
         </div>
-        <script src="check.js"></script>
+        <script src="js/check.js"></script>
         <script>
 
             $("#progressbarTWInput").change(function(){

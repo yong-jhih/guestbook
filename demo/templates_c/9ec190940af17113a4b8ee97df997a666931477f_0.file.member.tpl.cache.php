@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-20 05:00:32
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 04:48:36
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e2525e03bb9b3_15972213',
+  'unifunc' => 'content_5e38e994c752c0_28678755',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1579492829,
+      1 => 1580786966,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e2525e03bb9b3_15972213 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '20719584675e2525e03932e7_16063183';
+function content_5e38e994c752c0_28678755 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '7031866795e38e994c28b17_77954814';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ $_smarty_tpl->compiled->nocache_hash = '20719584675e2525e03932e7_16063183';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>會員中心</title>
     <?php echo '<script'; ?>
- src="jquery-3.4.1.js"><?php echo '</script'; ?>
+ src="js/jquery-3.4.1.js"><?php echo '</script'; ?>
 >
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <?php echo '<script'; ?>
@@ -178,7 +178,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 <nav>
         </div>
         <?php echo '<script'; ?>
- src="check.js"><?php echo '</script'; ?>
+ src="js/check.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
 >

@@ -32,7 +32,7 @@
       <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="Little Mary.php" tabindex="-1">
+            <a class="nav-link" href="LittleMary.php" tabindex="-1">
               <?php
                 if (isset($_SESSION['passed'])) {
                   echo "小遊戲" ;
@@ -45,8 +45,8 @@
               <?php
                 if (isset($_SESSION['passed'])) {
                   echo $_SESSION['memberName'] . " 歡迎回來~";
-                  if($_SERVER['PHP_SELF']=='/coding/guestbook/demo/Little Mary.php'){
-                    echo '目前有 '.' 代幣' ;
+                  if($_SERVER['PHP_SELF']=='/coding/guestbook/demo/LittleMary.php'){
+                    echo '您目前有 '.$GameCoin.' 代幣' ;
                   }
                 }
               ?>

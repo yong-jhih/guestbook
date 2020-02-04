@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 04:48:36
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 07:12:56
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e38e994c752c0_28678755',
+  'unifunc' => 'content_5e390b68aee046_81699677',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ec190940af17113a4b8ee97df997a666931477f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\member.tpl',
-      1 => 1580786966,
+      1 => 1580796774,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e38e994c752c0_28678755 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '7031866795e38e994c28b17_77954814';
+function content_5e390b68aee046_81699677 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '9218109175e390b68aaab13_02864695';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,12 +45,6 @@ $_smarty_tpl->compiled->nocache_hash = '7031866795e38e994c28b17_77954814';
  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"><?php echo '</script'; ?>
 >
     <style>
-        td {
-            border: 1px solid black;
-            width: 200px;
-            text-align: center;
-        }
-
         .content {
             width: 200px;
         }
@@ -119,47 +113,48 @@ $_smarty_tpl->compiled->nocache_hash = '7031866795e38e994c28b17_77954814';
             </form>
         </div>
 
-                <div class="col-md-9 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+                <div class="col-md-9" style="position:relative;display:inline-block;margin-top:20px">
             <h4>我的留言</h4>
-            <table>
-                <tr>
-                    <td>主題</td>
-                    <td>時間</td>
-                    <td class='content' style="overflow:hidden">內容</td>
-                    <td>修改</td>
-                </tr>
-            </table>
-
-            <?php
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">主題</th>
+                        <th scope="col">時間</th>
+                        <th scope="col" class='content' style="overflow:hidden">內容</th>
+                        <th scope="col">修改</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['post_array']->value, 'post');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['post']->value) {
 ?>
-            <table cellspacing='3'>
-                <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+                    <tr>
+                        <th scope="row"><?php echo $_smarty_tpl->tpl_vars['post']->value['subject'];?>
+</th>
+                        <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
 </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['post']->value['date'];?>
-</td>
-                    <td class='content' style="overflow:hidden">
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+                        <td class='content' style="overflow:hidden">
+                            <form action='modifyContent.php' method='POST'>
+                            <input type='hidden' name='contentID' value="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 ">
-                        <input type='text' name='content' id="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+                            <input type='text' name='content' id="<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 " value="<?php echo $_smarty_tpl->tpl_vars['post']->value['content'];?>
 ">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete(<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
+                        </td>
+                        <td>
+                            <button type='submit' class="btn btn-outline-primary">修改內容</button>
+                            </form><button class="btn btn-outline-warning" onclick='Delete(<?php echo $_smarty_tpl->tpl_vars['post']->value['postID'];?>
 )'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-            <?php
+                        </td>
+                    </tr>
+                    <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+                </tbody>
+            </table>
                             <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <?php
@@ -220,7 +215,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <?php echo '</script'; ?>
 >
     </div>
-
 </body>
 </html><?php }
 }

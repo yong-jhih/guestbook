@@ -13,11 +13,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
     <style>
-        td {
-            border: 1px solid black;
-            width: 200px;
-            text-align: center;
-        }
         .content {
             width: 200px;
         }
@@ -64,31 +59,33 @@
         <div>
             <div>
             <h4>留言列表</h4>
-                <table>
-                    <tr>
-                        <td>前往</td>
-                        <td>留言者</td>
-                        <td>主題</td>
-                        <td>時間</td>
-                        <td class='content' style="overflow:hidden">內容</td>
-                    </tr>
+                <table class="table" style="text-align:center">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:100px">前往</th>
+                            <th scope="col" style="width:100px">留言者</th>
+                            <th scope="col" style="width:100px">主題</th>
+                            <th scope="col" style="width:100px">時間</th>
+                            <th scope="col" style="width:50%;overflow:hidden">內容</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {foreach item=post from=$post_array}
+                        <tr>
+                        <form action="index.php" method="POST">
+                            <input type="text" name="postID" value="{$post.postID}" hidden>
+                            <input type="text" name="subID" value="{$post.subID}" hidden>
+                            <input type="text" name="type" value="{$post.type}" hidden>
+                            <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
+                            <td>{$post.memberName}</td>
+                            <td>{$post.subject}</td>
+                            <td>{$post.date}</td>
+                            <td class='content text-break' style="overflow:hidden">{$post.content}</td>
+                        </form>
+                        </tr>
+                        {/foreach}
+                    </tbody>
                 </table>
-                {foreach item=post from=$post_array}
-                <table>
-                    <tr>
-                    <form action="index.php" method="POST">
-                        <input type="text" name="postID" value="{$post.postID}" hidden>
-                        <input type="text" name="subID" value="{$post.subID}" hidden>
-                        <input type="text" name="type" value="{$post.type}" hidden>
-                        <td><button type="submit" class="btn btn-outline-success my-2 my-sm-0">前往</button></td>
-                        <td>{$post.memberName}</td>
-                        <td>{$post.subject}</td>
-                        <td>{$post.date}</td>
-                        <td class='content text-break' style="overflow:hidden">{$post.content}</td>
-                    </form>
-                    </tr>
-                </table>
-                {/foreach}
             </div>
         </div>
     {else}

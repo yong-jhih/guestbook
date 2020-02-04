@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 06:22:10
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 07:27:17
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e38ff8264fe36_17992806',
+  'unifunc' => 'content_5e390ec5433da9_81801930',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e38ff8264fe36_17992806 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e390ec5433da9_81801930 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,6 +74,83 @@ function content_5e38ff8264fe36_17992806 (Smarty_Internal_Template $_smarty_tpl)
                                             <div class="card">
                     <div class="card-header" id="headingOne" style="block-inline">
                         <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse125" aria-expanded="true" aria-controls="collapse125">
+                                <h4>123</h4>
+                            </button>
+                        </h2>
+                        <div>
+                            <div style="text-align:right">Sarah princess  於  2020-02-04 07:19:59  發表</div>
+                        </div>
+                    </div>
+                                        <div id="collapse125" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body" style="display:flex">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
+                                    <h5 style="margin:0px">
+                                                                                                                <img src="upload/5320200130090400123.jpg" style="width:auto;height:30px" title="Sarah princess"> said:
+                                                                        <p class="text-break mt-1">123<p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                    </div>
+                                                <div style="text-align:center">
+                            <form action="reply.php" method="post">
+                                <div>
+                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                                </div>
+                                <input type='text' name='subID' value="125" hidden>
+                                <input type='text' name='subject' value="RE.123" hidden>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="card">
+                    <div class="card-header" id="headingOne" style="block-inline">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse124" aria-expanded="true" aria-controls="collapse124">
+                                <h4>123</h4>
+                            </button>
+                        </h2>
+                        <div>
+                            <div style="text-align:right">Sarah princess  於  2020-02-04 07:19:40  發表</div>
+                        </div>
+                    </div>
+                                        <div id="collapse124" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body" style="display:flex">
+                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
+                                    <h5 style="margin:0px">
+                                                                                                                <img src="upload/5320200130090400123.jpg" style="width:auto;height:30px" title="Sarah princess"> said:
+                                                                        <p class="text-break mt-1">2133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+2121321
+21312323
+32131321
+2313213
+12312313
+12313
+121
+212
+12
+1
+231
+31
+321
+32
+1<p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                    </div>
+                                                <div style="text-align:center">
+                            <form action="reply.php" method="post">
+                                <div>
+                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
+                                </div>
+                                <input type='text' name='subID' value="124" hidden>
+                                <input type='text' name='subject' value="RE.123" hidden>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                                            <div class="card">
+                    <div class="card-header" id="headingOne" style="block-inline">
+                        <h2 class="mb-0">
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse123" aria-expanded="true" aria-controls="collapse123">
                                 <h4>sfbsfbsfb</h4>
                             </button>
@@ -93,7 +170,7 @@ function content_5e38ff8264fe36_17992806 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" required>
+                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="123" hidden>
@@ -124,7 +201,7 @@ function content_5e38ff8264fe36_17992806 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" required>
+                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="122" hidden>
@@ -155,73 +232,11 @@ function content_5e38ff8264fe36_17992806 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" required>
+                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="121" hidden>
                                 <input type='text' name='subject' value="RE.rtshtrsrh" hidden>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                                            <div class="card">
-                    <div class="card-header" id="headingOne" style="block-inline">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse120" aria-expanded="true" aria-controls="collapse120">
-                                <h4>strhstrhrst</h4>
-                            </button>
-                        </h2>
-                        <div>
-                            <div style="text-align:right">GM  於  2020-01-20 04:30:46  發表</div>
-                        </div>
-                    </div>
-                                        <div id="collapse120" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
-                                    <h5 style="margin:0px">
-                                                                                                                <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
-                                                                        <p class="text-break mt-1">srthrthrt<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                    </div>
-                                                <div style="text-align:center">
-                            <form action="reply.php" method="post">
-                                <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" required>
-                                                                        <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                                </div>
-                                <input type='text' name='subID' value="120" hidden>
-                                <input type='text' name='subject' value="RE.strhstrhrst" hidden>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                                            <div class="card">
-                    <div class="card-header" id="headingOne" style="block-inline">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse119" aria-expanded="true" aria-controls="collapse119">
-                                <h4>sthsrthstrsrh</h4>
-                            </button>
-                        </h2>
-                        <div>
-                            <div style="text-align:right">GM  於  2020-01-20 04:30:43  發表</div>
-                        </div>
-                    </div>
-                                        <div id="collapse119" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body" style="display:flex">
-                                                                                        <div class="col-sm-12" style="height:300px;padding:10px;overflow:scroll">
-                                    <h5 style="margin:0px">
-                                                                                                                <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
-                                                                        <p class="text-break mt-1">strhtrhsrthrth<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                    </div>
-                                                <div style="text-align:center">
-                            <form action="reply.php" method="post">
-                                <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" required>
-                                                                        <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
-                                </div>
-                                <input type='text' name='subID' value="119" hidden>
-                                <input type='text' name='subject' value="RE.sthsrthstrsrh" hidden>
                             </form>
                         </div>
                     </div>

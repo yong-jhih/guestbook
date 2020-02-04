@@ -1,5 +1,17 @@
 <?php
-    include_once "statusBar.php"
+    require 'mysqlilib.php';
+    require 'class_page.php';
+    ini_set('display_errors','off');
+    $memberID= $_SESSION['memberID'];
+    $db=new StockDB('localhost','root','','guestbook');
+    $qstr = "SELECT GameCoin FROM member WHERE memberID='$memberID'";
+    $data = $db->query($qstr);
+    while ($db->next_record()){
+        $l=$db->record;
+    }
+    $GameCoin = $l['GameCoin'];
+    include_once 'statusBar.php';
+    
 ?>
 
 <!DOCTYPE html>

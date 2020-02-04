@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 03:39:13
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 07:12:44
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\checkpwd.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e38d951767700_60559242',
+  'unifunc' => 'content_5e390b5cd9a075_34622951',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6822df0f23d8eb7cb7c9df9b8a3634e7c095efbe' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\checkpwd.tpl',
-      1 => 1579068823,
+      1 => 1580787033,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e38d951767700_60559242 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e390b5cd9a075_34622951 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@ function content_5e38d951767700_60559242 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>等待跳轉</title>
-    <script src="jquery-3.4.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

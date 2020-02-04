@@ -12,12 +12,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <style>
-        td {
-            border: 1px solid black;
-            width: 200px;
-            text-align: center;
-        }
-
         .content {
             width: 200px;
         }
@@ -50,7 +44,7 @@
                 {/if}     
             </div>
 
-            {* 基本資料 *}
+            {* 基本資料ok *}
             <form method="POST" action="modifyMember.php">
                 <div class="col-md-9 mb-3">
                     <label for="validationServer01">帳號</label>
@@ -83,34 +77,35 @@
         </div>
 
         {* 文章列表ok *}
-        <div class="col-md-9 mb-3" style="position:relative;display:inline-block;margin-top:20px">
+        <div class="col-md-9" style="position:relative;display:inline-block;margin-top:20px">
             <h4>我的留言</h4>
-            <table>
-                <tr>
-                    <td>主題</td>
-                    <td>時間</td>
-                    <td class='content' style="overflow:hidden">內容</td>
-                    <td>修改</td>
-                </tr>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">主題</th>
+                        <th scope="col">時間</th>
+                        <th scope="col" class='content' style="overflow:hidden">內容</th>
+                        <th scope="col">修改</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach item=post from=$post_array}
+                    <tr>
+                        <th scope="row">{$post.subject}</th>
+                        <td>{$post.date}</td>
+                        <td class='content' style="overflow:hidden">
+                            <form action='modifyContent.php' method='POST'>
+                            <input type='hidden' name='contentID' value="{$post.postID}">
+                            <input type='text' name='content' id="{$post.postID}" value="{$post.content}">
+                        </td>
+                        <td>
+                            <button type='submit' class="btn btn-outline-primary">修改內容</button>
+                            </form><button class="btn btn-outline-warning" onclick='Delete({$post.postID})'>刪除</button>
+                        </td>
+                    </tr>
+                    {/foreach}
+                </tbody>
             </table>
-
-            {foreach item=post from=$post_array}
-            <table cellspacing='3'>
-                <tr>
-                    <td>{$post.subject}</td>
-                    <td>{$post.date}</td>
-                    <td class='content' style="overflow:hidden">
-                        <form action='modifyContent.php' method='POST'>
-                        <input type='hidden' name='contentID' value="{$post.postID}">
-                        <input type='text' name='content' id="{$post.postID}" value="{$post.content}">
-                    </td>
-                    <td>
-                        <button type='submit'>修改內容</button>
-                        </form><button onclick='Delete({$post.postID})'>刪除</button>
-                    </td>
-                </tr>
-            </table>
-            {/foreach}
             {* 跳頁 *}
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
@@ -159,6 +154,5 @@
             }
         </script>
     </div>
-
 </body>
 </html>

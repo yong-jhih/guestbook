@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 04:30:58
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 09:56:19
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e38e5726f1da6_41231554',
+  'unifunc' => 'content_5e3931b3925290_27216181',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580787012,
+      1 => 1580806556,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e38e5726f1da6_41231554 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '13619589095e38e57244dbd6_25963447';
+function content_5e3931b3925290_27216181 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '15713492155e3931b38d7b79_62688847';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -259,14 +259,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
     </form>
     
     <?php echo '<script'; ?>
->
-        let cookie = document.cookie.split(" ");
-        let memberName = cookie[1].split("=")[1].replace("+"," ");
-        if(cookie[0]=="passed=1;"){
-            passed=true;
+ type="text/javascript">
+        let passed ;
+        let cookie = document.cookie.split(" ") ;
+        if(cookie.length>1){
+            passed = true ;
+            var memberName = cookie[1].split("=")[1].replace("+"," ");
             document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
-            passed=false;
+            passed = false ;
         }
         function checkMember() {
             document.getElementById('author').disabled = !passed;

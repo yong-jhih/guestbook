@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 07:27:17
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 09:56:19
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e390ec5433da9_81801930',
+  'unifunc' => 'content_5e3931b3a3eb71_95104733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580787012,
+      1 => 1580806556,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e390ec5433da9_81801930 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -285,14 +285,15 @@ function content_5e390ec5433da9_81801930 (Smarty_Internal_Template $_smarty_tpl)
         </table>
     </form>
     
-    <script>
-        let cookie = document.cookie.split(" ");
-        let memberName = cookie[1].split("=")[1].replace("+"," ");
-        if(cookie[0]=="passed=1;"){
-            passed=true;
+    <script type="text/javascript">
+        let passed ;
+        let cookie = document.cookie.split(" ") ;
+        if(cookie.length>1){
+            passed = true ;
+            var memberName = cookie[1].split("=")[1].replace("+"," ");
             document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
-            passed=false;
+            passed = false ;
         }
         function checkMember() {
             document.getElementById('author').disabled = !passed;

@@ -184,14 +184,15 @@
         </table>
     </form>
     
-    <script>
-        let cookie = document.cookie.split(" ");
-        let memberName = cookie[1].split("=")[1].replace("+"," ");
-        if(cookie[0]=="passed=1;"){
-            passed=true;
+    <script type="text/javascript">
+        let passed ;
+        let cookie = document.cookie.split(" ") ;
+        if(cookie.length>1){
+            passed = true ;
+            var memberName = cookie[1].split("=")[1].replace("+"," ");
             document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
-            passed=false;
+            passed = false ;
         }
         function checkMember() {
             document.getElementById('author').disabled = !passed;

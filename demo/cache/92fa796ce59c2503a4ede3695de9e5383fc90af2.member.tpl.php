@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 07:13:31
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 09:55:25
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\member.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e390b8b40d378_35953743',
+  'unifunc' => 'content_5e39317d6d15f7_82414940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e390b8b40d378_35953743 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e39317d6d15f7_82414940 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -153,6 +153,47 @@ function content_5e390b8b40d378_35953743 (Smarty_Internal_Template $_smarty_tpl)
                         <td>
                             <button type='submit' class="btn btn-outline-primary">修改內容</button>
                             </form><button class="btn btn-outline-warning" onclick='Delete(117)'>刪除</button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <th scope="row">123</th>
+                        <td>2020-02-04 07:19:40</td>
+                        <td class='content' style="overflow:hidden">
+                            <form action='modifyContent.php' method='POST'>
+                            <input type='hidden' name='contentID' value="124">
+                            <input type='text' name='content' id="124" value="2133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333
+2121321
+21312323
+32131321
+2313213
+12312313
+12313
+121
+212
+12
+1
+231
+31
+321
+32
+1">
+                        </td>
+                        <td>
+                            <button type='submit' class="btn btn-outline-primary">修改內容</button>
+                            </form><button class="btn btn-outline-warning" onclick='Delete(124)'>刪除</button>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <th scope="row">123</th>
+                        <td>2020-02-04 07:19:59</td>
+                        <td class='content' style="overflow:hidden">
+                            <form action='modifyContent.php' method='POST'>
+                            <input type='hidden' name='contentID' value="125">
+                            <input type='text' name='content' id="125" value="123">
+                        </td>
+                        <td>
+                            <button type='submit' class="btn btn-outline-primary">修改內容</button>
+                            </form><button class="btn btn-outline-warning" onclick='Delete(125)'>刪除</button>
                         </td>
                     </tr>
                                     </tbody>

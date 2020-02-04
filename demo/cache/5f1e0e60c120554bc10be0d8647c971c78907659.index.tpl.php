@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-01-30 09:05:07
+/* Smarty version 3.1.34-dev-7, created on 2020-02-04 04:33:21
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e328e33ef49b4_38792967',
+  'unifunc' => 'content_5e38e6013c07a2_58001927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1579511659,
+      1 => 1580787012,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e328e33ef49b4_38792967 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e38e6013c07a2_58001927 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@ function content_5e328e33ef49b4_38792967 (Smarty_Internal_Template $_smarty_tpl)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>guestbook</title>
-    <script src="jquery-3.4.1.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">

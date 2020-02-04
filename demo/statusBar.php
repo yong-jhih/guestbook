@@ -14,7 +14,7 @@ function test_input($data)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="jquery-3.4.1.js"></script>
+  <script src="js/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
   <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -31,15 +31,15 @@ function test_input($data)
       <a class="navbar-brand" href="index.php">留言板</a>
       <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="member.php" tabindex="-1">
+          <li class="nav-item">
+            <a class="nav-link" href="Little Mary.php" tabindex="-1">
               <?php
                 if (isset($_SESSION['passed'])) {
-                  echo "遊戲區" ;
+                  echo "小遊戲" ;
                 }
               ?>
             </a>
-          </li> -->
+          </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
               <?php

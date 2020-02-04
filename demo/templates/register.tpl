@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>註冊</title>
-  <script src="jquery-3.4.1.js"></script>
+  <script src="js/jquery-3.4.1.js"></script>
   <link rel="stylesheet" href="../bootstrap-4.4.1-dist\css\bootstrap.css">
   <script src="../bootstrap-4.4.1-dist\js\bootstrap.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -84,6 +84,6 @@
   </div>
   <hr>
   
-  <script src="check.js"></script>
+  <script src="js/check.js"></script>
 </body>
 </html>

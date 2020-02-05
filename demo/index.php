@@ -54,7 +54,6 @@
         $smarty->assign("post_array",$r);
         $smarty->assign("reply_array",$s);
         $smarty->display('index.tpl');
-        include_once 'footer.php';
 
     }else{ // 查詢(目標貼文)
 
@@ -69,6 +68,7 @@
         }else{
             $page = 1;
         }
+        
         $startedRecord = $recordPerPage * ($page - 1);
         $r=array();
         $i=0;
@@ -94,6 +94,8 @@
         $smarty->assign("post_array",$r);
         $smarty->assign("reply_array",$s);
         $smarty->display('index.tpl');
-        include_once 'footer.php';
+        
     }
+    include_once 'footer.php';
+
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 09:56:19
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 03:31:50
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3931b3925290_27216181',
+  'unifunc' => 'content_5e3a2916bf8f06_85641085',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580806556,
+      1 => 1580869909,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e3931b3925290_27216181 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '15713492155e3931b38d7b79_62688847';
+function content_5e3a2916bf8f06_85641085 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '6982023775e3a2916baf1d6_62657176';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,8 +79,8 @@ $_smarty_tpl->compiled->nocache_hash = '15713492155e3931b38d7b79_62688847';
     </div>
     
     <hr>
-    <div class="container">
-                <div class="accordion" id="accordionExample">
+        <div class="container">
+        <div class="accordion" id="accordionExample">
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['post_array']->value, 'post');
 if ($_from !== null) {
@@ -207,7 +207,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
-        <nav aria-label="Page navigation example">
+                <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pages']->value, 'page');
@@ -224,39 +224,41 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </ul>
         <nav>
     </div>
-    <hr>
 
-        <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
-        <table border="0" width="800" align="center" cellspacing="0">
-            <tr bgcolor="#0084CA" align="center">
+        <div class="container">
+        <table style="width:100%;margin:auto">
+            <tr style="background-color:#0084CA;text-align:center">
                 <td colspan="2">
-                    <font color="#FFFFFF" id="enter">請在此輸入新的留言</font>
+                    <h5 style="color:#FFFFFF" id="enter">請在此輸入新的留言</h5>
                 </td>
             </tr>
-            <tr bgcolor="#D9F2FF">
-                <td width="15%">發文者</td>
+            <tr style="background-color:#D9F2FF;text-align:center">
+                <td width="10%">發文者</td>
                     <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
-            <tr bgcolor="#84D7FF">
-                <td width="15%">主題</td>
-                <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
-            </tr>
-            <tr bgcolor="#D9F2FF">
-                <td width="15%">內容</td>
-                <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
-            </tr>
-            <tr bgcolor="#84D7FF">
-                <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
-                    <input type="reset" class='btn btn-outline-primary' value="重新輸入">
-                </td>
-            </tr>
+            <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
+                <tr style="background-color:#84D7FF;text-align:center">
+                    <td width="10%">主題</td>
+                    <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
+                </tr>
+                <tr style="background-color:#D9F2FF;text-align:center">
+                    <td width="10%">內容</td>
+                    <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr style="background-color:#84D7FF;">
+                    <td width="10%">上傳圖片</td>
+                    <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;padding:10px">
+                        <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
+                        <input type="reset" class='btn btn-outline-primary' value="重新輸入">
+                    </td>
+                </tr>
+            </form>
         </table>
-    </form>
+    </div>
+    
     
     <?php echo '<script'; ?>
  type="text/javascript">

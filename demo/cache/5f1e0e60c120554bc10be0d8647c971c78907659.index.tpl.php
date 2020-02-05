@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-05 02:41:53
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 03:32:01
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3a1d61033cf4_18456967',
+  'unifunc' => 'content_5e3a2921efb2a7_50502756',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
     array (
       0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580806556,
+      1 => 1580869909,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e3a1d61033cf4_18456967 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3a2921efb2a7_50502756 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,8 +69,8 @@ function content_5e3a1d61033cf4_18456967 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     
     <hr>
-    <div class="container">
-                <div class="accordion" id="accordionExample">
+        <div class="container">
+        <div class="accordion" id="accordionExample">
                                             <div class="card">
                     <div class="card-header" id="headingOne" style="block-inline">
                         <h2 class="mb-0">
@@ -242,7 +242,7 @@ function content_5e3a1d61033cf4_18456967 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
                     </div>
-        <nav aria-label="Page navigation example">
+                <nav aria-label="Page navigation example">
             <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
                                     <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
@@ -251,39 +251,41 @@ function content_5e3a1d61033cf4_18456967 (Smarty_Internal_Template $_smarty_tpl)
             </ul>
         <nav>
     </div>
-    <hr>
 
-        <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
-        <table border="0" width="800" align="center" cellspacing="0">
-            <tr bgcolor="#0084CA" align="center">
+        <div class="container">
+        <table style="width:100%;margin:auto">
+            <tr style="background-color:#0084CA;text-align:center">
                 <td colspan="2">
-                    <font color="#FFFFFF" id="enter">請在此輸入新的留言</font>
+                    <h5 style="color:#FFFFFF" id="enter">請在此輸入新的留言</h5>
                 </td>
             </tr>
-            <tr bgcolor="#D9F2FF">
-                <td width="15%">發文者</td>
+            <tr style="background-color:#D9F2FF;text-align:center">
+                <td width="10%">發文者</td>
                     <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
             </tr>
-            <tr bgcolor="#84D7FF">
-                <td width="15%">主題</td>
-                <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
-            </tr>
-            <tr bgcolor="#D9F2FF">
-                <td width="15%">內容</td>
-                <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
-            </tr>
-            <tr bgcolor="#84D7FF">
-                <td width="15%">上傳圖片</td>
-                <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
-                    <input type="reset" class='btn btn-outline-primary' value="重新輸入">
-                </td>
-            </tr>
+            <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
+                <tr style="background-color:#84D7FF;text-align:center">
+                    <td width="10%">主題</td>
+                    <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
+                </tr>
+                <tr style="background-color:#D9F2FF;text-align:center">
+                    <td width="10%">內容</td>
+                    <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr style="background-color:#84D7FF;">
+                    <td width="10%">上傳圖片</td>
+                    <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;padding:10px">
+                        <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
+                        <input type="reset" class='btn btn-outline-primary' value="重新輸入">
+                    </td>
+                </tr>
+            </form>
         </table>
-    </form>
+    </div>
+    
     
     <script type="text/javascript">
         let passed ;

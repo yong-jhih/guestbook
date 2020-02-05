@@ -8,11 +8,7 @@
     $memberName = test_input($_POST['memberName']);
     $memberMail = test_input($_POST['memberMail']);
     
-    require '../libs/Smarty.class.php';
-    $smarty = new Smarty;
-    $smarty->debugging = true;
-    $smarty->caching = true;
-    $smarty->cache_lifetime = 0;
+    require_once 'smarty_ini.php';
 
     // 比對過濾前後資料
     if($memberAC == $_POST['memberAC'] && $memberName == $_POST['memberName'] && $memberMail == $_POST['memberMail']){

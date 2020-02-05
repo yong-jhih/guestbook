@@ -1,10 +1,6 @@
 <?php
   include_once 'statusBar.php';
-  require '../libs/Smarty.class.php';
-  $smarty = new Smarty;
-  $smarty->debugging = true;
-  $smarty->caching = true;
-  $smarty->cache_lifetime = 0;
+  require_once 'smarty_ini.php';
   $smarty->display('register.tpl');
   include_once 'footer.php';
 ?>

@@ -2,6 +2,7 @@
     include_once 'statusBar.php';
     require 'mysqlilib.php';
     require 'class_page.php';
+    require_once 'smarty_ini.php';
     ini_set('display_errors','off');
 
     // 查詢會員資料
@@ -36,12 +37,6 @@
         $p[$j]=$db->record;
         $j++;
     }
-
-    require '../libs/Smarty.class.php';
-    $smarty = new Smarty;
-    $smarty->debugging = true;
-    $smarty->caching = true;
-    $smarty->cache_lifetime = 0;
 
     if(isset($_SESSION['passed'])){
         // 會員資料smarty

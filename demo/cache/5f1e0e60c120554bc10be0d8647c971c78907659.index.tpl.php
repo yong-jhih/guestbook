@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-04 09:56:19
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 02:41:53
   from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3931b3a3eb71_95104733',
+  'unifunc' => 'content_5e3a1d61033cf4_18456967',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3a1d61033cf4_18456967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,7 +93,7 @@ function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="125" hidden>
@@ -139,7 +139,7 @@ function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="124" hidden>
@@ -170,7 +170,7 @@ function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="123" hidden>
@@ -201,7 +201,7 @@ function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="122" hidden>
@@ -232,7 +232,7 @@ function content_5e3931b3a3eb71_95104733 (Smarty_Internal_Template $_smarty_tpl)
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="121" hidden>

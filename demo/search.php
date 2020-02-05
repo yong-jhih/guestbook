@@ -1,6 +1,7 @@
 <?php 
     include_once 'statusBar.php';
     require 'mysqlilib.php';
+    require_once 'smarty_ini.php';
     ini_set('display_errors','off');
 
     $keywords = test_input($_POST['keywords']);
@@ -27,12 +28,7 @@
             $i++;
         }
     }
-
-    require_once '../libs/Smarty.class.php';
-    $smarty = new Smarty;
-    $smarty->debugging = true;
-    $smarty->caching = true;
-    $smarty->cache_lifetime = 0;
+    
     $smarty->assign("post_array",$r);
     $smarty->assign("records",$totalRecords);
     $smarty->display('search.tpl');

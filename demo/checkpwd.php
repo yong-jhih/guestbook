@@ -7,11 +7,7 @@
     $memberAC = test_input($_POST['memberAC']);
     $memberPW = md5(strrev(test_input($_POST['memberPW']).$memberAC),);
 
-    require '../libs/Smarty.class.php';
-    $smarty = new Smarty;
-    $smarty->debugging = true;
-    $smarty->caching = true;
-    $smarty->cache_lifetime = 0;
+    require_once 'smarty_ini.php';
 
     // 比對過濾前後資料
     if($memberAC == $_POST['memberAC']){

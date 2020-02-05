@@ -48,11 +48,7 @@
             $n++;
         }
 
-        require_once '../libs/Smarty.class.php';
-        $smarty = new Smarty;
-        $smarty->debugging = true;
-        $smarty->caching = true;
-        $smarty->cache_lifetime = 0;
+        require_once 'smarty_ini.php';
         $smarty->assign("passed",$_SESSION['passed']);
         $smarty->assign("pages",$num);
         $smarty->assign("post_array",$r);
@@ -92,11 +88,7 @@
             $n++;
         }
 
-        require_once '../libs/Smarty.class.php';
-        $smarty = new Smarty;
-        $smarty->debugging = true;
-        $smarty->caching = true;
-        $smarty->cache_lifetime = 0;
+        require_once 'smarty_ini.php';
         $smarty->assign("passed",$_SESSION['passed']);
         $smarty->assign("pages",$num);
         $smarty->assign("post_array",$r);

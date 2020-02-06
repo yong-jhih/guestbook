@@ -1,24 +1,24 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-06 08:04:16
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 09:30:11
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\chat.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3bba701b8a06_03045619',
+  'unifunc' => 'content_5e3a7d13c2e4b9_72980523',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
+    '68f8ac772a9b0b555bedf3af7cec78a41bd7f6eb' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580869928,
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\chat.tpl',
+      1 => 1580891390,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 0,
 ),true)) {
-function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3a7d13c2e4b9_72980523 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,39 +35,6 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
     </script>
 </head>
 <body>
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">會員登入</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="checkpwd.php">
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">帳號</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="staticEmail" name="memberAC" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">密碼</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword" name="memberPW" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                            <button type="submit" class="btn btn-primary">登入</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <hr>
         <div class="container">
         <div class="accordion" id="accordionExample">
@@ -88,12 +55,12 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/5320200130090400123.jpg" style="width:auto;height:30px" title="Sarah princess"> said:
                                                                         <p class="text-break mt-1">123<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                    </div>
                                                     </div>
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="125" hidden>
@@ -134,12 +101,12 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
 321
 32
 1<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                    </div>
                                                     </div>
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="124" hidden>
@@ -165,12 +132,12 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">sfbsbsbs<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                    </div>
                                                     </div>
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="123" hidden>
@@ -196,12 +163,12 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">strhrsthsrth<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                    </div>
                                                     </div>
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="122" hidden>
@@ -227,12 +194,12 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
                                     <h5 style="margin:0px">
                                                                                                                 <img src="upload/020200117044845GM.png" style="width:auto;height:30px" title="GM"> said:
                                                                         <p class="text-break mt-1">strhrthsrth<p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                    </div>
                                                     </div>
                                                 <div style="text-align:center">
                             <form action="reply.php" method="post">
                                 <div>
-                                                                        <input type="text" class="col-sm-11" name="reply" disabled required>
+                                                                        <input type="text" class="col-sm-11" name="reply" required>
                                                                         <button type="submit" class='btn btn-outline-primary' style="margin-left:10px;margin-bottom:10px">submit</button>
                                 </div>
                                 <input type='text' name='subID' value="121" hidden>
@@ -242,50 +209,7 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </div>
                     </div>
-                <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                                    <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
-                                  
-            </ul>
-        <nav>
     </div>
-
-        <div class="container">
-        <table style="width:100%;margin:auto">
-            <tr style="background-color:#0084CA;text-align:center">
-                <td colspan="2">
-                    <h5 style="color:#FFFFFF" id="enter">請在此輸入新的留言</h5>
-                </td>
-            </tr>
-            <tr style="background-color:#D9F2FF;text-align:center">
-                <td width="10%">發文者</td>
-                    <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
-            </tr>
-            <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
-                <tr style="background-color:#84D7FF;text-align:center">
-                    <td width="10%">主題</td>
-                    <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
-                </tr>
-                <tr style="background-color:#D9F2FF;text-align:center">
-                    <td width="10%">內容</td>
-                    <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
-                </tr>
-                <tr style="background-color:#84D7FF;">
-                    <td width="10%">上傳圖片</td>
-                    <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center;padding:10px">
-                        <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
-                        <input type="reset" class='btn btn-outline-primary' value="重新輸入">
-                    </td>
-                </tr>
-            </form>
-        </table>
-    </div>
-    
     <script type="text/javascript">
         let passed ;
         let cookie = document.cookie.split(" ") ;
@@ -295,23 +219,6 @@ function content_5e3bba701b8a06_03045619 (Smarty_Internal_Template $_smarty_tpl)
             document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
             passed = false ;
-        }
-        function checkMember() {
-            document.getElementById('author').disabled = !passed;
-            document.getElementById('subject').disabled = !passed;
-            document.getElementById('content').disabled = !passed;
-            document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
-        }checkMember();
-        function checkForm() {
-            if (document.myForm.author.value.length == 0) {
-                alert("請留名字");
-            } else if (document.myForm.subject.value.length == 0) {
-                alert("請給主題");
-            } else if (document.myForm.content.value.length == 0) {
-                alert("請給內容");
-            } else {
-                myForm.submit();
-            }
         }
     </script>
 

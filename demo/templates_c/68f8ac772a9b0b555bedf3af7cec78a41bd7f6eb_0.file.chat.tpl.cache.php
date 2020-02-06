@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-05 07:47:36
-  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\index.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 09:30:11
+  from 'C:\xampp\htdocs\coding\guestbook\demo\templates\chat.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3a6508a823b8_47364798',
+  'unifunc' => 'content_5e3a7d13b15685_62209534',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'fb7bda8a00003dcb36a0b75bc0c0724146a12f94' => 
+    '68f8ac772a9b0b555bedf3af7cec78a41bd7f6eb' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\index.tpl',
-      1 => 1580869928,
+      0 => 'C:\\xampp\\htdocs\\coding\\guestbook\\demo\\templates\\chat.tpl',
+      1 => 1580891390,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e3a6508a823b8_47364798 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '8808348535e3a6508a528d8_83484470';
+function content_5e3a7d13b15685_62209534 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '3433333795e3a7d13acf343_23910226';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -45,39 +45,6 @@ $_smarty_tpl->compiled->nocache_hash = '8808348535e3a6508a528d8_83484470';
 >
 </head>
 <body>
-        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">會員登入</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="checkpwd.php">
-                        <div class="form-group row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">帳號</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="staticEmail" name="memberAC" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">密碼</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword" name="memberPW" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                            <button type="submit" class="btn btn-primary">登入</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <hr>
         <div class="container">
         <div class="accordion" id="accordionExample">
@@ -207,58 +174,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         </div>
-                <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['pages']->value, 'page');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['page']->value) {
-?>
-                    <li class="page-item"><a class="page-link" href="?page=<?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-"><?php echo $_smarty_tpl->tpl_vars['page']->value;?>
-</a></li>
-                <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>                  
-            </ul>
-        <nav>
     </div>
-
-        <div class="container">
-        <table style="width:100%;margin:auto">
-            <tr style="background-color:#0084CA;text-align:center">
-                <td colspan="2">
-                    <h5 style="color:#FFFFFF" id="enter">請在此輸入新的留言</h5>
-                </td>
-            </tr>
-            <tr style="background-color:#D9F2FF;text-align:center">
-                <td width="10%">發文者</td>
-                    <td width='85%'><input class="form-control" id='author' name='author' readonly type='text' size='50'></td>
-            </tr>
-            <form name="myForm" method="post" action="post.php" enctype="multipart/form-data">
-                <tr style="background-color:#84D7FF;text-align:center">
-                    <td width="10%">主題</td>
-                    <td width="85%"><input class="form-control" id='subject' name="subject" type="text" size="50"></td>
-                </tr>
-                <tr style="background-color:#D9F2FF;text-align:center">
-                    <td width="10%">內容</td>
-                    <td width="85%"><textarea class="form-control" id='content' name="content" cols="50" rows="5"></textarea></td>
-                </tr>
-                <tr style="background-color:#84D7FF;">
-                    <td width="10%">上傳圖片</td>
-                    <td width="85%"><input id='img' name="img" type="file" accept=".image,.jpg,.jpeg,.png,.gif"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center;padding:10px">
-                        <input type="button" value="張貼留言" class='btn btn-outline-primary' onClick="checkForm()">
-                        <input type="reset" class='btn btn-outline-primary' value="重新輸入">
-                    </td>
-                </tr>
-            </form>
-        </table>
-    </div>
-    
     <?php echo '<script'; ?>
  type="text/javascript">
         let passed ;
@@ -269,23 +185,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             document.getElementById('author').value = memberName.substring(0,memberName.length-1) ;
         }else{
             passed = false ;
-        }
-        function checkMember() {
-            document.getElementById('author').disabled = !passed;
-            document.getElementById('subject').disabled = !passed;
-            document.getElementById('content').disabled = !passed;
-            document.getElementById('enter').innerHTML = passed ? "請在此輸入新的留言" : "如要留言請先登入會員";
-        }checkMember();
-        function checkForm() {
-            if (document.myForm.author.value.length == 0) {
-                alert("請留名字");
-            } else if (document.myForm.subject.value.length == 0) {
-                alert("請給主題");
-            } else if (document.myForm.content.value.length == 0) {
-                alert("請給內容");
-            } else {
-                myForm.submit();
-            }
         }
     <?php echo '</script'; ?>
 >

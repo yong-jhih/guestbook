@@ -29,7 +29,6 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="index.php">留言板</a>
-      <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03"> -->
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="LittleMary.php" tabindex="-1">
@@ -41,12 +40,21 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="chat.php" tabindex="-1">
+              <?php
+                if (isset($_SESSION['passed'])) {
+                  echo "聊天室" ;
+                }
+              ?>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
               <?php
                 if (isset($_SESSION['passed'])) {
                   echo $_SESSION['memberName'] . " 歡迎回來~";
                   if($_SERVER['PHP_SELF']=='/coding/guestbook/demo/LittleMary.php'){
-                    echo '您目前有 '.$GameCoin.' 代幣' ;
+                    echo '您有'.$GameCoin.'代幣' ;
                   }
                 }
               ?>
